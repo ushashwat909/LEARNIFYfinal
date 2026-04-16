@@ -1,0 +1,162 @@
+[
+  {
+    "id": "array_basics",
+    "title": "Array Basics",
+    "difficulty": 1,
+    "prerequisites": [],
+    "mastery_threshold": 0.8,
+    "category": "arrays"
+  },
+  {
+    "id": "two_pointers",
+    "title": "Two Pointers",
+    "difficulty": 2,
+    "prerequisites": ["array_basics"],
+    "mastery_threshold": 0.85,
+    "category": "arrays"
+  },
+  {
+    "id": "sliding_window",
+    "title": "Sliding Window",
+    "difficulty": 3,
+    "prerequisites": ["two_pointers"],
+    "mastery_threshold": 0.9,
+    "category": "arrays"
+  },
+  {
+    "id": "binary_search",
+    "title": "Binary Search",
+    "difficulty": 2,
+    "prerequisites": ["array_basics"],
+    "mastery_threshold": 0.85,
+    "category": "arrays"
+  },
+  {
+    "id": "prefix_sum",
+    "title": "Prefix Sum",
+    "difficulty": 2,
+    "prerequisites": ["array_basics"],
+    "mastery_threshold": 0.8,
+    "category": "arrays"
+  },
+  {
+    "id": "hash_maps",
+    "title": "Hash Maps",
+    "difficulty": 2,
+    "prerequisites": ["array_basics"],
+    "mastery_threshold": 0.8,
+    "category": "hashing"
+  },
+  {
+    "id": "stacks",
+    "title": "Stacks & Queues",
+    "difficulty": 2,
+    "prerequisites": ["array_basics"],
+    "mastery_threshold": 0.8,
+    "category": "linear"
+  },
+  {
+    "id": "linked_list",
+    "title": "Linked Lists",
+    "difficulty": 2,
+    "prerequisites": ["array_basics"],
+    "mastery_threshold": 0.8,
+    "category": "linear"
+  },
+  {
+    "id": "fast_slow_pointers",
+    "title": "Fast & Slow Pointers",
+    "difficulty": 3,
+    "prerequisites": ["linked_list", "two_pointers"],
+    "mastery_threshold": 0.85,
+    "category": "linear"
+  },
+  {
+    "id": "recursion",
+    "title": "Recursion & Backtracking",
+    "difficulty": 3,
+    "prerequisites": ["stacks"],
+    "mastery_threshold": 0.85,
+    "category": "recursion"
+  },
+  {
+    "id": "binary_tree",
+    "title": "Binary Trees",
+    "difficulty": 3,
+    "prerequisites": ["recursion", "linked_list"],
+    "mastery_threshold": 0.85,
+    "category": "trees"
+  },
+  {
+    "id": "bst",
+    "title": "Binary Search Trees",
+    "difficulty": 3,
+    "prerequisites": ["binary_tree", "binary_search"],
+    "mastery_threshold": 0.85,
+    "category": "trees"
+  },
+  {
+    "id": "heap",
+    "title": "Heaps & Priority Queues",
+    "difficulty": 3,
+    "prerequisites": ["binary_tree"],
+    "mastery_threshold": 0.85,
+    "category": "trees"
+  },
+  {
+    "id": "graph_basics",
+    "title": "Graph Fundamentals",
+    "difficulty": 3,
+    "prerequisites": ["hash_maps", "recursion"],
+    "mastery_threshold": 0.85,
+    "category": "graphs"
+  },
+  {
+    "id": "bfs_dfs",
+    "title": "BFS & DFS",
+    "difficulty": 3,
+    "prerequisites": ["graph_basics", "stacks"],
+    "mastery_threshold": 0.9,
+    "category": "graphs"
+  },
+  {
+    "id": "dynamic_programming",
+    "title": "Dynamic Programming",
+    "difficulty": 4,
+    "prerequisites": ["recursion", "prefix_sum"],
+    "mastery_threshold": 0.9,
+    "category": "dp"
+  },
+  {
+    "id": "greedy",
+    "title": "Greedy Algorithms",
+    "difficulty": 4,
+    "prerequisites": ["dynamic_programming", "heap"],
+    "mastery_threshold": 0.9,
+    "category": "advanced"
+  },
+  {
+    "id": "trie",
+    "title": "Tries",
+    "difficulty": 4,
+    "prerequisites": ["hash_maps", "binary_tree"],
+    "mastery_threshold": 0.9,
+    "category": "advanced"
+  },
+  {
+    "id": "union_find",
+    "title": "Union Find",
+    "difficulty": 4,
+    "prerequisites": ["graph_basics"],
+    "mastery_threshold": 0.9,
+    "category": "graphs"
+  },
+  {
+    "id": "advanced_graphs",
+    "title": "Shortest Paths (Dijkstra)",
+    "difficulty": 5,
+    "prerequisites": ["bfs_dfs", "heap", "greedy"],
+    "mastery_threshold": 0.95,
+    "category": "advanced"
+  }
+]

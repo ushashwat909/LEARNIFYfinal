@@ -7,6 +7,10 @@ from typing import Optional
 # Import our custom logic
 from nlp_engine import classify_text, generate_study_outline
 from db_schema import init_db
+from engine import LearnifyCore
+
+# Initialize Core
+core = LearnifyCore()
 
 # 1. Initialize the FastAPI App
 app = FastAPI(
@@ -121,3 +125,69 @@ async def get_dashboard_data():
          raise HTTPException(status_code=500, detail=str(e))
     finally:
          conn.close()
+
+class AdaptiveSubmission(BaseModel):
+    user_id: int
+    topic_id: str
+    passed: bool
+
+class CodeSubmission(BaseModel):
+    user_id: int
+    problem_id: str
+    code: str
+    language: str = "python"
+
+@app.get("/api/adaptive/recommend/{user_id}")
+async def get_adaptive_recommendation(user_id: int):
+    return core.get_next_recommendation(user_id)
+
+@app.post("/api/adaptive/submit")
+async def submit_adaptive_result(submission: AdaptiveSubmission):
+    return core.process_result(submission.user_id, submission.topic_id, submission.passed)
+
+@app.get("/api/adaptive/resource/{topic_id}")
+async def get_resource_for_topic(topic_id: str):
+    """Return the YouTube resource for a specific topic — used when user clicks a node."""
+    resource = core.resources.get(topic_id)
+    if not resource:
+        raise HTTPException(status_code=404, detail=f"No resource found for topic: {topic_id}")
+    return resource
+
+# --- Practice Hub Endpoints ---
+
+@app.get("/api/problems")
+async def list_problems(category: Optional[str] = None, difficulty: Optional[str] = None):
+    return {"problems": core.practice.list_problems(category, difficulty)}
+
+@app.get("/api/problems/{problem_id}")
+async def get_problem(problem_id: str):
+    problem = core.practice.get_problem(problem_id)
+    if not problem:
+        raise HTTPException(status_code=404, detail="Problem not found")
+    return problem
+
+@app.get("/api/stats/{user_id}")
+async def get_user_stats(user_id: int):
+    return core.mastery.get_user_stats(user_id)
+
+@app.post("/api/problems/{problem_id}/run")
+async def run_problem_code(problem_id: str, submission: CodeSubmission):
+    try:
+        result = core.practice.run_code(problem_id, submission.code, submission.language)
+        
+        # If successful, auto-log results to the student model for Bayesian tracking
+        if result.get("status") == "success":
+            results_list = result.get("results", [])
+            if results_list:
+                all_passed = all(r.get("status") == "pass" for r in results_list)
+                if all_passed:
+                    problem = core.practice.get_problem(problem_id)
+                    if problem:
+                        topic_id = problem.get('category', '').replace('-', '_')
+                        if topic_id in core.resources:
+                            core.process_result(submission.user_id, topic_id, True)
+
+        return result
+    except Exception as e:
+        print(f"Runner Error: {e}")
+        return {"status": "error", "stderr": f"System execution fault: {str(e)}"}

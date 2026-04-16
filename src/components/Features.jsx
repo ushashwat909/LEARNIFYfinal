@@ -1,58 +1,81 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
-const FeatureCard = ({ title, problem, solution, icon, copilotText }) => (
-  <div className="organic-card" style={{ padding: '40px 30px', display: 'flex', flexDirection: 'column' }}>
-    <div style={{ width: '56px', height: '56px', borderRadius: '16px', background: 'rgba(224, 122, 95, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.8rem', color: 'var(--color-primary)', marginBottom: '24px' }}>
-      {icon}
-    </div>
-    <h3 style={{ fontSize: '1.4rem', marginBottom: '16px' }}>{title}</h3>
-    <div style={{ flexGrow: 1 }}>
-      <p style={{ fontSize: '0.95rem', marginBottom: '12px' }}><strong>The Problem:</strong> {problem}</p>
-      <p style={{ fontSize: '0.95rem', marginBottom: '24px' }}><strong>The Solution:</strong> {solution}</p>
-    </div>
-    <div style={{ marginTop: 'auto', paddingTop: '16px', borderTop: '1px solid var(--color-border)' }}>
-      <a href="http://localhost:8501" target="_blank" rel="noreferrer" className="btn-copilot" style={{ textDecoration: 'none' }}>✨ {copilotText}</a>
-    </div>
-  </div>
-);
+const features = [
+  {
+    icon: '🧠',
+    color: '#00F0FF',
+    title: 'Knowledge Gap Analyzer',
+    desc: 'Our NLP pipeline analyzes your written answers to identify specific semantic misunderstandings, dynamically generating a targeted micro-learning path.',
+  },
+  {
+    icon: '🌿',
+    color: '#4ade80',
+    title: 'Wellness & Burnout Shield',
+    desc: 'Ethical NLP extracts key stressors from anonymous feedback, creating a burnout-risk dashboard for administrators before it becomes a crisis.',
+  },
+  {
+    icon: '📚',
+    color: '#FB923C',
+    title: 'Smart Syllabus Contextualizer',
+    desc: 'Upload raw lecture transcripts. The system automatically parses text, classifying topics to generate interactive, bite-sized study flashcards.',
+  },
+  {
+    icon: '⚡',
+    color: '#a855f7',
+    title: 'Real-Time BKT Mastery',
+    desc: 'Bayesian Knowledge Tracing updates mastery probability after every interaction — no waiting for a quiz score to know where you actually stand.',
+  },
+  {
+    icon: '🗺️',
+    color: '#00F0FF',
+    title: 'Live Knowledge Graph',
+    desc: 'Powered by a Directed Acyclic Graph. See every prerequisite, visited concept, and frontier node rendered live, just like a GPS for your brain.',
+  },
+  {
+    icon: '🎥',
+    color: '#FF5722',
+    title: 'Curated Video Mining',
+    desc: 'For each graph node, our YouTube scraper ranks tutorials by view count and duration — surfacing the best 7-minute explanation, not 4-hour courses.',
+  },
+];
 
-const Features = () => {
-  return (
-    <section id="features" className="py-20" style={{ background: 'rgba(255, 255, 255, 0.4)' }}>
-      <div className="container">
-        <div className="text-center mb-4" style={{ maxWidth: '700px', margin: '0 auto 60px' }}>
-          <h2 style={{ marginBottom: '16px' }}>Invisible AI. Visible Impact.</h2>
-          <p style={{ fontSize: '1.1rem' }}>
-            We don't believe in generic chatbots. Learnify runs complex Natural Language Processing silently in the background, surfacing insights only when they help you succeed.
-          </p>
+const Features = () => (
+  <section id="features" style={{ background: '#070d1a', padding: '100px 24px' }}>
+    <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+      <div style={{ textAlign: 'center', marginBottom: '70px' }}>
+        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 20px', background: 'rgba(0,240,255,0.08)', borderRadius: '50px', marginBottom: '20px', fontSize: '0.85rem', fontWeight: 700, color: '#00F0FF', letterSpacing: '2px', textTransform: 'uppercase', border: '1px solid rgba(0,240,255,0.2)' }}>
+          Capabilities
         </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          <FeatureCard 
-            icon="🧠"
-            title="Knowledge Gap Analyzer" 
-            problem="Students fail because they don't know exactly what they don't know."
-            solution="Our NLP pipeline analyzes your written answers to identify specific semantic misunderstandings, dynamically generating a targeted micro-learning path."
-            copilotText="Draft personalized study outline"
-          />
-          <FeatureCard 
-            icon="🌿"
-            title="Wellness & Burnout Dashboard" 
-            problem="Schools lack the resources to monitor the mental load and academic burnout of their students."
-            solution="Ethical NLP analyzes anonymous feedback to extract key stressors, creating a macro-level dashboard for administrators to adjust workloads before burnout happens."
-            copilotText="View class sentiment trends"
-          />
-          <FeatureCard 
-            icon="📚"
-            title="Smart Syllabus Contextualizer" 
-            problem="Students waste hours organizing notes and finding relevant resources for dense lectures."
-            solution="Upload raw lecture transcripts. The system automatically parses the text, classifying main topics to generate interactive, bite-sized study flashcards."
-            copilotText="Extract key terms from lecture"
-          />
-        </div>
+        <h2 style={{ color: '#FFF', fontSize: '2.8rem', marginBottom: '20px' }}>Invisible AI. Visible Impact.</h2>
+        <p style={{ color: '#94a3b8', maxWidth: '600px', margin: '0 auto', fontSize: '1.1rem' }}>
+          We don't believe in generic chatbots. Learnify runs complex NLP silently in the background, surfacing insights only when they help you succeed.
+        </p>
       </div>
-    </section>
-  );
-};
+
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '25px' }}>
+        {features.map((f, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: i * 0.08 }}
+            whileHover={{ y: -6 }}
+            className="glass"
+            style={{ padding: '35px', borderRadius: '20px', position: 'relative', overflow: 'hidden' }}
+          >
+            <div style={{ position: 'absolute', top: '-20px', right: '-20px', width: '80px', height: '80px', borderRadius: '50%', background: f.color, opacity: 0.07, filter: 'blur(25px)' }} />
+            <div style={{ width: '52px', height: '52px', borderRadius: '14px', background: `${f.color}18`, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.6rem', marginBottom: '20px', border: `1px solid ${f.color}33` }}>
+              {f.icon}
+            </div>
+            <h3 style={{ color: '#FFF', fontSize: '1.1rem', marginBottom: '12px' }}>{f.title}</h3>
+            <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: 1.7, margin: 0 }}>{f.desc}</p>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
 
 export default Features;

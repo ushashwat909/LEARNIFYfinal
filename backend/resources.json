@@ -1,0 +1,162 @@
+{
+    "array_basics": {
+        "id": "0OK-kbu9Cwo",
+        "title": "Array Data Structure",
+        "url": "https://www.youtube.com/watch?v=0OK-kbu9Cwo",
+        "duration": "7:58",
+        "viewCount": "90K views",
+        "channel": "Telusko"
+    },
+    "two_pointers": {
+        "id": "QzZ7nmouLTI",
+        "title": "Two Pointers in 7 minutes | LeetCode Pattern",
+        "url": "https://www.youtube.com/watch?v=QzZ7nmouLTI",
+        "duration": "7:21",
+        "viewCount": "244K views",
+        "channel": "AlgoMasterIO"
+    },
+    "sliding_window": {
+        "id": "9kdHxplyl5I",
+        "title": "Introduction to Sliding Window & 2 Pointers | Templates & Patterns",
+        "url": "https://www.youtube.com/watch?v=9kdHxplyl5I",
+        "duration": "36:55",
+        "viewCount": "862K views",
+        "channel": "take U forward"
+    },
+    "binary_search": {
+        "id": "9HlbVEVt_Y0",
+        "title": "Binary Search in Data Structure",
+        "url": "https://www.youtube.com/watch?v=9HlbVEVt_Y0",
+        "duration": "10:33",
+        "viewCount": "523K views",
+        "channel": "Gate Smashers"
+    },
+    "prefix_sum": {
+        "id": "yuws7YK0Yng",
+        "title": "Prefix Sum in 4 minutes | LeetCode Pattern",
+        "url": "https://www.youtube.com/watch?v=yuws7YK0Yng",
+        "duration": "4:13",
+        "viewCount": "167K views",
+        "channel": "AlgoMasterIO"
+    },
+    "hash_maps": {
+        "id": "KyUTuwz_b7Q",
+        "title": "Hash Tables and Hash Maps in 4 minutes",
+        "url": "https://www.youtube.com/watch?v=KyUTuwz_b7Q",
+        "duration": "4:18",
+        "viewCount": "1.2M views",
+        "channel": "CS Dojo"
+    },
+    "stacks": {
+        "id": "I37kGX-nZEI",
+        "title": "Stacks and Queues | Data Structures Full Tutorial",
+        "url": "https://www.youtube.com/watch?v=I37kGX-nZEI",
+        "duration": "14:42",
+        "viewCount": "650K views",
+        "channel": "CS Dojo"
+    },
+    "linked_list": {
+        "id": "F8AbOfQwl1c",
+        "title": "Linked Lists | Full Data Structure Course",
+        "url": "https://www.youtube.com/watch?v=F8AbOfQwl1c",
+        "duration": "42:08",
+        "viewCount": "1.5M views",
+        "channel": "freeCodeCamp"
+    },
+    "fast_slow_pointers": {
+        "id": "XIdigk956u0",
+        "title": "Floyd's Cycle Detection Algorithm | Fast & Slow Pointers",
+        "url": "https://www.youtube.com/watch?v=XIdigk956u0",
+        "duration": "9:55",
+        "viewCount": "310K views",
+        "channel": "Back To Back SWE"
+    },
+    "recursion": {
+        "id": "IJDJ0kBx2LM",
+        "title": "Recursion in Programming - Full Course",
+        "url": "https://www.youtube.com/watch?v=IJDJ0kBx2LM",
+        "duration": "2:13:45",
+        "viewCount": "570K views",
+        "channel": "freeCodeCamp"
+    },
+    "binary_tree": {
+        "id": "fAAZixBzIAI",
+        "title": "Binary Trees - Full Introduction",
+        "url": "https://www.youtube.com/watch?v=fAAZixBzIAI",
+        "duration": "13:52",
+        "viewCount": "2.1M views",
+        "channel": "William Fiset"
+    },
+    "bst": {
+        "id": "pYT9F8_LFTM",
+        "title": "Binary Search Tree | BST Full Course",
+        "url": "https://www.youtube.com/watch?v=pYT9F8_LFTM",
+        "duration": "28:13",
+        "viewCount": "890K views",
+        "channel": "CS Dojo"
+    },
+    "heap": {
+        "id": "t0Cq6tVNRBA",
+        "title": "Heaps and Priority Queues",
+        "url": "https://www.youtube.com/watch?v=t0Cq6tVNRBA",
+        "duration": "7:42",
+        "viewCount": "560K views",
+        "channel": "CS Dojo"
+    },
+    "graph_basics": {
+        "id": "tWVWeAqZ0WU",
+        "title": "Graphs | Data Structures & Algorithms",
+        "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
+        "duration": "11:16",
+        "viewCount": "720K views",
+        "channel": "CS Dojo"
+    },
+    "bfs_dfs": {
+        "id": "pcKY4hjDrxk",
+        "title": "BFS and DFS in Graphs | Graph Traversal Algorithms",
+        "url": "https://www.youtube.com/watch?v=pcKY4hjDrxk",
+        "duration": "18:32",
+        "viewCount": "780K views",
+        "channel": "William Fiset"
+    },
+    "dynamic_programming": {
+        "id": "oBt53YbR9Kk",
+        "title": "Dynamic Programming - Learn to Solve Algorithmic Problems",
+        "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+        "duration": "5:09:15",
+        "viewCount": "1.8M views",
+        "channel": "freeCodeCamp"
+    },
+    "greedy": {
+        "id": "HzeK7g8cD0Y",
+        "title": "Greedy Algorithms Tutorial - Solve Coding Challenges",
+        "url": "https://www.youtube.com/watch?v=HzeK7g8cD0Y",
+        "duration": "1:22:04",
+        "viewCount": "340K views",
+        "channel": "freeCodeCamp"
+    },
+    "trie": {
+        "id": "oobqoCJlHA0",
+        "title": "Trie Data Structure | Explained with Code",
+        "url": "https://www.youtube.com/watch?v=oobqoCJlHA0",
+        "duration": "11:05",
+        "viewCount": "425K views",
+        "channel": "NeetCode"
+    },
+    "union_find": {
+        "id": "ibjEGG7ylHk",
+        "title": "Union Find / Disjoint Set - Explained",
+        "url": "https://www.youtube.com/watch?v=ibjEGG7ylHk",
+        "duration": "12:33",
+        "viewCount": "530K views",
+        "channel": "William Fiset"
+    },
+    "advanced_graphs": {
+        "id": "pSqmAO-m7Lk",
+        "title": "Dijkstra's Shortest Path Algorithm | Graph Theory",
+        "url": "https://www.youtube.com/watch?v=pSqmAO-m7Lk",
+        "duration": "15:22",
+        "viewCount": "1.1M views",
+        "channel": "William Fiset"
+    }
+}

@@ -2,14 +2,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  /* Palette A: Empathetic & Warm */
-  --color-bg: #F4F1DE;          /* Warm Off-White / Sand */
-  --color-text: #264653;        /* Deep Charcoal */
-  --color-primary: #E07A5F;     /* Deep Terracotta */
-  --color-secondary: #81B29A;   /* Muted Sage Green */
-  --color-card-bg: #FFFFFF;     /* Pure white for cards to pop against sand */
-  --color-border: rgba(38, 70, 83, 0.1); /* Subtle charcoal border */
+  /* Palette: Defying Gravity Dark Mode */
+  --color-bg: #0B1120;          /* Deep space dark */
+  --color-text: #E2E8F0;        /* Light grayish blue */
+  --color-primary: #00F0FF;     /* Neon Cyan */
+  --color-secondary: #FF5722;   /* Rocket Orange */
+  --color-card-bg: rgba(30, 41, 59, 0.7); /* Translucent dark blue for Glassmorphism */
+  --color-border: rgba(0, 240, 255, 0.2); /* Subtle cyan border */
 }
+
+/* Glassmorphism utility */
+.glass {
+  background: var(--color-card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border);
+}
+
 
 * {
   box-sizing: border-box;

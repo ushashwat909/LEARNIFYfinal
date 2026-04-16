@@ -1,61 +1,95 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
-const HeroSection = () => {
+const HeroSection = ({ onStart }) => {
   return (
-    <section style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', paddingTop: '100px', position: 'relative' }}>
-      <div className="container grid md:grid-cols-2 items-center gap-8">
+    <section style={{ 
+      minHeight: '80vh', 
+      display: 'flex', 
+      alignItems: 'center', 
+      padding: '80px 20px', 
+      background: 'radial-gradient(ellipse at top right, #1e293b 0%, #0B1120 100%)',
+      overflow: 'hidden'
+    }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '60px', alignItems: 'center' }}>
         
         {/* Text Content */}
-        <div style={{ zIndex: 10 }}>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '6px 16px', background: 'rgba(129, 178, 154, 0.2)', borderRadius: '50px', marginBottom: '24px', fontSize: '0.9rem', fontWeight: 600, color: 'var(--color-secondary)' }}>
-            <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'var(--color-secondary)' }}></span>
-            Empowering Human Intelligence
+        <motion.div 
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', background: 'rgba(0, 240, 255, 0.1)', borderRadius: '50px', marginBottom: '24px', fontSize: '0.9rem', fontWeight: 600, color: '#00F0FF', border: '1px solid rgba(0, 240, 255, 0.2)' }}>
+            <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#00F0FF', boxShadow: '0 0 10px #00F0FF' }}></span>
+            AI-Powered Personalization
           </div>
-          <h1 className="mb-4">
-            Education that actually <br/>
-            <span style={{ color: 'var(--color-primary)' }}>understands you.</span>
-          </h1>
-          <p className="mb-4" style={{ fontSize: '1.25rem' }}>
-            Learnify acts as your invisible co-pilot. We gently analyze your learning patterns in the background to deliver exactly what you need, exactly when you need it—without the robotic interface.
-          </p>
-          <div className="flex items-center mt-8" style={{ gap: '1rem' }}>
-            <a href="http://localhost:8501" target="_blank" rel="noreferrer" className="btn btn-primary" style={{ textDecoration: 'none' }}>Find My Learning Path</a>
-            <a href="#features" className="btn btn-secondary" style={{ textDecoration: 'none' }}>See How It Works</a>
-          </div>
-        </div>
-
-        {/* UI Mockup / XAI Concept */}
-        <div style={{ position: 'relative', zIndex: 10, display: 'flex', justifyContent: 'center', alignItems: 'center', height: '400px' }}>
           
-          {/* Mockup Base */}
-          <div className="organic-card" style={{ width: '100%', maxWidth: '450px', padding: '30px', position: 'relative' }}>
-            <h3 style={{ fontSize: '1.2rem', marginBottom: '8px' }}>Module 4: Advanced Data Structures</h3>
-            <p style={{ fontSize: '0.9rem', opacity: 0.7, marginBottom: '24px' }}>Let's review Binary Trees before we proceed.</p>
-            
-            <div style={{ background: '#f8f9fa', borderRadius: '12px', padding: '16px', marginBottom: '16px', border: '1px solid #e9ecef' }}>
-              <p style={{ fontSize: '0.95rem', fontWeight: 500, color: '#495057' }}>"What is the time complexity of searching a completely unbalanced Binary Search Tree?"</p>
-            </div>
-            
-            <button className="btn-copilot" style={{ marginTop: '8px' }}>✨ Generate a hint</button>
+          <h1 style={{ fontSize: '3.5rem', lineHeight: 1.1, marginBottom: '24px', color: '#FFF', fontWeight: 800 }}>
+            Education that <span style={{ color: '#00F0FF' }}>Defies Gravity.</span>
+          </h1>
+          
+          <p style={{ fontSize: '1.2rem', marginBottom: '40px', color: '#cbd5e1', lineHeight: 1.6, maxWidth: '500px' }}>
+            EduGrav analyzes your learning gaps in real-time. We build a personalized path that evolves with you, ensuring you master every concept.
+          </p>
+          
+          <div style={{ display: 'flex', gap: '20px' }}>
+            <button 
+              onClick={onStart}
+              style={{ 
+                background: '#00F0FF', color: '#0B1120', padding: '18px 36px', borderRadius: '12px', 
+                border: 'none', fontWeight: 800, fontSize: '1.1rem', cursor: 'pointer',
+                boxShadow: '0 0 25px rgba(0, 240, 255, 0.4)'
+              }}
+            >
+              Start My Learning Path
+            </button>
+            <button style={{ background: 'transparent', color: '#FFF', padding: '18px 36px', borderRadius: '12px', border: '1px solid #1e293b', fontWeight: 600, cursor: 'pointer' }}>
+              How it Works
+            </button>
+          </div>
+        </motion.div>
 
-            {/* Explainable AI Tooltip Overlay */}
-            <div className="tooltip-card" style={{ position: 'absolute', top: '-20px', right: '-40px', width: '280px', animation: 'float 5s ease-in-out infinite' }}>
-              <div style={{ fontSize: '1.5rem' }}>💡</div>
-              <div>
-                <strong style={{ display: 'block', fontSize: '0.95rem', marginBottom: '4px' }}>Why are we reviewing this?</strong>
-                <p style={{ margin: 0, opacity: 0.8, lineHeight: 1.4 }}>Recommended because you missed 2 questions on Tree Traversals last week.</p>
+        {/* Visual Mockup */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          style={{ position: 'relative' }}
+        >
+          <div className="glass" style={{ padding: '30px', borderRadius: '24px', boxShadow: '0 20px 50px rgba(0,0,0,0.5)', border: '1px solid #1e293b' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: '#FFF' }}>Student Progress: Alex</h3>
+            <div style={{ height: '8px', background: '#0B1120', borderRadius: '4px', marginBottom: '20px', overflow: 'hidden' }}>
+              <motion.div 
+                initial={{ width: 0 }}
+                animate={{ width: '65%' }}
+                transition={{ duration: 1.5, delay: 0.5 }}
+                style={{ height: '100%', background: '#00F0FF', boxShadow: '0 0 10px #00F0FF' }} 
+              />
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
+              <div style={{ background: 'rgba(255,255,255,0.05)', padding: '15px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)' }}>
+                <div style={{ fontSize: '0.75rem', color: '#94a3b8' }}>Concepts Mastered</div>
+                <div style={{ fontSize: '1.25rem', fontWeight: 700, color: '#FFF' }}>12 / 20</div>
+              </div>
+              <div style={{ background: 'rgba(255, 87, 34, 0.1)', padding: '15px', borderRadius: '12px', border: '1px solid rgba(255, 87, 34, 0.2)' }}>
+                <div style={{ fontSize: '0.75rem', color: '#FF5722' }}>Current Focus</div>
+                <div style={{ fontSize: '1rem', fontWeight: 700, color: '#FFF' }}>Two Pointers</div>
               </div>
             </div>
-            
-            <div className="tooltip-card" style={{ position: 'absolute', bottom: '-20px', left: '-20px', width: '240px', borderColor: 'var(--color-primary)', animation: 'float-delay 6s ease-in-out infinite' }}>
-               <div style={{ fontSize: '1.2rem' }}>🎯</div>
-               <div>
-                 <p style={{ margin: 0, opacity: 0.9, lineHeight: 1.4 }}><strong>Goal aligned:</strong> Midterm prep (85% readiness)</p>
-               </div>
+            <div style={{ marginTop: '20px', padding: '15px', background: '#0B1120', borderRadius: '12px', color: '#FFF', fontSize: '0.9rem', border: '1px solid rgba(0, 240, 255, 0.3)' }}>
+              "Looking good! You've improved 15% in Data Structures this week."
             </div>
-
           </div>
-        </div>
+          
+          {/* Floating badge */}
+          <div style={{ 
+            position: 'absolute', top: '-20px', right: '-20px', background: '#FF5722', 
+            color: '#FFF', padding: '12px 20px', borderRadius: '50px', fontWeight: 700,
+            boxShadow: '0 10px 20px rgba(255, 87, 34, 0.4)', transform: 'rotate(5deg)'
+          }}>
+            85% Mastery
+          </div>
+        </motion.div>
 
       </div>
     </section>
