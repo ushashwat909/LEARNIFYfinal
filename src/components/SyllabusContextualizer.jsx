@@ -123,7 +123,7 @@ const SyllabusContextualizer = ({ theme }) => {
               padding: '20px',
               borderRadius: '16px',
               border: 'none',
-              background: 'var(--gradient-primary)',
+              background: 'var(--color-primary)',
               color: '#fff',
               fontSize: '1.2rem',
               fontWeight: 800,

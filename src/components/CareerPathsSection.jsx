@@ -1,15 +1,18 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { WaveDivider } from './HeroSection';
 import { Code2, Database, Globe, Shield, Cpu, LineChart } from 'lucide-react';
 
 const CareerPathsSection = () => {
+  const navigate = useNavigate();
+
   const paths = [
-    { icon: <Code2 size={24} />, title: 'Data Structures & Algorithms', duration: '12 Weeks', desc: 'Master arrays, trees, graphs, DP, and competitive programming patterns with hands-on practice.', color: '#2D9E73' },
-    { icon: <Database size={24} />, title: 'System Design', duration: '10 Weeks', desc: 'Learn to design scalable systems — load balancers, caching, microservices, and database sharding.', color: '#3B82F6' },
-    { icon: <Globe size={24} />, title: 'Full-Stack Development', duration: '14 Weeks', desc: 'Build end-to-end applications with React, Node.js, databases, and deployment pipelines.', color: '#8B5CF6' },
-    { icon: <Shield size={24} />, title: 'Cybersecurity Fundamentals', duration: '8 Weeks', desc: 'Understand network security, ethical hacking, cryptography, and secure coding practices.', color: '#EF4444' },
-    { icon: <Cpu size={24} />, title: 'Machine Learning Basics', duration: '10 Weeks', desc: 'Dive into supervised/unsupervised learning, neural networks, and model optimization.', color: '#F59E0B' },
-    { icon: <LineChart size={24} />, title: 'Competitive Programming', duration: '8 Weeks', desc: 'Sharpen problem-solving with curated contest problems, editorial walkthroughs, and timing drills.', color: '#06B6D4' },
+    { id: 'data-structures-algorithms', icon: <Code2 size={24} />, title: 'Data Structures & Algorithms', duration: '12 Weeks', desc: 'Master arrays, trees, graphs, DP, and competitive programming patterns with hands-on practice.', color: '#2D9E73' },
+    { id: 'system-design', icon: <Database size={24} />, title: 'System Design', duration: '10 Weeks', desc: 'Learn to design scalable systems — load balancers, caching, microservices, and database sharding.', color: '#3B82F6' },
+    { id: 'full-stack-development', icon: <Globe size={24} />, title: 'Full-Stack Development', duration: '14 Weeks', desc: 'Build end-to-end applications with React, Node.js, databases, and deployment pipelines.', color: '#8B5CF6' },
+    { id: 'cybersecurity-fundamentals', icon: <Shield size={24} />, title: 'Cybersecurity Fundamentals', duration: '8 Weeks', desc: 'Understand network security, ethical hacking, cryptography, and secure coding practices.', color: '#EF4444' },
+    { id: 'machine-learning-basics', icon: <Cpu size={24} />, title: 'Machine Learning Basics', duration: '10 Weeks', desc: 'Dive into supervised/unsupervised learning, neural networks, and model optimization.', color: '#F59E0B' },
+    { id: 'competitive-programming', icon: <LineChart size={24} />, title: 'Competitive Programming', duration: '8 Weeks', desc: 'Sharpen problem-solving with curated contest problems, editorial walkthroughs, and timing drills.', color: '#06B6D4' },
   ];
 
   return (
@@ -72,7 +75,9 @@ const CareerPathsSection = () => {
 
                 {/* Bottom action */}
                 <div style={{ marginTop: '20px' }}>
-                  <button className="btn btn-outline btn-sm" style={{
+                  <button 
+                    onClick={() => navigate(`/path/${path.id}`)}
+                    className="btn btn-outline btn-sm" style={{
                     width: '100%',
                     borderRadius: 'var(--radius-full)',
                     borderColor: path.color,

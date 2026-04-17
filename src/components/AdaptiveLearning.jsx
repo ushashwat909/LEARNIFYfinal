@@ -255,13 +255,13 @@ const AdaptiveLearning = ({ userData, onChallenge }) => {
   }
 
   return (
-    <div style={{ maxWidth: '1300px', margin: '0 auto', padding: '40px 20px', color: '#E2E8F0' }}>
+    <div style={{ maxWidth: '1300px', margin: '0 auto', padding: '40px 20px', color: 'var(--color-text)' }}>
       <header style={{ marginBottom: '40px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '10px' }}>
             <TrendingUp size={24} color="#00F0FF" />
-            <h2 style={{ margin: 0, fontSize: '1.8rem', color: '#FFF' }}>Mission Control: Adaptive Path</h2>
+            <h2 style={{ margin: 0, fontSize: '1.8rem', color: 'var(--color-text)' }}>Mission Control: Adaptive Path</h2>
         </div>
-        <p style={{ color: '#94a3b8' }}>Learnify Bayesian AI is charting your optimal trajectory through Data Structures.</p>
+        <p style={{ color: 'var(--color-text-muted)' }}>Learnify Bayesian AI is charting your optimal trajectory through Data Structures.</p>
       </header>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1.5fr) minmax(0, 1fr)', gap: '30px' }}>
@@ -281,7 +281,7 @@ const AdaptiveLearning = ({ userData, onChallenge }) => {
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '25px' }}>
                     <div>
                         <span style={{ fontSize: '0.85rem', fontWeight: 700, color: '#FF5722', textTransform: 'uppercase', letterSpacing: '2px' }}>Current Target</span>
-                        <h1 style={{ margin: '10px 0', fontSize: '2.5rem', color: '#FFF' }}>{recommendation.resource.title}</h1>
+                        <h1 style={{ margin: '10px 0', fontSize: '2.5rem', color: 'var(--color-text)' }}>{recommendation.resource.title}</h1>
                         <p style={{ color: '#00F0FF' }}>Broadcast: {recommendation.resource.channel} • {recommendation.resource.duration}</p>
                     </div>
                     <div className="glass" style={{ padding: '15px 25px', borderRadius: '16px', textAlign: 'center', borderColor: '#FF5722' }}>
@@ -300,14 +300,14 @@ const AdaptiveLearning = ({ userData, onChallenge }) => {
                 </div>
 
                 {/* Developer Scratchpad (IDE Mockup) */}
-                <div style={{ marginBottom: '30px', background: '#0B1120', borderRadius: '16px', border: '1px solid #1e293b', overflow: 'hidden' }}>
-                    <div style={{ background: '#1e293b', padding: '10px 20px', fontSize: '0.8.5rem', display: 'flex', gap: '15px', color: '#94a3b8' }}>
-                        <span style={{ color: '#00F0FF', borderBottom: '2px solid #00F0FF', paddingBottom: '5px' }}>scratchpad.py</span>
-                        <span>notes.txt</span>
+                <div style={{ marginBottom: '30px', background: 'var(--color-card-bg)', borderRadius: '16px', border: '1px solid var(--color-border)', overflow: 'hidden' }}>
+                    <div style={{ background: 'var(--color-bg-alt)', padding: '10px 20px', fontSize: '0.85rem', display: 'flex', gap: '15px', color: 'var(--color-text-muted)' }}>
+                        <button onClick={() => alert('Scratchpad activated for coding execution.')} style={{ background: 'transparent', border: 'none', color: 'var(--color-primary)', borderBottom: '2px solid var(--color-primary)', paddingBottom: '5px', cursor: 'pointer', fontWeight: 600 }}>scratchpad.py</button>
+                        <button onClick={() => alert('Notes opened: You can write theoretical notes here.')} style={{ background: 'transparent', border: 'none', color: 'var(--color-text-muted)', cursor: 'pointer' }}>notes.txt</button>
                     </div>
                     <textarea 
                         defaultValue={`# Write your algorithmic notes or code here\n# Topic: ${recommendation.resource.title}\n\ndef solve():\n    pass\n`}
-                        style={{ width: '100%', height: '150px', background: 'transparent', border: 'none', color: '#E2E8F0', padding: '20px', fontFamily: 'monospace', fontSize: '1rem', resize: 'vertical', outline: 'none' }}
+                        style={{ width: '100%', height: '150px', background: 'transparent', border: 'none', color: 'var(--color-text)', padding: '20px', fontFamily: 'monospace', fontSize: '1rem', resize: 'vertical', outline: 'none' }}
                         spellCheck="false"
                     />
                 </div>
@@ -328,7 +328,7 @@ const AdaptiveLearning = ({ userData, onChallenge }) => {
                     >
                         <Zap size={20} /> Deep Dive Challenge
                     </button>
-                    <button style={{ background: 'transparent', border: '1px solid #475569', padding: '16px 32px', borderRadius: '12px', color: '#cbd5e1', cursor: 'pointer' }}>
+                    <button style={{ background: 'transparent', border: '1px solid var(--color-border)', padding: '16px 32px', borderRadius: '12px', color: 'var(--color-text-muted)', cursor: 'pointer' }}>
                         Abort
                     </button>
                 </div>
@@ -342,8 +342,8 @@ const AdaptiveLearning = ({ userData, onChallenge }) => {
                 style={{ padding: '50px', borderRadius: '24px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', border: '1px solid #FF5722' }}
               >
                 <AlertCircle size={56} color="#FF5722" style={{ marginBottom: '20px' }} />
-                <h2 style={{ fontSize: '2.5rem', marginBottom: '10px', color: '#FFF' }}>Skill Verification: {recommendation.topic_id}</h2>
-                <p style={{ color: '#cbd5e1', maxWidth: '500px', marginBottom: '40px', fontSize: '1.1rem' }}>
+                <h2 style={{ fontSize: '2.5rem', marginBottom: '10px', color: 'var(--color-text)' }}>Skill Verification: {recommendation.topic_id}</h2>
+                <p style={{ color: 'var(--color-text-muted)', maxWidth: '500px', marginBottom: '40px', fontSize: '1.1rem' }}>
                   Based on the broadcast, determine the correct approach. If you succeed, your Bayseian mastery probability will increase.
                 </p>
                 
@@ -351,14 +351,14 @@ const AdaptiveLearning = ({ userData, onChallenge }) => {
                     <button 
                          onClick={() => submitResult(true)}
                          className="glass"
-                         style={{ background: 'rgba(42, 157, 143, 0.2)', color: '#FFF', padding: '20px', borderRadius: '12px', border: '1px solid #2A9D8F', fontWeight: 600, cursor: 'pointer', transition: 'all 0.2s', textAlign: 'left' }}
+                         style={{ background: 'rgba(42, 157, 143, 0.2)', color: 'var(--color-text)', padding: '20px', borderRadius: '12px', border: '1px solid #2A9D8F', fontWeight: 600, cursor: 'pointer', transition: 'all 0.2s', textAlign: 'left' }}
                     >
                         ✅ A: I fully comprehend the optimal time/space complexity (Pass)
                     </button>
                     <button 
                          onClick={() => submitResult(false)}
                          className="glass"
-                         style={{ background: 'rgba(231, 111, 81, 0.2)', color: '#FFF', padding: '20px', borderRadius: '12px', border: '1px solid #E76F51', fontWeight: 600, cursor: 'pointer', transition: 'all 0.2s', textAlign: 'left' }}
+                         style={{ background: 'rgba(231, 111, 81, 0.2)', color: 'var(--color-text)', padding: '20px', borderRadius: '12px', border: '1px solid #E76F51', fontWeight: 600, cursor: 'pointer', transition: 'all 0.2s', textAlign: 'left' }}
                     >
                         ⚠️ B: I need to review prerequisite concepts (Fail)
                     </button>
@@ -372,10 +372,10 @@ const AdaptiveLearning = ({ userData, onChallenge }) => {
         <aside style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
             <div className="glass" style={{ borderRadius: '20px', padding: '25px', display: 'flex', flexDirection: 'column' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px' }}>
-                  <h3 style={{ margin: 0, fontSize: '1.1rem', color: '#FFF', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <h3 style={{ margin: 0, fontSize: '1.1rem', color: 'var(--color-text)', display: 'flex', alignItems: 'center', gap: '8px' }}>
                       <Map size={18} color="#00F0FF" /> Knowledge Graph
                   </h3>
-                  <span style={{ fontSize: '0.75rem', color: '#64748b' }}>20 nodes · 29 edges</span>
+                  <span style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)' }}>20 nodes · 29 edges</span>
                 </div>
                 {/* Color Legend */}
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '15px' }}>
@@ -389,12 +389,12 @@ const AdaptiveLearning = ({ userData, onChallenge }) => {
                     { label: 'DP', color: '#818cf8' },
                     { label: 'Advanced', color: '#f472b6' },
                   ].map(({ label, color }) => (
-                    <span key={label} style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', fontSize: '0.7rem', color: '#94a3b8' }}>
+                    <span key={label} style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', fontSize: '0.7rem', color: 'var(--color-text-muted)' }}>
                       <span style={{ width: '8px', height: '8px', borderRadius: '2px', background: color, display: 'inline-block' }} />{label}
                     </span>
                   ))}
                 </div>
-                <div style={{ height: '550px', background: '#060c18', borderRadius: '12px', overflow: 'hidden', border: '1px solid #1e293b', position: 'relative' }}>
+                <div style={{ height: '550px', background: 'var(--color-bg-alt)', borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--color-border)', position: 'relative' }}>
                     {/* Node click toast */}
                     {nodeToast && (
                       <div style={{ position: 'absolute', top: '10px', left: '50%', transform: 'translateX(-50%)', zIndex: 10, background: '#00F0FF', color: '#0B1120', padding: '6px 16px', borderRadius: '50px', fontSize: '0.8rem', fontWeight: 700, whiteSpace: 'nowrap', boxShadow: '0 0 15px rgba(0,240,255,0.5)' }}>
@@ -414,8 +414,8 @@ const AdaptiveLearning = ({ userData, onChallenge }) => {
                       nodesDraggable={false}
                       elementsSelectable={true}
                     >
-                      <Background color="#0f172a" gap={20} size={1} />
-                      <Controls showInteractive={false} style={{ background: '#1e293b', border: '1px solid #334155' }} />
+                      <Background color="var(--color-text-muted)" gap={20} size={1} />
+                      <Controls showInteractive={false} style={{ background: 'var(--color-card-bg)', border: '1px solid var(--color-border)' }} />
                     </ReactFlow>
                 </div>
             </div>
@@ -423,8 +423,8 @@ const AdaptiveLearning = ({ userData, onChallenge }) => {
             <div className="glass" style={{ borderRadius: '20px', padding: '20px', display: 'flex', gap: '15px', alignItems: 'center', borderLeft: '4px solid #00F0FF' }}>
                 <div style={{ fontSize: '2rem' }}>🚀</div>
                 <div>
-                  <h4 style={{ color: '#FFF', margin: '0 0 4px 0', fontSize: '1rem' }}>AI Flight Computer</h4>
-                  <p style={{ color: '#94a3b8', fontSize: '0.8rem', margin: 0 }}>pyBKT active · 20 skills tracked · Current node glows cyan</p>
+                  <h4 style={{ color: 'var(--color-text)', margin: '0 0 4px 0', fontSize: '1rem' }}>AI Flight Computer</h4>
+                  <p style={{ color: 'var(--color-text-muted)', fontSize: '0.8rem', margin: 0 }}>pyBKT active · 20 skills tracked · Current node glows cyan</p>
                 </div>
             </div>
         </aside>

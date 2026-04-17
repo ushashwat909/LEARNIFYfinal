@@ -210,4 +210,4 @@ def _knowledge_base_response(user_message):
     if best_entry and best_score > 0.15:
         return random.choice(best_entry["responses"])
 
-    return "I can help with CS topics! Try asking about 'Dynamic Programming' or 'Sorting Algorithms'."
+    return f"That's a great question! While we're in prototype mode without a full API key, I recommend focusing exclusively on CS topics like 'Dynamic Programming', 'Arrays', or 'Recursion'. For '{user_message}', I'll log that for when my full AI brain is hooked up!"

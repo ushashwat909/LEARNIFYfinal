@@ -20,35 +20,6 @@ const StatsSection = () => {
 
   return (
     <section style={{ background: 'var(--color-bg)', padding: '80px 0 64px' }}>
-      {/* Partners Strip */}
-      <div style={{
-        borderTop: '1px solid var(--color-border)',
-        borderBottom: '1px solid var(--color-border)',
-        background: 'var(--color-bg-alt)',
-        padding: '24px 0',
-        marginBottom: '72px',
-        overflow: 'hidden',
-      }}>
-        <div className="container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '48px', flexWrap: 'wrap' }}>
-          <span style={{ fontSize: '0.78rem', fontWeight: 700, color: 'var(--color-text-muted)', textTransform: 'uppercase', letterSpacing: '0.1em', whiteSpace: 'nowrap' }}>
-            Trusted by learners at
-          </span>
-          {partners.map((p, i) => (
-            <div key={i} style={{
-              display: 'flex', alignItems: 'center', gap: '8px',
-              opacity: 0.55, transition: 'opacity 0.2s',
-              cursor: 'default', fontWeight: 700, fontSize: '0.95rem',
-              color: 'var(--color-text)',
-            }}
-              onMouseEnter={e => e.currentTarget.style.opacity = 1}
-              onMouseLeave={e => e.currentTarget.style.opacity = 0.55}
-            >
-              <span style={{ fontSize: '1.2rem' }}>{p.emoji}</span>
-              {p.name}
-            </div>
-          ))}
-        </div>
-      </div>
 
       {/* Wave Divider */}
       <WaveDivider />

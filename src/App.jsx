@@ -17,6 +17,7 @@ import CurriculumPage from './pages/CurriculumPage';
 import BrainGpsPage from './pages/BrainGpsPage';
 import StatsPage from './pages/StatsPage';
 import PlaceholderPage from './pages/PlaceholderPage';
+import PathDetailsPage from './pages/PathDetailsPage';
 
 export default function App() {
   return (
@@ -37,6 +38,7 @@ export default function App() {
         <Route path="curriculum" element={<CurriculumPage />} />
         <Route path="brain-gps" element={<BrainGpsPage />} />
         <Route path="stats" element={<StatsPage />} />
+        <Route path="path/:pathId" element={<PathDetailsPage />} />
 
         <Route path="about" element={<PlaceholderPage slug="about" />} />
         <Route path="careers" element={<PlaceholderPage slug="careers" />} />

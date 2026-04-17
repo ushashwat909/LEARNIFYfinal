@@ -139,7 +139,7 @@ const GapAnalyzer = ({ theme }) => {
               width: '100%',
               padding: '16px',
               borderRadius: '12px',
-              background: 'var(--gradient-primary)',
+              background: 'var(--color-primary)',
               color: '#fff',
               fontSize: '1.1rem',
               fontWeight: 700,

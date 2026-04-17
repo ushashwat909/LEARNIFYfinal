@@ -49,23 +49,6 @@ const Navbar = ({ theme, onToggleTheme, user, onLogout }) => {
 
   return (
     <>
-      <div
-        style={{
-          background: 'var(--color-announcement)',
-          color: '#fff',
-          textAlign: 'center',
-          padding: '10px 24px',
-          fontSize: '0.82rem',
-          fontWeight: 500,
-          letterSpacing: '0.02em',
-        }}
-      >
-        🚀 Learn AI the Right Way &mdash;{' '}
-        <Link to="/login" style={{ textDecoration: 'underline', fontWeight: 700, color: '#fff' }}>
-          Join Us Today!
-        </Link>
-      </div>
-
       <nav
         style={{
           position: 'sticky',
