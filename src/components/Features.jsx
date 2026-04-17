@@ -41,14 +41,14 @@ const features = [
 ];
 
 const Features = () => (
-  <section id="features" style={{ background: '#070d1a', padding: '100px 24px' }}>
+  <section id="features" style={{ background: 'var(--color-section-bg)', padding: '100px 24px' }}>
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <div style={{ textAlign: 'center', marginBottom: '70px' }}>
-        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 20px', background: 'rgba(0,240,255,0.08)', borderRadius: '50px', marginBottom: '20px', fontSize: '0.85rem', fontWeight: 700, color: '#00F0FF', letterSpacing: '2px', textTransform: 'uppercase', border: '1px solid rgba(0,240,255,0.2)' }}>
+        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 20px', background: 'rgba(0,240,255,0.08)', borderRadius: '50px', marginBottom: '20px', fontSize: '0.85rem', fontWeight: 700, color: 'var(--color-primary)', letterSpacing: '2px', textTransform: 'uppercase', border: '1px solid rgba(0,240,255,0.2)' }}>
           Capabilities
         </div>
-        <h2 style={{ color: '#FFF', fontSize: '2.8rem', marginBottom: '20px' }}>Invisible AI. Visible Impact.</h2>
-        <p style={{ color: '#94a3b8', maxWidth: '600px', margin: '0 auto', fontSize: '1.1rem' }}>
+        <h2 style={{ color: 'var(--color-text)', fontSize: '2.8rem', marginBottom: '20px' }}>Invisible AI. Visible Impact.</h2>
+        <p style={{ color: 'var(--color-text-muted)', maxWidth: '600px', margin: '0 auto', fontSize: '1.1rem' }}>
           We don't believe in generic chatbots. Learnify runs complex NLP silently in the background, surfacing insights only when they help you succeed.
         </p>
       </div>
@@ -62,15 +62,15 @@ const Features = () => (
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: i * 0.08 }}
             whileHover={{ y: -6 }}
-            className="glass"
-            style={{ padding: '35px', borderRadius: '20px', position: 'relative', overflow: 'hidden' }}
+            className="organic-card"
+            style={{ padding: '35px', borderRadius: '20px', position: 'relative', overflow: 'hidden', background: 'var(--color-card-bg)', border: '1px solid var(--color-border)' }}
           >
             <div style={{ position: 'absolute', top: '-20px', right: '-20px', width: '80px', height: '80px', borderRadius: '50%', background: f.color, opacity: 0.07, filter: 'blur(25px)' }} />
             <div style={{ width: '52px', height: '52px', borderRadius: '14px', background: `${f.color}18`, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.6rem', marginBottom: '20px', border: `1px solid ${f.color}33` }}>
               {f.icon}
             </div>
-            <h3 style={{ color: '#FFF', fontSize: '1.1rem', marginBottom: '12px' }}>{f.title}</h3>
-            <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: 1.7, margin: 0 }}>{f.desc}</p>
+            <h3 style={{ color: 'var(--color-text)', fontSize: '1.1rem', marginBottom: '12px' }}>{f.title}</h3>
+            <p style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', lineHeight: 1.7, margin: 0 }}>{f.desc}</p>
           </motion.div>
         ))}
       </div>

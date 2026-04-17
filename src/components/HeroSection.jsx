@@ -8,7 +8,7 @@ const HeroSection = ({ onStart }) => {
       display: 'flex', 
       alignItems: 'center', 
       padding: '80px 20px', 
-      background: 'radial-gradient(ellipse at top right, #1e293b 0%, #0B1120 100%)',
+      background: 'var(--color-hero-bg)',
       overflow: 'hidden'
     }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '60px', alignItems: 'center' }}>
@@ -24,12 +24,12 @@ const HeroSection = ({ onStart }) => {
             AI-Powered Personalization
           </div>
           
-          <h1 style={{ fontSize: '3.5rem', lineHeight: 1.1, marginBottom: '24px', color: '#FFF', fontWeight: 800 }}>
-            Education that <span style={{ color: '#00F0FF' }}>Defies Gravity.</span>
+          <h1 style={{ fontSize: '3.5rem', lineHeight: 1.1, marginBottom: '24px', color: 'var(--color-text)', fontWeight: 800 }}>
+            Education that <span style={{ color: 'var(--color-primary)' }}>Defies Gravity.</span>
           </h1>
           
-          <p style={{ fontSize: '1.2rem', marginBottom: '40px', color: '#cbd5e1', lineHeight: 1.6, maxWidth: '500px' }}>
-            EduGrav analyzes your learning gaps in real-time. We build a personalized path that evolves with you, ensuring you master every concept.
+          <p style={{ fontSize: '1.2rem', marginBottom: '40px', color: 'var(--color-text-muted)', lineHeight: 1.6, maxWidth: '500px' }}>
+            Learnify analyzes your learning gaps in real-time. We build a personalized path that evolves with you, ensuring you master every concept.
           </p>
           
           <div style={{ display: 'flex', gap: '20px' }}>
@@ -43,7 +43,10 @@ const HeroSection = ({ onStart }) => {
             >
               Start My Learning Path
             </button>
-            <button style={{ background: 'transparent', color: '#FFF', padding: '18px 36px', borderRadius: '12px', border: '1px solid #1e293b', fontWeight: 600, cursor: 'pointer' }}>
+            <button 
+              onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
+              style={{ background: 'transparent', color: '#FFF', padding: '18px 36px', borderRadius: '12px', border: '1px solid #1e293b', fontWeight: 600, cursor: 'pointer' }}
+            >
               How it Works
             </button>
           </div>
@@ -56,8 +59,8 @@ const HeroSection = ({ onStart }) => {
           transition={{ duration: 0.8, delay: 0.2 }}
           style={{ position: 'relative' }}
         >
-          <div className="glass" style={{ padding: '30px', borderRadius: '24px', boxShadow: '0 20px 50px rgba(0,0,0,0.5)', border: '1px solid #1e293b' }}>
-            <h3 style={{ margin: '0 0 10px 0', color: '#FFF' }}>Student Progress: Alex</h3>
+          <div className="glass" style={{ padding: '30px', borderRadius: '24px', boxShadow: '0 20px 50px rgba(0,0,0,0.1)', border: '1px solid var(--color-border)', background: 'var(--color-card-bg)' }}>
+            <h3 style={{ margin: '0 0 10px 0', color: 'var(--color-text)' }}>Student Progress: Alex</h3>
             <div style={{ height: '8px', background: '#0B1120', borderRadius: '4px', marginBottom: '20px', overflow: 'hidden' }}>
               <motion.div 
                 initial={{ width: 0 }}
@@ -67,9 +70,9 @@ const HeroSection = ({ onStart }) => {
               />
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
-              <div style={{ background: 'rgba(255,255,255,0.05)', padding: '15px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)' }}>
-                <div style={{ fontSize: '0.75rem', color: '#94a3b8' }}>Concepts Mastered</div>
-                <div style={{ fontSize: '1.25rem', fontWeight: 700, color: '#FFF' }}>12 / 20</div>
+              <div style={{ background: 'var(--color-section-bg)', padding: '15px', borderRadius: '12px', border: '1px solid var(--color-border)' }}>
+                <div style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)' }}>Concepts Mastered</div>
+                <div style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--color-text)' }}>12 / 20</div>
               </div>
               <div style={{ background: 'rgba(255, 87, 34, 0.1)', padding: '15px', borderRadius: '12px', border: '1px solid rgba(255, 87, 34, 0.2)' }}>
                 <div style={{ fontSize: '0.75rem', color: '#FF5722' }}>Current Focus</div>

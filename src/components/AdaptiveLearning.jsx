@@ -261,7 +261,7 @@ const AdaptiveLearning = ({ userData, onChallenge }) => {
             <TrendingUp size={24} color="#00F0FF" />
             <h2 style={{ margin: 0, fontSize: '1.8rem', color: '#FFF' }}>Mission Control: Adaptive Path</h2>
         </div>
-        <p style={{ color: '#94a3b8' }}>EduGrav Bayesian AI is charting your optimal trajectory through Data Structures.</p>
+        <p style={{ color: '#94a3b8' }}>Learnify Bayesian AI is charting your optimal trajectory through Data Structures.</p>
       </header>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1.5fr) minmax(0, 1fr)', gap: '30px' }}>

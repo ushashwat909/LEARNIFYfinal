@@ -1,20 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Flame, Trophy, Calendar, Target, Award, Star, TrendingUp, Zap } from 'lucide-react';
+import { Flame, Trophy, Calendar, Award, Zap, Shield, Code2, BookOpen } from 'lucide-react';
 import CalendarHeatmap from 'react-calendar-heatmap';
 import 'react-calendar-heatmap/dist/styles.css';
-// Note: We removed the dependency on react-tooltip for stability
-// and implemented ultra-sleek custom tooltips in CSS below.
+
+const BADGES = [
+    { id: 'first_solve', title: 'First Blood', icon: '🎯', color: '#3fb950', desc: 'Solve your first problem', threshold: (s) => s.totalSolved >= 1 },
+    { id: 'five_solves', title: 'Getting Warmed Up', icon: '🔥', color: '#fb923c', desc: 'Solve 5 problems', threshold: (s) => s.totalSolved >= 5 },
+    { id: 'ten_solves', title: 'Double Digits', icon: '💎', color: '#58a6ff', desc: 'Solve 10 problems', threshold: (s) => s.totalSolved >= 10 },
+    { id: 'twenty_five', title: 'Quarter Century', icon: '🏆', color: '#d2a8ff', desc: 'Solve 25 problems', threshold: (s) => s.totalSolved >= 25 },
+    { id: 'fifty_solves', title: 'Half Centurion', icon: '👑', color: '#f0883e', desc: 'Solve 50 problems', threshold: (s) => s.totalSolved >= 50 },
+    { id: 'streak_3', title: 'Hat Trick', icon: '⚡', color: '#f85149', desc: '3-day solving streak', threshold: (s) => s.streak >= 3 },
+    { id: 'streak_7', title: 'Consistency King', icon: '🔥', color: '#fb923c', desc: '7-day solving streak', threshold: (s) => s.streak >= 7 },
+    { id: 'streak_30', title: 'Iron Will', icon: '🛡️', color: '#58a6ff', desc: '30-day solving streak', threshold: (s) => s.streak >= 30 },
+    { id: 'python_master', title: 'Pythonista', icon: '🐍', color: '#3fb950', desc: 'Solve 10 problems in Python', threshold: (s) => (s.langCounts?.python || 0) >= 10 },
+    { id: 'cpp_master', title: 'C++ Warrior', icon: '⚙️', color: '#58a6ff', desc: 'Solve 5 problems in C++', threshold: (s) => (s.langCounts?.cpp || 0) >= 5 },
+    { id: 'multi_lang', title: 'Polyglot', icon: '🌍', color: '#d2a8ff', desc: 'Solve in 2+ languages', threshold: (s) => Object.values(s.langCounts || {}).filter(v => v > 0).length >= 2 },
+    { id: 'level_5', title: 'Rising Star', icon: '⭐', color: '#f0883e', desc: 'Reach Level 5', threshold: (s) => s.level >= 5 },
+];
 
 const GamificationDashboard = ({ userId = 101 }) => {
     const [stats, setStats] = useState({
-        streak: 0,
-        totalSolved: 0,
-        activeDays: 0,
-        points: 0,
-        level: 1,
-        experience: 10,
-        badges: []
+        streak: 0, totalSolved: 0, points: 0, level: 1, experience: 0, langCounts: {}
     });
     const [heatmapData, setHeatmapData] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -22,26 +29,38 @@ const GamificationDashboard = ({ userId = 101 }) => {
     useEffect(() => {
         const fetchStats = async () => {
             try {
-                const response = await fetch(`http://localhost:8000/api/stats/${userId}`);
-                const data = await response.json();
-                
-                // Map backend response to UI state
-                const totalSolved = data.total_solved || 0;
+                const [statsRes, progressRes] = await Promise.all([
+                    fetch(`http://localhost:8000/api/stats/${userId}`),
+                    fetch(`http://localhost:8000/api/progress/${userId}`)
+                ]);
+                const statsData = await statsRes.json();
+                const progressData = await progressRes.json();
+
+                const totalSolved = statsData.total_solved || 0;
+
+                // Count solves per language
+                const langCounts = {};
+                (progressData.progress || []).forEach(p => {
+                    if (p.status === 'passed') {
+                        langCounts[p.language] = (langCounts[p.language] || 0) + 1;
+                    }
+                });
+
+                // Build heatmap from activity data
+                const heatmap = (statsData.activity || []).map(a => ({
+                    date: a.date,
+                    count: a.count
+                }));
+
                 setStats({
-                    streak: data.current_streak || 0,
-                    totalSolved: totalSolved,
-                    activeDays: data.active_days || 0,
+                    streak: statsData.current_streak || 0,
+                    totalSolved,
                     points: totalSolved * 100,
                     level: Math.floor(totalSolved / 5) + 1,
                     experience: (totalSolved % 5) * 20,
-                    badges: [
-                        { id: 1, title: 'Array Ace', icon: '💎', color: '#00F0FF', desc: 'Solved 10 Array problems', unlocked: totalSolved >= 10 },
-                        { id: 2, title: 'Binary Scout', icon: '🔍', color: '#a855f7', desc: 'First Binary Search solve', unlocked: totalSolved >= 1 },
-                        { id: 3, title: 'Consistency', icon: '🔥', color: '#fb923c', desc: '7-day solving streak', unlocked: (data.current_streak || 0) >= 7 },
-                        { id: 4, title: 'Speed Demon', icon: '🚀', color: '#f87171', desc: 'Solved under 5 mins', unlocked: false }
-                    ]
+                    langCounts
                 });
-                setHeatmapData(data.heatmap_data || []);
+                setHeatmapData(heatmap);
             } catch (error) {
                 console.error("Failed to load stats", error);
             } finally {
@@ -51,65 +70,47 @@ const GamificationDashboard = ({ userId = 101 }) => {
         fetchStats();
     }, [userId]);
 
+    const badges = BADGES.map(b => ({ ...b, unlocked: b.threshold(stats) }));
+    const unlockedCount = badges.filter(b => b.unlocked).length;
+
     const today = new Date();
-    const threeMonthsAgo = new Date();
-    threeMonthsAgo.setMonth(today.getMonth() - 6);
+    const sixMonthsAgo = new Date();
+    sixMonthsAgo.setMonth(today.getMonth() - 6);
+
+    if (loading) return (
+        <div style={{ minHeight: '80vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <div className="pulse" style={{ color: 'var(--color-primary)', fontSize: '1.1rem' }}>Loading stats...</div>
+        </div>
+    );
 
     return (
-        <div style={{ padding: '40px', maxWidth: '1200px', margin: '0 auto', color: '#FFF' }}>
+        <div style={{ padding: '100px 40px 60px', maxWidth: '1200px', margin: '0 auto', color: 'var(--color-text)' }}>
             <div style={{ marginBottom: '40px' }}>
-                <h1 style={{ fontSize: '2.5rem', margin: 0, fontWeight: 800 }}>Pilot Records</h1>
-                <p style={{ color: '#94a3b8', fontSize: '1.2rem' }}>Performance metrics from the cognitive frontier.</p>
+                <h1 style={{ fontSize: '2.2rem', margin: '0 0 4px 0', fontWeight: 800 }}>Your Progress</h1>
+                <p style={{ color: 'var(--color-text-muted, #8b949e)', fontSize: '1rem', margin: 0 }}>Track your learning journey and unlock achievements.</p>
             </div>
 
             {/* Top Stats Cards */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px', marginBottom: '40px' }}>
-                <div className="glass" style={{ padding: '30px', borderRadius: '24px', border: '1px solid #1e293b', display: 'flex', alignItems: 'center', gap: '20px' }}>
-                    <div style={{ background: 'rgba(251, 146, 60, 0.1)', padding: '15px', borderRadius: '16px', border: '1px solid #fb923c' }}>
-                        <Flame size={32} color="#fb923c" />
-                    </div>
-                    <div>
-                        <div style={{ color: '#94a3b8', fontSize: '0.85rem' }}>CURRENT STREAK</div>
-                        <div style={{ fontSize: '2rem', fontWeight: 800 }}>{stats.streak} Days</div>
-                    </div>
-                </div>
-
-                <div className="glass" style={{ padding: '30px', borderRadius: '24px', border: '1px solid #1e293b', display: 'flex', alignItems: 'center', gap: '20px' }}>
-                    <div style={{ background: 'rgba(0, 240, 255, 0.1)', padding: '15px', borderRadius: '16px', border: '1px solid #00F0FF' }}>
-                        <Trophy size={32} color="#00F0FF" />
-                    </div>
-                    <div>
-                        <div style={{ color: '#94a3b8', fontSize: '0.85rem' }}>TOTAL CHALLENGES</div>
-                        <div style={{ fontSize: '2rem', fontWeight: 800 }}>{stats.totalSolved}</div>
-                    </div>
-                </div>
-
-                <div className="glass" style={{ padding: '30px', borderRadius: '24px', border: '1px solid #1e293b', display: 'flex', alignItems: 'center', gap: '20px' }}>
-                    <div style={{ background: 'rgba(168, 85, 247, 0.1)', padding: '15px', borderRadius: '16px', border: '1px solid #a855f7' }}>
-                        <Zap size={32} color="#a855f7" />
-                    </div>
-                    <div style={{ flex: 1 }}>
-                        <div style={{ color: '#94a3b8', fontSize: '0.85rem' }}>RANK LEVEL {stats.level}</div>
-                        <div style={{ width: '100%', height: '8px', background: '#1e293b', borderRadius: '10px', marginTop: '10px', overflow: 'hidden' }}>
-                            <div style={{ width: `${stats.experience}%`, height: '100%', background: '#a855f7', boxShadow: '0 0 10px #a855f7' }} />
-                        </div>
-                    </div>
-                </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '16px', marginBottom: '32px' }}>
+                <StatCard icon={<Flame size={28} />} iconColor="#fb923c" label="CURRENT STREAK" value={`${stats.streak} Days`} />
+                <StatCard icon={<Trophy size={28} />} iconColor="#3fb950" label="PROBLEMS SOLVED" value={stats.totalSolved} />
+                <StatCard icon={<Award size={28} />} iconColor="#d2a8ff" label="BADGES EARNED" value={`${unlockedCount} / ${badges.length}`} />
+                <StatCard icon={<Zap size={28} />} iconColor="#58a6ff" label={`LEVEL ${stats.level}`} value={null} progress={stats.experience} />
             </div>
 
-            {/* Heatmap Section */}
-            <div className="glass" style={{ padding: '40px', borderRadius: '30px', border: '1px solid #1e293b', marginBottom: '40px' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '30px' }}>
+            {/* Heatmap */}
+            <div style={{ padding: '32px', borderRadius: '16px', border: '1px solid var(--color-border)', background: 'var(--color-card-bg)', marginBottom: '32px' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <Calendar size={20} color="#00F0FF" />
-                        <h2 style={{ fontSize: '1.5rem', margin: 0 }}>Neuro-Activity Map</h2>
+                        <Calendar size={18} color="var(--color-primary)" />
+                        <h2 style={{ fontSize: '1.2rem', margin: 0, fontWeight: 700 }}>Activity</h2>
                     </div>
-                    <div style={{ fontSize: '0.85rem', color: '#94a3b8' }}>Visualizing cognitive engagement across time</div>
+                    <div style={{ fontSize: '0.8rem', color: 'var(--color-text-muted, #8b949e)' }}>{stats.totalSolved} contributions in the last 6 months</div>
                 </div>
-                
-                <div style={{ background: 'rgba(6, 11, 24, 0.5)', padding: '20px', borderRadius: '20px' }}>
+
+                <div style={{ borderRadius: '12px', padding: '16px' }}>
                     <CalendarHeatmap
-                        startDate={threeMonthsAgo}
+                        startDate={sixMonthsAgo}
                         endDate={today}
                         values={heatmapData}
                         classForValue={(value) => {
@@ -118,77 +119,91 @@ const GamificationDashboard = ({ userId = 101 }) => {
                         }}
                     />
                 </div>
-                <div style={{ marginTop: '15px', display: 'flex', justifyContent: 'center', gap: '10px', color: '#64748b', fontSize: '0.75rem' }}>
+                <div style={{ marginTop: '12px', display: 'flex', justifyContent: 'center', gap: '6px', color: 'var(--color-text-muted, #8b949e)', fontSize: '0.7rem', alignItems: 'center' }}>
                     <span>Less</span>
-                    <div style={{ display: 'flex', gap: '3px' }}>
-                        <div style={{ width: '12px', height: '12px', background: '#1e293b', borderRadius: '2px' }} />
-                        <div style={{ width: '12px', height: '12px', background: 'rgba(0, 240, 255, 0.2)', borderRadius: '2px' }} />
-                        <div style={{ width: '12px', height: '12px', background: 'rgba(0, 240, 255, 0.4)', borderRadius: '2px' }} />
-                        <div style={{ width: '12px', height: '12px', background: 'rgba(0, 240, 255, 0.7)', borderRadius: '2px' }} />
-                        <div style={{ width: '12px', height: '12px', background: '#00F0FF', borderRadius: '2px' }} />
-                    </div>
+                    {[0, 1, 2, 3, 4].map(i => (
+                        <div key={i} className={`color-scale-legend-${i}`} style={{
+                            width: '12px', height: '12px', borderRadius: '2px',
+                            background: i === 0 ? 'var(--color-border)' : `rgba(63, 185, 80, ${0.15 + i * 0.2})`
+                        }} />
+                    ))}
                     <span>More</span>
                 </div>
             </div>
 
             {/* Badges Section */}
             <div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '25px' }}>
-                    <Award size={24} color="#00F0FF" />
-                    <h2 style={{ fontSize: '1.5rem', margin: 0 }}>Hall of Valour</h2>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px' }}>
+                    <Shield size={20} color="var(--color-primary)" />
+                    <h2 style={{ fontSize: '1.2rem', margin: 0, fontWeight: 700 }}>Achievements</h2>
+                    <span style={{ fontSize: '0.8rem', color: 'var(--color-text-muted, #8b949e)', marginLeft: '8px' }}>{unlockedCount} of {badges.length} unlocked</span>
                 </div>
-                
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '20px' }}>
-                    {stats.badges.map(badge => (
-                        <motion.div 
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '14px' }}>
+                    {badges.map(badge => (
+                        <motion.div
                             key={badge.id}
-                            whileHover={badge.unlocked ? { scale: 1.02 } : {}}
-                            className="glass"
-                            style={{ 
-                                padding: '25px', 
-                                borderRadius: '24px', 
-                                border: `1px solid ${badge.unlocked ? badge.color : '#1e293b'}`, 
-                                display: 'flex', 
-                                flexDirection: 'column', 
-                                alignItems: 'center', 
-                                textAlign: 'center',
-                                opacity: badge.unlocked ? 1 : 0.4,
-                                position: 'relative'
+                            whileHover={badge.unlocked ? { scale: 1.03, y: -2 } : {}}
+                            style={{
+                                padding: '20px',
+                                borderRadius: '14px',
+                                border: `1px solid ${badge.unlocked ? badge.color + '60' : 'var(--color-border)'}`,
+                                background: badge.unlocked ? badge.color + '08' : 'var(--color-card-bg)',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '14px',
+                                opacity: badge.unlocked ? 1 : 0.45,
+                                transition: '0.2s',
+                                cursor: badge.unlocked ? 'default' : 'not-allowed'
                             }}
                         >
-                            {!badge.unlocked && (
-                                <div style={{ position: 'absolute', top: '10px', right: '10px', fontSize: '0.8rem' }}>🔒</div>
-                            )}
-                            <div style={{ 
-                                fontSize: '3rem', 
-                                marginBottom: '15px', 
-                                filter: badge.unlocked ? `drop-shadow(0 0 10px ${badge.color})` : 'grayscale(100%)' 
+                            <div style={{
+                                fontSize: '2rem',
+                                filter: badge.unlocked ? `drop-shadow(0 0 8px ${badge.color})` : 'grayscale(100%)',
+                                lineHeight: 1
                             }}>
                                 {badge.icon}
                             </div>
-                            <h3 style={{ margin: '0 0 5px 0', color: badge.unlocked ? badge.color : '#475569' }}>{badge.title}</h3>
-                            <p style={{ margin: 0, fontSize: '0.85rem', color: '#94a3b8' }}>{badge.desc}</p>
+                            <div style={{ flex: 1, minWidth: 0 }}>
+                                <div style={{ fontSize: '0.85rem', fontWeight: 700, color: badge.unlocked ? badge.color : 'var(--color-text-muted, #8b949e)', marginBottom: '2px' }}>
+                                    {badge.title}
+                                    {!badge.unlocked && <span style={{ marginLeft: '6px', fontSize: '0.7rem' }}>🔒</span>}
+                                </div>
+                                <div style={{ fontSize: '0.75rem', color: 'var(--color-text-muted, #8b949e)', lineHeight: 1.3 }}>{badge.desc}</div>
+                            </div>
                         </motion.div>
                     ))}
-                    
-                    {/* Coming Soon Shadow */}
-                    <div className="glass" style={{ padding: '25px', borderRadius: '24px', border: '1px dashed #1e293b', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', opacity: 0.2 }}>
-                        <div style={{ fontSize: '3rem', marginBottom: '15px' }}>✨</div>
-                        <div style={{ color: '#475569', fontSize: '0.9rem', fontWeight: 600 }}>MORE LOCI COMING</div>
-                    </div>
                 </div>
             </div>
 
             <style>{`
-                .react-calendar-heatmap .color-empty { fill: #1e293b; }
-                .react-calendar-heatmap .color-scale-1 { fill: rgba(0, 240, 255, 0.2); }
-                .react-calendar-heatmap .color-scale-2 { fill: rgba(0, 240, 255, 0.4); }
-                .react-calendar-heatmap .color-scale-3 { fill: rgba(0, 240, 255, 0.7); }
-                .react-calendar-heatmap .color-scale-4 { fill: #00F0FF; }
+                .react-calendar-heatmap .color-empty { fill: var(--color-border); }
+                .react-calendar-heatmap .color-scale-1 { fill: rgba(63, 185, 80, 0.25); }
+                .react-calendar-heatmap .color-scale-2 { fill: rgba(63, 185, 80, 0.5); }
+                .react-calendar-heatmap .color-scale-3 { fill: rgba(63, 185, 80, 0.75); }
+                .react-calendar-heatmap .color-scale-4 { fill: #3fb950; }
                 .react-calendar-heatmap rect { rx: 2; ry: 2; }
+                .react-calendar-heatmap text { fill: var(--color-text-muted, #8b949e); font-size: 0.65rem; }
             `}</style>
         </div>
     );
 };
+
+const StatCard = ({ icon, iconColor, label, value, progress }) => (
+    <div style={{ padding: '24px', borderRadius: '14px', border: '1px solid var(--color-border)', background: 'var(--color-card-bg)', display: 'flex', alignItems: 'center', gap: '16px' }}>
+        <div style={{ background: iconColor + '15', padding: '12px', borderRadius: '12px', color: iconColor, display: 'flex' }}>
+            {icon}
+        </div>
+        <div style={{ flex: 1 }}>
+            <div style={{ color: 'var(--color-text-muted, #8b949e)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.5px' }}>{label}</div>
+            {value !== null && <div style={{ fontSize: '1.5rem', fontWeight: 800, marginTop: '2px' }}>{value}</div>}
+            {progress !== undefined && progress !== null && (
+                <div style={{ width: '100%', height: '6px', background: 'var(--color-border)', borderRadius: '10px', marginTop: '8px', overflow: 'hidden' }}>
+                    <div style={{ width: `${progress}%`, height: '100%', background: iconColor, borderRadius: '10px', transition: 'width 0.5s ease' }} />
+                </div>
+            )}
+        </div>
+    </div>
+);
 
 export default GamificationDashboard;

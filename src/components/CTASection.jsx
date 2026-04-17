@@ -15,10 +15,10 @@ const CTASection = ({ onStart }) => (
       style={{ maxWidth: '700px', margin: '0 auto', textAlign: 'center', position: 'relative' }}
     >
       <span style={{ fontSize: '4rem', display: 'block', marginBottom: '30px' }}>🚀</span>
-      <h2 style={{ color: '#FFF', fontSize: '3.5rem', lineHeight: 1.1, marginBottom: '24px', fontWeight: 900 }}>
-        Ready to <span style={{ color: '#00F0FF' }}>defy gravity?</span>
+      <h2 style={{ color: 'var(--color-text)', fontSize: '3.5rem', lineHeight: 1.1, marginBottom: '24px', fontWeight: 900 }}>
+        Ready to <span style={{ color: 'var(--color-primary)' }}>defy gravity?</span>
       </h2>
-      <p style={{ color: '#94a3b8', fontSize: '1.2rem', marginBottom: '50px', lineHeight: 1.7 }}>
+      <p style={{ color: 'var(--color-text-muted)', fontSize: '1.2rem', marginBottom: '50px', lineHeight: 1.7 }}>
         Join thousands of students whose knowledge graphs are expanding daily. Your mission starts now.
       </p>
       <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>

@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Filter, Rocket, Star, Code2, ArrowRight, ShieldCheck } from 'lucide-react';
 
-const PracticeHub = ({ onSelectProblem }) => {
+const PracticeHub = ({ onSelectProblem, initialSearch = '' }) => {
     const [problems, setProblems] = useState([]);
-    const [search, setSearch] = useState('');
+    const [search, setSearch] = useState(initialSearch);
     const [difficulty, setDifficulty] = useState('All');
     const [loading, setLoading] = useState(true);
 
@@ -24,13 +24,20 @@ const PracticeHub = ({ onSelectProblem }) => {
     }, []);
 
     const filtered = problems.filter(p => {
-        const matchesSearch = p.title.toLowerCase().includes(search.toLowerCase());
+        const matchesSearch = p.title.toLowerCase().includes(search.toLowerCase()) || 
+                             (p.category && p.category.toLowerCase().includes(search.toLowerCase()));
         const matchesDifficulty = difficulty === 'All' || p.difficulty === difficulty;
         return matchesSearch && matchesDifficulty;
     });
 
     return (
-        <div style={{ padding: '40px', maxWidth: '1200px', margin: '0 auto', color: '#FFF' }}>
+        <div style={{ 
+            padding: '100px 40px 40px 40px', 
+            maxWidth: '1200px', 
+            margin: '0 auto', 
+            color: '#FFF',
+            minHeight: '100vh'
+        }}>
             {/* Header section */}
             <div style={{ marginBottom: '40px' }}>
                 <motion.div 

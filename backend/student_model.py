@@ -3,10 +3,23 @@ from pyBKT.models import Model
 import os
 import datetime
 
+_shared_model_instance = None
+
 class StudentMasteryModel:
-    def __init__(self, history_path='backend/student_history.csv'):
+    def __init__(self, history_path=None):
+        global _shared_model_instance
+        if history_path is None:
+            base_dir = os.path.dirname(os.path.abspath(__file__))
+            history_path = os.path.join(base_dir, 'student_history.csv')
+            
         self.history_path = history_path
-        self.model = Model(seed = 42, num_fits = 1)
+        
+        # Singleton/Shared model to avoid heavy redundant inits
+        if _shared_model_instance is None:
+            print("[MasteryModel] Initializing heavy pyBKT model...")
+            _shared_model_instance = Model(seed = 42, num_fits = 1)
+        
+        self.model = _shared_model_instance
         
         # Initialize history file if it doesn't exist
         if not os.path.exists(self.history_path):

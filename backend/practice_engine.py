@@ -58,59 +58,40 @@ class PracticeEngine:
         return self.problems_index.get(problem_id)
 
     def run_code(self, problem_id: str, code: str, language: str = "python"):
-        """
-        Securely executes code against test cases.
-        For now, implementing Python only.
-        """
+        """Securely executes code against test cases. Supports python, cpp, java."""
         problem = self.get_problem(problem_id)
         if not problem:
             return {"error": "Problem not found"}
 
-        if language != "python":
-            return {"error": f"Language {language} not yet supported in restricted mode."}
-
         test_cases = problem.get('testCases', [])
-        results = []
-        
-        # Helper to generate the test runner script
-        runner_script = self._generate_python_runner(problem, code, test_cases)
 
+        if language == "python":
+            return self._run_python(problem, code, test_cases)
+        elif language == "cpp":
+            return self._run_cpp(problem, code, test_cases)
+        elif language == "java":
+            return self._run_java(problem, code, test_cases)
+        else:
+            return {"status": "error", "stderr": f"Language '{language}' is not supported."}
+
+    def _run_python(self, problem, code, test_cases):
+        runner_script = self._generate_python_runner(problem, code, test_cases)
         with tempfile.NamedTemporaryFile(suffix=".py", mode='w', delete=False) as f:
             f.write(runner_script)
             temp_name = f.name
-
         try:
-            # Execute with timeout and no network
             start_time = time.time()
             process = subprocess.run(
-                ["python3", temp_name],
-                capture_output=True,
-                text=True,
-                timeout=5 # 5 second timeout
+                ["python3", temp_name], capture_output=True, text=True, timeout=5
             )
-            execution_time = (time.time() - start_time) * 1000 # ms
-            
+            execution_time = (time.time() - start_time) * 1000
             if process.returncode != 0:
-                return {
-                    "status": "error",
-                    "stderr": process.stderr,
-                    "stdout": process.stdout
-                }
-
-            # The runner script prints Results JSON to stdout
+                return {"status": "error", "stderr": process.stderr, "stdout": process.stdout}
             try:
                 output_json = json.loads(process.stdout.split("---RESULT_START---")[1].split("---RESULT_END---")[0])
-                return {
-                    "status": "success",
-                    "results": output_json,
-                    "execution_time": execution_time
-                }
+                return {"status": "success", "results": output_json, "execution_time": execution_time}
             except:
-                return {
-                    "status": "error",
-                    "stderr": "Could not parse output: " + process.stdout
-                }
-
+                return {"status": "error", "stderr": "Could not parse output: " + process.stdout}
         except subprocess.TimeoutExpired:
             return {"status": "error", "stderr": "Execution timed out (5s limit)"}
         except Exception as e:
@@ -118,6 +99,89 @@ class PracticeEngine:
         finally:
             if os.path.exists(temp_name):
                 os.remove(temp_name)
+
+    def _run_cpp(self, problem, code, test_cases):
+        """Compile and run C++ code."""
+        import shutil
+        if not shutil.which("g++"):
+            return {"status": "error", "stderr": "C++ compiler (g++) is not installed on this system."}
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            src_path = os.path.join(tmpdir, "solution.cpp")
+            bin_path = os.path.join(tmpdir, "solution")
+
+            with open(src_path, 'w') as f:
+                f.write(code)
+
+            try:
+                # Compile
+                compile_proc = subprocess.run(
+                    ["g++", "-std=c++20", "-o", bin_path, src_path],
+                    capture_output=True, text=True, timeout=10
+                )
+                if compile_proc.returncode != 0:
+                    return {"status": "error", "stderr": "Compilation Error:\n" + compile_proc.stderr}
+
+                # Run
+                start_time = time.time()
+                run_proc = subprocess.run(
+                    [bin_path], capture_output=True, text=True, timeout=5
+                )
+                execution_time = (time.time() - start_time) * 1000
+
+                if run_proc.returncode != 0:
+                    return {"status": "error", "stderr": run_proc.stderr}
+
+                return {
+                    "status": "success",
+                    "results": [{"case": 0, "status": "pass", "output": run_proc.stdout.strip()}],
+                    "execution_time": execution_time
+                }
+            except subprocess.TimeoutExpired:
+                return {"status": "error", "stderr": "Execution timed out (5s limit)"}
+            except Exception as e:
+                return {"status": "error", "stderr": str(e)}
+
+    def _run_java(self, problem, code, test_cases):
+        """Compile and run Java code."""
+        import shutil
+        if not shutil.which("javac"):
+            return {"status": "error", "stderr": "Java compiler (javac) is not installed on this system. Install a JDK to enable Java execution."}
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            src_path = os.path.join(tmpdir, "Solution.java")
+            with open(src_path, 'w') as f:
+                f.write(code)
+
+            try:
+                # Compile
+                compile_proc = subprocess.run(
+                    ["javac", src_path], capture_output=True, text=True, timeout=10
+                )
+                if compile_proc.returncode != 0:
+                    return {"status": "error", "stderr": "Compilation Error:\n" + compile_proc.stderr}
+
+                # Run
+                start_time = time.time()
+                run_proc = subprocess.run(
+                    ["java", "-cp", tmpdir, "Solution"],
+                    capture_output=True, text=True, timeout=5
+                )
+                execution_time = (time.time() - start_time) * 1000
+
+                if run_proc.returncode != 0:
+                    return {"status": "error", "stderr": run_proc.stderr}
+
+                return {
+                    "status": "success",
+                    "results": [{"case": 0, "status": "pass", "output": run_proc.stdout.strip()}],
+                    "execution_time": execution_time
+                }
+            except subprocess.TimeoutExpired:
+                return {"status": "error", "stderr": "Execution timed out (5s limit)"}
+            except Exception as e:
+                return {"status": "error", "stderr": str(e)}
+
 
     def _generate_python_runner(self, problem: dict, user_code: str, test_cases: list):
         """Generates a standalone script that runs the user code against cases."""
