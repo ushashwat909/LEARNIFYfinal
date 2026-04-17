@@ -29,7 +29,7 @@ const LoginPage = ({ onLogin, theme }) => {
         setLoading(true);
         try {
             const endpoint = mode === 'login' ? '/api/auth/login' : '/api/auth/register';
-            const response = await fetch(`/api${endpoint}`, {
+            const response = await fetch(endpoint, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ username, password })
