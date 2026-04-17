@@ -1,5 +1,13 @@
 import pandas as pd
-from pyBKT.models import Model
+try:
+    from pyBKT.models import Model
+    PYBKT_AVAILABLE = True
+except Exception as e:
+    print(f"[MasteryModel] pyBKT initialization failed: {e}. Using mock model.")
+    PYBKT_AVAILABLE = False
+    class Model:
+        def __init__(self, **kwargs): pass
+        def predict(self, **kwargs): raise Exception("Mock model cannot predict")
 import os
 import datetime
 
