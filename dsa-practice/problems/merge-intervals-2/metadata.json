@@ -1,0 +1,57 @@
+{
+  "id": "merge-intervals-2",
+  "title": "Merge Intervals - 2",
+  "difficulty": "Medium",
+  "category": "merge-intervals",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [[1, 3], [6, 9]]\nB = [2, 5]",
+      "output": "[[1, 5], [6, 9]]"
+    },
+    {
+      "input": "A = [[1, 3], [6, 9]]\nB = [2, 6]",
+      "output": "[[1, 9]]"
+    }
+  ],
+  "starterCode": {
+    "java": "import java.util.*;\nclass Solution {\n    public List<List<Integer>> insert(int[][] A, int[] B) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of list of integers\n    # @param B : list of integers\n    # @return a list of list of integers\n    def insert(self, A, B):\n        ",
+    "cpp": "class Solution {\npublic:\n    vector<vector<int> > insert(vector<vector<int> >& A, vector<int>& B) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[[1,3],[6,9]]",
+      "B": "[2,5]"
+    },
+    {
+      "A": "[[1,3],[6,9]]",
+      "B": "[2,6]"
+    }
+  ],
+  "functionName": "insert",
+  "params": [
+    {
+      "name": "A",
+      "type": "int_array_2d"
+    },
+    {
+      "name": "B",
+      "type": "int_array"
+    }
+  ],
+  "outputType": "int_list_2d",
+  "hints": [
+    "Since intervals are sorted, you can process them in order.",
+    "For each existing interval, check its relationship with the new interval.",
+    "If an interval ends before the new interval starts, add it to the result.",
+    "If an interval starts after the new interval ends, add the new interval and all remaining intervals.",
+    "If intervals overlap, merge them by updating the new interval's start and end.",
+    "Don't forget to add the new interval if it hasn't been added yet (at the end)."
+  ]
+}
+
+
+
+
+

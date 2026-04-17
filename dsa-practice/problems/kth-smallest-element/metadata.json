@@ -1,0 +1,52 @@
+{
+  "id": "kth-smallest-element",
+  "title": "Kth Smallest Element",
+  "difficulty": "Easy",
+  "category": "sorting-basics",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [2, 1, 4, 3, 2]\nB = 3",
+      "output": "2"
+    },
+    {
+      "input": "A = [1, 2]\nB = 2",
+      "output": "2"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int[] A, int B) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @param B : integer\n    # @return an integer\n    def solve(self, A, B):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(vector<int>& A, int B) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[2,1,4,3,2]",
+      "B": "3"
+    },
+    {
+      "A": "[1,2]",
+      "B": "2"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    },
+    {
+      "name": "B",
+      "type": "int"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use partial selection sort - only find the minimum for the first B positions.",
+    "For each position i from 0 to B-1, find the minimum element in the remaining unsorted portion.",
+    "Swap the minimum element to position i.",
+    "After B iterations, the Bth smallest element will be at position B-1.",
+    "This approach uses at most B swaps, which is more efficient than full sorting when B is small."
+  ]
+}
+

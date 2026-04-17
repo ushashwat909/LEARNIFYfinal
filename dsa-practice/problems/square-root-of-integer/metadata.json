@@ -1,0 +1,51 @@
+{
+  "id": "square-root-of-integer",
+  "title": "Square Root of Integer",
+  "difficulty": "Easy",
+  "category": "binary-search-on-problems",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 11",
+      "output": "3"
+    },
+    {
+      "input": "A = 9",
+      "output": "3"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int sqrt(int A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : integer\n    # @return an integer\n    def sqrt(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int sqrt(int A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "11"
+    },
+    {
+      "A": "9"
+    }
+  ],
+  "functionName": "sqrt",
+  "params": [
+    {
+      "name": "A",
+      "type": "int"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use binary search to find the square root in O(log A) time.",
+    "Search in the range [0, A] for the largest integer whose square is <= A.",
+    "For a given mid, check if mid*mid <= A. If yes, update answer and search right for larger values.",
+    "If mid*mid > A, search left for smaller values.",
+    "Use long to prevent integer overflow when calculating mid*mid.",
+    "The answer is the largest integer whose square is <= A."
+  ]
+}
+
+
+
+
+

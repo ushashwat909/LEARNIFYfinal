@@ -1,0 +1,47 @@
+{
+  "id": "minimum-number-of-squares",
+  "title": "Minimum Number of Squares",
+  "difficulty": "Medium",
+  "category": "dp-1dimensional",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 6",
+      "output": "3"
+    },
+    {
+      "input": "A = 5",
+      "output": "2"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int countMinSquares(int A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : integer\n    # @return an integer\n    def countMinSquares(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int countMinSquares(int A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "6"
+    },
+    {
+      "A": "5"
+    }
+  ],
+  "functionName": "countMinSquares",
+  "params": [
+    {
+      "name": "A",
+      "type": "int"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Think about what the minimum number of squares needed for each number from 1 to A.",
+    "For any number i, you can represent it as i = (i - j*j) + j*j for some j where j*j <= i.",
+    "Use dynamic programming: dp[i] = minimum number of squares needed to represent i.",
+    "Base case: dp[0] = 0 (no squares needed to represent 0).",
+    "For each i, try all possible squares j*j <= i and take the minimum: dp[i] = min(dp[i], dp[i - j*j] + 1).",
+    "The answer will be dp[A]."
+  ]
+}
+

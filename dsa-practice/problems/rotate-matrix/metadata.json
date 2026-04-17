@@ -1,0 +1,45 @@
+{
+  "id": "rotate-matrix",
+  "title": "Rotate Matrix",
+  "difficulty": "Medium",
+  "category": "2d-matrices",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [[1, 2], [3, 4]]",
+      "output": "[[3, 1], [4, 2]]"
+    },
+    {
+      "input": "A = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]",
+      "output": "[[7, 4, 1], [8, 5, 2], [9, 6, 3]]"
+    }
+  ],
+  "starterCode": {
+    "java": "import java.util.*;\nclass Solution {\n    public List<List<Integer>> solve(int[][] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of list of integers\n    # @return a list of list of integers\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    vector<vector<int> > solve(vector<vector<int> >& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[[1,2],[3,4]]"
+    },
+    {
+      "A": "[[1,2,3],[4,5,6],[7,8,9]]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int_array_2d"
+    }
+  ],
+  "outputType": "int_list_2d",
+  "hints": [
+    "Rotate 90 degrees clockwise can be done in two steps: transpose then reverse each row.",
+    "First, transpose the matrix (swap A[i][j] with A[j][i] for i < j).",
+    "Then, reverse each row of the transposed matrix.",
+    "This approach does in-place rotation without using additional space."
+  ]
+}
+

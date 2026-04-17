@@ -1,0 +1,43 @@
+{
+  "id": "continuous-sum-query",
+  "title": "Continuous Sum Query",
+  "difficulty": "Easy",
+  "category": "arrays-one-dimensional",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 5\nB = [[1, 2, 10], [2, 3, 20], [2, 5, 25]]",
+      "output": "[10, 55, 45, 25, 25]"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int[] solve(int A, int[][] B) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : integer\n    # @param B : list of list of integers\n    # @return a list of integers\n    def solve(self, A, B):\n        ",
+    "cpp": "class Solution {\npublic:\n    vector<int> solve(int A, vector<vector<int> >& B) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "5",
+      "B": "[[1,2,10],[2,3,20],[2,5,25]]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int"
+    },
+    {
+      "name": "B",
+      "type": "int_array_2d"
+    }
+  ],
+  "outputType": "int_array",
+  "hints": [
+    "Use difference array technique for range updates.",
+    "For each query [L, R, P], add P at index L-1 and subtract P at index R (if R < A).",
+    "After processing all queries, compute prefix sum to get the final amounts.",
+    "This approach allows O(1) range updates instead of O(R-L+1) per query."
+  ]
+}
+

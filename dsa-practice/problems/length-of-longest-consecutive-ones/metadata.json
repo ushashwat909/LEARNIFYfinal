@@ -1,0 +1,46 @@
+{
+  "id": "length-of-longest-consecutive-ones",
+  "title": "Length of longest consecutive ones",
+  "difficulty": "Medium",
+  "category": "three-pointers-boyer-moore",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = \"111000\"",
+      "output": "3"
+    },
+    {
+      "input": "A = \"111011101\"",
+      "output": "7"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(String A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : string\n    # @return an integer\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(string A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "\"111000\""
+    },
+    {
+      "A": "\"111011101\""
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "string"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Count the total number of 1's in the string.",
+    "If all characters are 1's, return the length of the string.",
+    "For each 0, count consecutive 1's on the left and right sides.",
+    "If left + right equals total ones, we can only get left+right (no extra 1 to swap).",
+    "Otherwise, we can get left+right+1 by swapping one 1 from elsewhere."
+  ]
+}
+

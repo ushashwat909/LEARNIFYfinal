@@ -1,0 +1,14 @@
+{
+    "title": "Climbing Stairs",
+    "difficulty": "Easy",
+    "category": "Dynamic Programming",
+    "functionName": "climbStairs",
+    "testCases": [
+        {
+            "n": "2"
+        },
+        {
+            "n": "3"
+        }
+    ]
+}

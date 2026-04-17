@@ -1,0 +1,62 @@
+{
+  "id": "implement-power-function",
+  "title": "Implement Power Function",
+  "difficulty": "Medium",
+  "category": "recursion-2",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 2\nB = 3\nC = 3",
+      "output": "2"
+    },
+    {
+      "input": "A = 3\nB = 3\nC = 1",
+      "output": "0"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int pow(int A, int B, int C) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : integer\n    # @param B : integer\n    # @param C : integer\n    # @return an integer\n    def pow(self, A, B, C):\n        ",
+    "cpp": "class Solution {\npublic:\n    int pow(int A, int B, int C) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "2",
+      "B": "3",
+      "C": "3"
+    },
+    {
+      "A": "3",
+      "B": "3",
+      "C": "1"
+    }
+  ],
+  "functionName": "pow",
+  "params": [
+    {
+      "name": "A",
+      "type": "int"
+    },
+    {
+      "name": "B",
+      "type": "int"
+    },
+    {
+      "name": "C",
+      "type": "int"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use fast exponentiation (divide and conquer) to compute A^B efficiently.",
+    "For even B: A^B = (A^(B/2))^2, for odd B: A^B = (A^(B/2))^2 * A.",
+    "Apply modulo at each step to prevent overflow: (x * y) % C = ((x % C) * (y % C)) % C.",
+    "Handle base cases: if A == 0 return 0, if B == 0 return 1.",
+    "For negative A, ensure the result is non-negative using ((A % C) + C) % C."
+  ]
+}
+
+
+
+
+

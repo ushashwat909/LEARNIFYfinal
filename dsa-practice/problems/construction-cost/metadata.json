@@ -1,0 +1,52 @@
+{
+  "id": "construction-cost",
+  "title": "Construction Cost",
+  "difficulty": "Medium",
+  "category": "graphs3-mst-dijkstra",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 3\nB = [   [1, 2, 14]\n        [2, 3, 7]\n        [3, 1, 2]   ]",
+      "output": "9"
+    },
+    {
+      "input": "A = 3\nB = [   [1, 2, 20]\n        [2, 3, 17]  ]",
+      "output": "37"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int A, int[][] B) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : integer\n    # @param B : list of list of integers\n    # @return an integer\n    def solve(self, A, B):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(int A, vector<vector<int>>& B) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "3",
+      "B": "[[1,2,14],[2,3,7],[3,1,2]]"
+    },
+    {
+      "A": "3",
+      "B": "[[1,2,20],[2,3,17]]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int"
+    },
+    {
+      "name": "B",
+      "type": "int[][]"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "This is a Minimum Spanning Tree (MST) problem.",
+    "Use Kruskal's algorithm: sort edges by weight and add them greedily.",
+    "Use Union-Find (Disjoint Set Union) to detect cycles when adding edges.",
+    "Add edges only if they don't form a cycle (i.e., connect two different components).",
+    "Remember to apply modulo 10^9+7 to the final result."
+  ]
+}
+

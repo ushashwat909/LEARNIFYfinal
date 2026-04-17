@@ -1,0 +1,47 @@
+{
+  "id": "generate-subsets",
+  "title": "Generate Subsets",
+  "difficulty": "Medium",
+  "category": "backtracking1",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [1]",
+      "output": "[ [], [1] ]"
+    },
+    {
+      "input": "A = [1, 2, 3]",
+      "output": "[ [], [1], [1, 2], [1, 2, 3], [1, 3], [2], [2, 3], [3] ]"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public ArrayList<ArrayList<Integer>> subsets(ArrayList<Integer> A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @return a list of list of integers\n    def subsets(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> subsets(vector<int>& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1]"
+    },
+    {
+      "A": "[1,2,3]"
+    }
+  ],
+  "functionName": "subsets",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    }
+  ],
+  "outputType": "int_list_2d",
+  "hints": [
+    "Use backtracking/DFS approach to generate all subsets.",
+    "For each element, you have two choices: include it or exclude it.",
+    "Recursively explore both choices for each element.",
+    "When you reach the end of the array, add the current subset to the result.",
+    "Make sure to create a copy of the current subset before adding to result.",
+    "The empty subset [] should also be included in the result."
+  ]
+}
+

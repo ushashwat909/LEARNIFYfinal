@@ -1,0 +1,58 @@
+{
+  "id": "balanced-paranthesis",
+  "title": "Balanced Paranthesis",
+  "difficulty": "Easy",
+  "category": "stacks1",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = {([])}",
+      "output": "1"
+    },
+    {
+      "input": "A = (){",
+      "output": "0"
+    },
+    {
+      "input": "A = ()[]",
+      "output": "1"
+    }
+  ],
+  "starterCode": {
+    "java": "import java.util.*;\nclass Solution {\n    public int solve(String A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : string\n    # @return an integer\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(string A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "{([])}"
+    },
+    {
+      "A": "(){"
+    },
+    {
+      "A": "()[]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "string"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use a stack to keep track of opening brackets.",
+    "When you encounter an opening bracket '(', '[', or '{', push it onto the stack.",
+    "When you encounter a closing bracket ')', ']', or '}', check if the stack is empty or if the top doesn't match.",
+    "If the stack is empty when encountering a closing bracket, return 0 (not balanced).",
+    "If the top of the stack matches the closing bracket, pop it. Otherwise, return 0.",
+    "After processing all characters, if the stack is empty, return 1 (balanced), otherwise return 0."
+  ]
+}
+
+
+
+
+

@@ -1,0 +1,54 @@
+{
+  "id": "first-missing-integer",
+  "title": "First Missing Integer",
+  "difficulty": "Medium",
+  "category": "merge-intervals",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [1, 2, 0]",
+      "output": "3"
+    },
+    {
+      "input": "A = [3, 4, -1, 1]",
+      "output": "2"
+    },
+    {
+      "input": "A = [-8, -7, -6]",
+      "output": "1"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int firstMissingPositive(int[] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @return an integer\n    def firstMissingPositive(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int firstMissingPositive(vector<int>& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1,2,0]"
+    },
+    {
+      "A": "[3,4,-1,1]"
+    },
+    {
+      "A": "[-8,-7,-6]"
+    }
+  ],
+  "functionName": "firstMissingPositive",
+  "params": [
+    {
+      "name": "A",
+      "type": "int_array"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Think about what the first missing positive integer could be. It must be between 1 and N+1 (where N is the array size).",
+    "Since we need O(n) time and constant space, we can't use extra arrays or sorting.",
+    "Use the array itself as a hash table. For each number, mark its presence by making the value at that index negative.",
+    "First, replace all non-positive numbers with a value outside the range [1, N] (like N+2).",
+    "Then, for each number in the array, use its absolute value as an index and mark that position as negative.",
+    "Finally, scan the array to find the first positive value - its index+1 is the first missing positive integer."
+  ]
+}
+

@@ -1,0 +1,47 @@
+{
+  "id": "print-linked-list",
+  "title": "Print Linked List",
+  "difficulty": "Easy",
+  "category": "linked-list-introduction",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 1 -> 2 -> 3",
+      "output": "1 2 3 "
+    },
+    {
+      "input": "A = 4 -> 3 -> 2 -> 1",
+      "output": "4 3 2 1 "
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public String solve(ListNode A) {\n        \n    }\n}",
+    "python": "# Definition for singly-linked list.\n# class ListNode:\n#    def __init__(self, x):\n#        self.val = x\n#        self.next = None\n\nclass Solution:\n    # @param A : head node of linked list\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    void solve(ListNode* A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1,2,3]"
+    },
+    {
+      "A": "[4,3,2,1]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "ListNode"
+    }
+  ],
+  "outputType": "string",
+  "captureStdout": true,
+  "hints": [
+    "Traverse the linked list from head to tail.",
+    "Print each node's value followed by a space.",
+    "After printing all nodes, print a new line.",
+    "Use a temporary pointer to traverse the list without modifying the head.",
+    "Continue until the pointer becomes null."
+  ]
+}
+

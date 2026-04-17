@@ -1,0 +1,11 @@
+{
+    "title": "Best Time to Buy and Sell Stock",
+    "difficulty": "Easy",
+    "category": "Arrays",
+    "functionName": "maxProfit",
+    "testCases": [
+        {
+            "prices": "[7,1,5,3,6,4]"
+        }
+    ]
+}

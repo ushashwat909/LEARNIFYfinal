@@ -99,13 +99,14 @@ const Navbar = ({ onGoHome, onNavigate, currentView, theme, onToggleTheme, user,
               <>
                 {navLink('Dashboard', 'dashboard')}
                 {navLink('Practice Hub', 'practice')}
+                {navLink('Full Curriculum', 'curriculum')}
                 {navLink('Gap Analyzer', 'gap-analyzer')}
                 {navLink('Syllabus AI', 'syllabus-ai')}
                 {navLink('Brain GPS', 'knowledge-graph')}
-                {navLink('Stats', 'stats')}
               </>
             ) : (
               <>
+                {navLink('Curriculum', 'curriculum')}
                 <span
                   onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
                   style={{ cursor: 'pointer', color: 'var(--color-text)', fontWeight: 500, fontSize: '0.9rem', transition: 'color 0.2s' }}

@@ -1,0 +1,44 @@
+{
+  "id": "partition-index",
+  "title": "Partition Index",
+  "difficulty": "Medium",
+  "category": "quick-sort-and-comparator-problems",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [6, 2, 0, 4, 5]",
+      "output": "3"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int partition(int[] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @return an integer\n    def partition(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int partition(vector<int>& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[6,2,0,4,5]"
+    }
+  ],
+  "functionName": "partition",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use the partition algorithm from quicksort with the last element as pivot.",
+    "Use two pointers: one from the start (i) and one from the second-to-last element (j).",
+    "Move i forward when A[i] < pivot, move j backward when A[j] > pivot.",
+    "When A[i] >= pivot and A[j] <= pivot, swap them.",
+    "After the loop, swap the pivot (last element) with A[i] to place it in the correct position.",
+    "Return the index i where the pivot is placed."
+  ]
+}
+
+
+
+
+

@@ -1,0 +1,57 @@
+{
+  "id": "sorted-insert-position",
+  "title": "Sorted Insert Position",
+  "difficulty": "Easy",
+  "category": "binary-search-on-array",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [1, 3, 5, 6]\nB = 5",
+      "output": "2"
+    },
+    {
+      "input": "A = [1, 4, 9]\nB = 3",
+      "output": "1"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int searchInsert(int[] A, int B) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @param B : integer\n    # @return an integer\n    def searchInsert(self, A, B):\n        ",
+    "cpp": "class Solution {\npublic:\n    int searchInsert(vector<int>& A, int B) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1,3,5,6]",
+      "B": "5"
+    },
+    {
+      "A": "[1,4,9]",
+      "B": "3"
+    }
+  ],
+  "functionName": "searchInsert",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    },
+    {
+      "name": "B",
+      "type": "int"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use binary search to find the target value or the insertion position.",
+    "If the target is found, return its index immediately.",
+    "If the target is not found, the left pointer (lo) will point to the correct insertion position.",
+    "When A[mid] < B, move left pointer to mid+1.",
+    "When A[mid] >= B, move right pointer to mid-1.",
+    "After the loop ends, return the left pointer as it indicates where the target should be inserted."
+  ]
+}
+
+
+
+
+

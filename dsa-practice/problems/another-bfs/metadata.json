@@ -1,0 +1,64 @@
+{
+  "id": "another-bfs",
+  "title": "Another BFS",
+  "difficulty": "Medium",
+  "category": "graphs2-bfs-matrix",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 6\nB = [   [2, 5, 1]\n        [1, 3, 1] \n        [0, 5, 2] \n        [0, 2, 2] \n        [1, 4, 1] \n        [0, 1, 1] ] \nC = 3\nD = 2",
+      "output": "4"
+    },
+    {
+      "input": "A = 2\nB = [   [0, 1, 1]\n    ] \nC = 0\nD = 1",
+      "output": "1"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int A, int[][] B, int C, int D) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : integer\n    # @param B : list of list of integers\n    # @param C : integer\n    # @param D : integer\n    # @return an integer\n    def solve(self, A, B, C, D):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(int A, vector<vector<int>>& B, int C, int D) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "6",
+      "B": "[[2,5,1],[1,3,1],[0,5,2],[0,2,2],[1,4,1],[0,1,1]]",
+      "C": "3",
+      "D": "2"
+    },
+    {
+      "A": "2",
+      "B": "[[0,1,1]]",
+      "C": "0",
+      "D": "1"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int"
+    },
+    {
+      "name": "B",
+      "type": "int[][]"
+    },
+    {
+      "name": "C",
+      "type": "int"
+    },
+    {
+      "name": "D",
+      "type": "int"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use 0-1 BFS (modified BFS) since edge weights are only 1 or 2.",
+    "Build an adjacency list from the edge list.",
+    "Use a deque: add weight-1 edges to the front (priority) and weight-2 edges to the back.",
+    "Maintain a distance array initialized to infinity, set distance[C] = 0.",
+    "If distance[D] remains infinity after BFS, return -1."
+  ]
+}
+

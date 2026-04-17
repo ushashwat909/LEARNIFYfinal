@@ -1,0 +1,49 @@
+{
+  "id": "single-number",
+  "title": "Single Number",
+  "difficulty": "Easy",
+  "category": "bit-manipulation-2",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [1, 2, 2, 3, 1]",
+      "output": "3"
+    },
+    {
+      "input": "A = [1, 2, 2]",
+      "output": "1"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int singleNumber(int[] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : tuple of integers\n    # @return an integer\n    def singleNumber(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int singleNumber(vector<int>& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1, 2, 2, 3, 1]"
+    },
+    {
+      "A": "[1, 2, 2]"
+    }
+  ],
+  "functionName": "singleNumber",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Think about the XOR operation and its properties.",
+    "XOR of a number with itself is 0, and XOR with 0 is the number itself.",
+    "If you XOR all elements in the array, what happens to elements that appear twice?",
+    "The XOR operation is commutative and associative, so order doesn't matter."
+  ]
+}
+
+
+
+
+

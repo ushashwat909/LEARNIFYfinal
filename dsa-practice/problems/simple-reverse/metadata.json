@@ -1,0 +1,45 @@
+{
+  "id": "simple-reverse",
+  "title": "Simple Reverse",
+  "difficulty": "Easy",
+  "category": "strings",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = \"scaler\"",
+      "output": "\"relacs\""
+    },
+    {
+      "input": "A = \"academy\"",
+      "output": "\"ymedaca\""
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public String solve(String A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : string\n    # @return a string\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    string solve(string A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "\"scaler\""
+    },
+    {
+      "A": "\"academy\""
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "string"
+    }
+  ],
+  "outputType": "string",
+  "hints": [
+    "Convert the string to a character array or use two pointers.",
+    "Swap characters from both ends moving towards the center.",
+    "Use two pointers: one starting from the beginning and one from the end.",
+    "Swap characters at these positions and move both pointers towards the center."
+  ]
+}
+

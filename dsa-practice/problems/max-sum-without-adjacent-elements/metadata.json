@@ -1,0 +1,47 @@
+{
+  "id": "max-sum-without-adjacent-elements",
+  "title": "Max Sum Without Adjacent Elements",
+  "difficulty": "Medium",
+  "category": "dp-2dimensional",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [[1], [2]]",
+      "output": "2"
+    },
+    {
+      "input": "A = [[1, 2, 3, 4], [2, 3, 4, 5]]",
+      "output": "8"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int adjacent(int[][] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of list of integers\n    # @return an integer\n    def adjacent(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int adjacent(vector<vector<int> >& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[[1],[2]]"
+    },
+    {
+      "A": "[[1,2,3,4],[2,3,4,5]]"
+    }
+  ],
+  "functionName": "adjacent",
+  "params": [
+    {
+      "name": "A",
+      "type": "int_array_2d"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Since we cannot choose adjacent elements (horizontally, vertically, or diagonally), for each column, we can only choose at most one element.",
+    "For each column, take the maximum value between the two rows: max(A[0][i], A[1][i]).",
+    "This reduces the problem to a 1D array where we need to maximize sum without choosing adjacent elements.",
+    "Use dynamic programming: dp[i] represents the maximum sum we can get up to column i.",
+    "For each column i, we have two choices: either take it (dp[i-2] + max_values[i]) or skip it (dp[i-1]).",
+    "Base cases: dp[0] = max_values[0], dp[1] = max(max_values[0], max_values[1])."
+  ]
+}
+

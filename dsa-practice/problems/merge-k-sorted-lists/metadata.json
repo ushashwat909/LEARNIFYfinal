@@ -1,0 +1,48 @@
+{
+  "id": "merge-k-sorted-lists",
+  "title": "Merge K Sorted Lists",
+  "difficulty": "Hard",
+  "category": "review-problems",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [1->10->20, 4->11->13, 3->8->9]",
+      "output": "1->3->4->8->9->10->11->13->20"
+    },
+    {
+      "input": "A = [10->12, 13, 5->6]",
+      "output": "5->6->10->12->13"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public ListNode mergeKLists(ListNode[] A) {\n        \n    }\n}",
+    "python": "# Definition for singly-linked list.\n# class ListNode:\n#     def __init__(self, x):\n#         self.val = x\n#         self.next = None\n\nclass Solution:\n    # @param A : list of linked list\n    # @return the head node in the linked list\n    def mergeKLists(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    ListNode* mergeKLists(vector<ListNode*>& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[[1,10,20],[4,11,13],[3,8,9]]"
+    },
+    {
+      "A": "[[10,12],[13],[5,6]]"
+    }
+  ],
+  "functionName": "mergeKLists",
+  "params": [
+    {
+      "name": "A",
+      "type": "ListNode[]"
+    }
+  ],
+  "outputType": "ListNode",
+  "hints": [
+    "Use a min heap to efficiently get the smallest element from all lists at each step.",
+    "Initialize the heap with the first node from each non-empty linked list.",
+    "At each step, extract the minimum node from the heap and add it to the result.",
+    "If the extracted node has a next node, add that next node to the heap.",
+    "Continue until the heap is empty.",
+    "This approach achieves O(N log K) complexity where N is total nodes and K is number of lists."
+  ]
+}
+
+

@@ -1,0 +1,64 @@
+{
+  "id": "insert-in-linked-list",
+  "title": "Insert in Linked List",
+  "difficulty": "Easy",
+  "category": "linked-list-introduction",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 1 -> 2\nB = 3\nC = 0",
+      "output": "3 -> 1 -> 2"
+    },
+    {
+      "input": "A = 1 -> 2\nB = 3\nC = 1",
+      "output": "1 -> 3 -> 2"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public ListNode solve(ListNode A, int B, int C) {\n        \n    }\n}",
+    "python": "# Definition for singly-linked list.\n# class ListNode:\n#    def __init__(self, x):\n#        self.val = x\n#        self.next = None\n\nclass Solution:\n    # @param A : head node of linked list\n    # @param B : integer\n    # @param C : integer\n    # @return the head node in the linked list\n    def solve(self, A, B, C):\n        ",
+    "cpp": "class Solution {\npublic:\n    ListNode* solve(ListNode* A, int B, int C) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1,2]",
+      "B": "3",
+      "C": "0"
+    },
+    {
+      "A": "[1,2]",
+      "B": "3",
+      "C": "1"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "ListNode"
+    },
+    {
+      "name": "B",
+      "type": "int"
+    },
+    {
+      "name": "C",
+      "type": "int"
+    }
+  ],
+  "outputType": "ListNode",
+  "hints": [
+    "Create a new node with value B.",
+    "If the list is empty (A is null), return the new node as the head.",
+    "If position C is 0, insert at the head by making new node point to A and return new node.",
+    "Otherwise, traverse to position C-1 (0-based indexing).",
+    "If you reach the end of the list before reaching C-1, insert at the tail.",
+    "Insert the new node by updating pointers: new_node.next = current.next, current.next = new_node.",
+    "Return the original head A (unless inserting at head)."
+  ]
+}
+
+
+
+
+

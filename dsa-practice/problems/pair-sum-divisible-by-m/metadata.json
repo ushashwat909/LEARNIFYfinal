@@ -1,0 +1,56 @@
+{
+  "id": "pair-sum-divisible-by-m",
+  "title": "Pair Sum divisible by M",
+  "difficulty": "Medium",
+  "category": "modular-arithmetic-and-gcd",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [1, 2, 3, 4, 5]\nB = 2",
+      "output": "4"
+    },
+    {
+      "input": "A = [5, 17, 100, 11]\nB = 28",
+      "output": "1"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int[] A, int B) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @param B : integer\n    # @return an integer\n    def solve(self, A, B):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(vector<int>& A, int B) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1, 2, 3, 4, 5]",
+      "B": "2"
+    },
+    {
+      "A": "[5, 17, 100, 11]",
+      "B": "28"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    },
+    {
+      "name": "B",
+      "type": "int"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use modular arithmetic: (a + b) % B = 0 means (a % B + b % B) % B = 0.",
+    "For a number with remainder r, we need to find numbers with remainder (B - r) % B.",
+    "Use a hashmap to count the frequency of each remainder.",
+    "For each element, calculate its remainder modulo B and find the count of elements with the complementary remainder.",
+    "Remember to handle modulo operations to prevent integer overflow."
+  ]
+}
+
+
+
+
+

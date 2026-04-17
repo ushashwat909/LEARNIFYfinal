@@ -77,7 +77,7 @@ const nodeTypes = {
   knowledgeNode: KnowledgeNode
 };
 
-const KnowledgeGraph = ({ theme, userId = 101 }) => {
+const KnowledgeGraph = ({ theme, userId = 101, onStartChallenge }) => {
   const [nodes, setNodes, onNodesChange] = useNodesState([]);
   const [edges, setEdges, onEdgesChange] = useEdgesState([]);
   const [loading, setLoading] = useState(true);

@@ -1,0 +1,52 @@
+{
+  "id": "merge-two-sorted-lists",
+  "title": "Merge Two Sorted Lists",
+  "difficulty": "Easy",
+  "category": "linked-list-sorting-detecting-loops",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 5 -> 8 -> 20\nB = 4 -> 11 -> 15",
+      "output": "4 -> 5 -> 8 -> 11 -> 15 -> 20"
+    },
+    {
+      "input": "A = 1 -> 2 -> 3\nB = Null",
+      "output": "1 -> 2 -> 3"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public ListNode mergeTwoLists(ListNode A, ListNode B) {\n        \n    }\n}",
+    "python": "class Solution:\n\t# @param A : head node of linked list\n\t# @param B : head node of linked list\n\t# @return the head node in the linked list\n\tdef mergeTwoLists(self, A, B):\n        ",
+    "cpp": "class Solution {\npublic:\n    ListNode* mergeTwoLists(ListNode* A, ListNode* B) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[5,8,20]",
+      "B": "[4,11,15]"
+    },
+    {
+      "A": "[1,2,3]",
+      "B": "[]"
+    }
+  ],
+  "functionName": "mergeTwoLists",
+  "params": [
+    {
+      "name": "A",
+      "type": "ListNode"
+    },
+    {
+      "name": "B",
+      "type": "ListNode"
+    }
+  ],
+  "outputType": "ListNode",
+  "hints": [
+    "Use a dummy node to simplify the merging process.",
+    "Compare the values of nodes from both lists.",
+    "Attach the smaller node to the result list and move forward.",
+    "Continue until one of the lists is exhausted.",
+    "Attach the remaining nodes from the non-empty list to the result."
+  ]
+}
+

@@ -1,0 +1,53 @@
+{
+  "id": "spiral-order-matrix-ii",
+  "title": "Spiral Order Matrix II",
+  "difficulty": "Medium",
+  "category": "two-dimensional-array",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 1",
+      "output": "[[1]]"
+    },
+    {
+      "input": "A = 2",
+      "output": "[[1, 2], [4, 3]]"
+    },
+    {
+      "input": "A = 5",
+      "output": "[[1, 2, 3, 4, 5], [16, 17, 18, 19, 6], [15, 24, 25, 20, 7], [14, 23, 22, 21, 8], [13, 12, 11, 10, 9]]"
+    }
+  ],
+  "starterCode": {
+    "java": "import java.util.*;\nclass Solution {\n    public List<List<Integer>> generateMatrix(int A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : integer\n    # @return a list of list of integers\n    def generateMatrix(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    vector<vector<int> > generateMatrix(int A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "1"
+    },
+    {
+      "A": "2"
+    },
+    {
+      "A": "5"
+    }
+  ],
+  "functionName": "generateMatrix",
+  "params": [
+    {
+      "name": "A",
+      "type": "int"
+    }
+  ],
+  "outputType": "int_list_2d",
+  "hints": [
+    "Think about how to traverse the matrix in spiral order: right, down, left, up.",
+    "Use four boundaries: top, bottom, left, right to track the current layer.",
+    "Fill the matrix layer by layer, starting from the outer layer and moving inward.",
+    "For each layer, fill the top row (left to right), right column (top to bottom), bottom row (right to left), and left column (bottom to top).",
+    "After completing a layer, move the boundaries inward and continue with the next layer."
+  ]
+}
+

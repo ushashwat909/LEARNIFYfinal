@@ -1,0 +1,56 @@
+{
+  "id": "check-pair-sum",
+  "title": "Check Pair Sum",
+  "difficulty": "Easy",
+  "category": "hashing-2",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 8\nB = [3, 5, 1, 2, 1, 2]",
+      "output": "1"
+    },
+    {
+      "input": "A = 21\nB = [9, 10, 7, 10, 9, 1, 5, 1, 5]",
+      "output": "0"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int A, int[] B) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : integer\n    # @param B : list of integers\n    # @return an integer\n    def solve(self, A, B):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(int A, vector<int>& B) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "8",
+      "B": "[3, 5, 1, 2, 1, 2]"
+    },
+    {
+      "A": "21",
+      "B": "[9, 10, 7, 10, 9, 1, 5, 1, 5]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int"
+    },
+    {
+      "name": "B",
+      "type": "int[]"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use a hashmap to store elements as you iterate through the array.",
+    "For each element B[i], calculate target = A - B[i].",
+    "Check if target exists in the hashmap before adding the current element.",
+    "This ensures you don't use the same element twice (i != j).",
+    "If target is found, return 1 immediately. Otherwise, add current element to hashmap."
+  ]
+}
+
+
+
+
+

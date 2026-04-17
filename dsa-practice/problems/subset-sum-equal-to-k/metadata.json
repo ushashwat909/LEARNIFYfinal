@@ -1,0 +1,53 @@
+{
+  "id": "subset-sum-equal-to-k",
+  "title": "Subset Sum equal to K",
+  "difficulty": "Medium",
+  "category": "backtracking2",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [3, 34, -3, 12, 5, 2]\nB = 9",
+      "output": "1"
+    },
+    {
+      "input": "A = [-8, 34, 4, 0, -5, -2]\nB = -20",
+      "output": "0"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int SubsetSum(int[] A, int B) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @param B : integer\n    # @return an integer\n    def SubsetSum(self, A, B):\n        ",
+    "cpp": "class Solution {\npublic:\n    int SubsetSum(vector<int>& A, int B) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[3,34,-3,12,5,2]",
+      "B": "9"
+    },
+    {
+      "A": "[-8,34,4,0,-5,-2]",
+      "B": "-20"
+    }
+  ],
+  "functionName": "SubsetSum",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    },
+    {
+      "name": "B",
+      "type": "int"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use backtracking to explore all possible subsets.",
+    "For each element, you have two choices: include it in the subset or exclude it.",
+    "Keep track of the current sum as you build the subset.",
+    "If current sum equals B, return 1 (found a valid subset).",
+    "If you've processed all elements and sum doesn't match, return 0.",
+    "Recursively explore both choices: including and excluding each element."
+  ]
+}
+

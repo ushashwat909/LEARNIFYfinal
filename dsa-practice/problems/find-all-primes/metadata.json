@@ -1,0 +1,47 @@
+{
+  "id": "find-all-primes",
+  "title": "Find All Primes",
+  "difficulty": "Easy",
+  "category": "maths-prime-numbers",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 7",
+      "output": "[2, 3, 5, 7]"
+    },
+    {
+      "input": "A = 12",
+      "output": "[2, 3, 5, 7, 11]"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int[] solve(int A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : integer\n    # @return a list of integers\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    vector<int> solve(int A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "7"
+    },
+    {
+      "A": "12"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int"
+    }
+  ],
+  "outputType": "int_array",
+  "hints": [
+    "Use Sieve of Eratosthenes algorithm to find all primes efficiently.",
+    "Create a boolean array is_prime of size (A+1), initialize all as true.",
+    "Mark 0 and 1 as false (not prime).",
+    "For each number i from 2 to sqrt(A), if i is prime, mark all multiples of i as false.",
+    "After the sieve, collect all indices where is_prime[i] is true.",
+    "The time complexity is O(n log log n) which is very efficient for large values of A."
+  ]
+}
+

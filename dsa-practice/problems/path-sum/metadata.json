@@ -1,0 +1,55 @@
+{
+  "id": "path-sum",
+  "title": "Path Sum",
+  "difficulty": "Easy",
+  "category": "trees5",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [5, 4, 8, 11, -1, 13, 4, 7, 2, -1, -1, -1, 1]\nB = 22",
+      "output": "1"
+    },
+    {
+      "input": "A = [5, 4, 8, -11, -1, -13, 4]\nB = -1",
+      "output": "0"
+    }
+  ],
+  "starterCode": {
+    "java": "// Definition for a binary tree node\n// class TreeNode {\n//     int val;\n//     TreeNode left;\n//     TreeNode right;\n//     TreeNode(int x) { val = x; }\n// }\n\nclass Solution {\n    public int hasPathSum(TreeNode A, int B) {\n        \n    }\n}",
+    "python": "# Definition for a  binary tree node\n# class TreeNode:\n#\tdef __init__(self, x):\n#\t\tself.val = x\n#\t\tself.left = None\n#\t\tself.right = None\n\nclass Solution:\n\t# @param A : root node of tree\n\t# @param B : integer\n\t# @return an integer\n\tdef hasPathSum(self, A, B):\n        ",
+    "cpp": "// Definition for a binary tree node.\n// struct TreeNode {\n//     int val;\n//     TreeNode *left;\n//     TreeNode *right;\n//     TreeNode(int x) : val(x), left(NULL), right(NULL) {}\n// };\n\nclass Solution {\npublic:\n    int hasPathSum(TreeNode* A, int B) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[5,4,8,11,-1,13,4,7,2,-1,-1,-1,1]",
+      "B": "22"
+    },
+    {
+      "A": "[5,4,8,-11,-1,-13,4]",
+      "B": "-1"
+    }
+  ],
+  "functionName": "hasPathSum",
+  "params": [
+    {
+      "name": "A",
+      "type": "TreeNode"
+    },
+    {
+      "name": "B",
+      "type": "int"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use recursive approach to traverse from root to leaf.",
+    "At each node, subtract the node's value from the target sum.",
+    "When you reach a leaf node, check if the remaining sum equals the leaf's value.",
+    "If a node is null, return 0 (no path exists).",
+    "Check both left and right subtrees - return 1 if either path exists.",
+    "A leaf node is one that has no left and right children.",
+    "The path must be from root to leaf - not just any path in the tree."
+  ]
+}
+
+

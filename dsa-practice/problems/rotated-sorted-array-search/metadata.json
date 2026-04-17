@@ -1,0 +1,57 @@
+{
+  "id": "rotated-sorted-array-search",
+  "title": "Rotated Sorted Array Search",
+  "difficulty": "Medium",
+  "category": "binary-search-on-problems",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [4, 5, 6, 7, 0, 1, 2, 3]\nB = 4",
+      "output": "0"
+    },
+    {
+      "input": "A = [9, 10, 3, 5, 6, 8]\nB = 5",
+      "output": "3"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int search(int[] A, int B) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : tuple of integers\n    # @param B : integer\n    # @return an integer\n    def search(self, A, B):\n        ",
+    "cpp": "class Solution {\npublic:\n    int search(vector<int>& A, int B) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[4,5,6,7,0,1,2,3]",
+      "B": "4"
+    },
+    {
+      "A": "[9,10,3,5,6,8]",
+      "B": "5"
+    }
+  ],
+  "functionName": "search",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    },
+    {
+      "name": "B",
+      "type": "int"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use binary search to find the target in O(log N) time.",
+    "Determine which half of the array is sorted by comparing A[mid] with A[0].",
+    "If A[mid] >= A[0], the left half is sorted. Check if target is in the sorted left half.",
+    "If A[mid] < A[0], the right half is sorted. Check if target is in the sorted right half.",
+    "If target is in the sorted half, search there. Otherwise, search in the other half.",
+    "Return -1 if target is not found after the binary search completes."
+  ]
+}
+
+
+
+
+

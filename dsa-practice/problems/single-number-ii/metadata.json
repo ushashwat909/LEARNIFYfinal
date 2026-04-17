@@ -1,0 +1,49 @@
+{
+  "id": "single-number-ii",
+  "title": "Single Number II",
+  "difficulty": "Medium",
+  "category": "bit-manipulation-2",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [1, 2, 4, 3, 3, 2, 2, 3, 1, 1]",
+      "output": "4"
+    },
+    {
+      "input": "A = [0, 0, 0, 1]",
+      "output": "1"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int singleNumber(int[] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : tuple of integers\n    # @return an integer\n    def singleNumber(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int singleNumber(vector<int>& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1, 2, 4, 3, 3, 2, 2, 3, 1, 1]"
+    },
+    {
+      "A": "[0, 0, 0, 1]"
+    }
+  ],
+  "functionName": "singleNumber",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Think about counting bits at each position.",
+    "If every element appears thrice, the count of 1s at each bit position should be divisible by 3.",
+    "For each bit position, count how many numbers have that bit set. If the count is not divisible by 3, that bit should be set in the answer.",
+    "Process each bit position from 0 to 31 (for 32-bit integers)."
+  ]
+}
+
+
+
+
+

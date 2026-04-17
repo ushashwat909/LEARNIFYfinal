@@ -1,0 +1,50 @@
+{
+  "id": "factors-sort",
+  "title": "Factors sort",
+  "difficulty": "Medium",
+  "category": "quick-sort-and-comparator-problems",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [6, 8, 9]",
+      "output": "[9, 6, 8]"
+    },
+    {
+      "input": "A = [2, 4, 7]",
+      "output": "[2, 7, 4]"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int[] solve(int[] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @return a list of integers\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    vector<int> solve(vector<int>& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[6, 8, 9]"
+    },
+    {
+      "A": "[2, 4, 7]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    }
+  ],
+  "outputType": "int_array",
+  "hints": [
+    "Use a custom comparator to sort the array.",
+    "First, compare by number of factors (ascending order).",
+    "If two elements have the same number of factors, compare by their values (ascending order).",
+    "To count factors efficiently, iterate from 1 to sqrt(n) and count pairs.",
+    "If i divides n, then both i and n/i are factors (unless i == n/i)."
+  ]
+}
+
+
+
+
+

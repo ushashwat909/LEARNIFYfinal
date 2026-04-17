@@ -1,0 +1,14 @@
+{
+    "title": "Contains Duplicate",
+    "difficulty": "Easy",
+    "category": "Arrays",
+    "functionName": "containsDuplicate",
+    "testCases": [
+        {
+            "nums": "[1,2,3,1]"
+        },
+        {
+            "nums": "[1,2,3,4]"
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "balanced-binary-tree",
+  "title": "Balanced Binary Tree",
+  "difficulty": "Easy",
+  "category": "trees2",
+  "link": "",
+  "examples": [
+    {
+      "input": "Tree: 1 -> (2, 3)",
+      "output": "1"
+    },
+    {
+      "input": "Tree: 1 -> (2, null), 2 -> (3, null)",
+      "output": "0"
+    }
+  ],
+  "starterCode": {
+    "java": "// Definition for a binary tree node.\n// class TreeNode {\n//     int val;\n//     TreeNode left;\n//     TreeNode right;\n//     TreeNode(int x) { val = x; }\n// }\n\nclass Solution {\n    public int isBalanced(TreeNode A) {\n        \n    }\n}",
+    "python": "# Definition for a  binary tree node\n# class TreeNode:\n#\tdef __init__(self, x):\n#\t\tself.val = x\n#\t\tself.left = None\n#\t\tself.right = None\n\nclass Solution:\n\t# @param A : root node of tree\n\t# @return an integer\n\tdef isBalanced(self, A):\n        ",
+    "cpp": "// Definition for binary tree\n// struct TreeNode {\n//     int val;\n//     TreeNode *left;\n//     TreeNode *right;\n//     TreeNode(int x) : val(x), left(NULL), right(NULL) {}\n// };\n\nclass Solution {\npublic:\n    int isBalanced(TreeNode* A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "Tree: 1 -> (2, 3)"
+    },
+    {
+      "A": "Tree: 1 -> (2, null), 2 -> (3, null)"
+    }
+  ],
+  "functionName": "isBalanced",
+  "params": [
+    {
+      "name": "A",
+      "type": "TreeNode"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use recursive approach to calculate height of each subtree.",
+    "For each node, calculate height of left and right subtrees.",
+    "Check if the absolute difference between left and right subtree heights is more than 1.",
+    "If difference > 1 for any node, the tree is not balanced.",
+    "Return -1 for null nodes (or 0 depending on your height calculation).",
+    "Use a flag or return value to track if tree is balanced during traversal."
+  ]
+}
+

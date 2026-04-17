@@ -1,0 +1,46 @@
+{
+  "id": "count-increasing-triplets",
+  "title": "Count Increasing Triplets",
+  "difficulty": "Easy",
+  "category": "three-pointers-boyer-moore",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [1, 2, 4, 3]",
+      "output": "2"
+    },
+    {
+      "input": "A = [2, 1, 2, 3]",
+      "output": "1"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int[] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @return an integer\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(vector<int>& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1,2,4,3]"
+    },
+    {
+      "A": "[2,1,2,3]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use three pointers approach - fix the middle element.",
+    "For each middle element at index i, count how many elements on the left are smaller than A[i].",
+    "Count how many elements on the right are larger than A[i].",
+    "The number of triplets with A[i] as middle element is (left_count * right_count).",
+    "Sum up all such triplets for all possible middle elements."
+  ]
+}
+

@@ -1,0 +1,54 @@
+{
+  "id": "search-in-bst",
+  "title": "Search in BST",
+  "difficulty": "Easy",
+  "category": "trees3-bst",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = Tree: 15 -> (12, 20), 12 -> (10, 14), 10 -> (8, null), 20 -> (16, 27)\nB = 16",
+      "output": "1"
+    },
+    {
+      "input": "A = Tree: 8 -> (6, 21), 6 -> (1, 7)\nB = 9",
+      "output": "0"
+    }
+  ],
+  "starterCode": {
+    "java": "// Definition for a binary tree node.\n// class TreeNode {\n//     int val;\n//     TreeNode left;\n//     TreeNode right;\n//     TreeNode(int x) { val = x; }\n// }\n\nclass Solution {\n    public int solve(TreeNode A, int B) {\n        \n    }\n}",
+    "python": "# Definition for a  binary tree node\n# class TreeNode:\n#    def __init__(self, x):\n#        self.val = x\n#        self.left = None\n#        self.right = None\n\nclass Solution:\n    # @param A : root node of tree\n    # @param B : integer\n    # @return an integer\n    def solve(self, A, B):\n        ",
+    "cpp": "// Definition for binary tree\n// struct TreeNode {\n//     int val;\n//     TreeNode *left;\n//     TreeNode *right;\n//     TreeNode(int x) : val(x), left(NULL), right(NULL) {}\n// };\n\nclass Solution {\npublic:\n    int solve(TreeNode* A, int B) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "Tree: 15 -> (12, 20), 12 -> (10, 14), 10 -> (8, null), 20 -> (16, 27)",
+      "B": "16"
+    },
+    {
+      "A": "Tree: 8 -> (6, 21), 6 -> (1, 7)",
+      "B": "9"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "TreeNode"
+    },
+    {
+      "name": "B",
+      "type": "int"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use the BST property: left subtree < root < right subtree.",
+    "Start from the root and compare the value with B.",
+    "If current node value == B, return 1 (found).",
+    "If current node value < B, search in the right subtree.",
+    "If current node value > B, search in the left subtree.",
+    "If you reach null, return 0 (not found).",
+    "You can use iterative or recursive approach."
+  ]
+}
+

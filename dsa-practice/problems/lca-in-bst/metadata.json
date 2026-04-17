@@ -1,0 +1,61 @@
+{
+  "id": "lca-in-bst",
+  "title": "LCA in BST",
+  "difficulty": "Medium",
+  "category": "trees4",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [15, 12, 20, 10, 14, 16, 27, 8]\nB = 8\nC = 20",
+      "output": "15"
+    },
+    {
+      "input": "A = [8, 6, 21, 1, 7]\nB = 7\nC = 1",
+      "output": "6"
+    }
+  ],
+  "starterCode": {
+    "java": "// Definition for a binary tree node\n// class TreeNode {\n//     int val;\n//     TreeNode left;\n//     TreeNode right;\n//     TreeNode(int x) { val = x; }\n// }\n\nclass Solution {\n    public int solve(TreeNode A, int B, int C) {\n        \n    }\n}",
+    "python": "# Definition for a  binary tree node\n# class TreeNode:\n#\tdef __init__(self, x):\n#\t\tself.val = x\n#\t\tself.left = None\n#\t\tself.right = None\n\nclass Solution:\n\t# @param A : root node of tree\n\t# @param B : integer\n\t# @param C : integer\n\t# @return an integer\n\tdef solve(self, A, B, C):\n        ",
+    "cpp": "// Definition for a binary tree node.\n// struct TreeNode {\n//     int val;\n//     TreeNode *left;\n//     TreeNode *right;\n//     TreeNode(int x) : val(x), left(NULL), right(NULL) {}\n// };\n\nclass Solution {\npublic:\n    int solve(TreeNode* A, int B, int C) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[15,12,20,10,14,16,27,8]",
+      "B": "8",
+      "C": "20"
+    },
+    {
+      "A": "[8,6,21,1,7]",
+      "B": "7",
+      "C": "1"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "TreeNode"
+    },
+    {
+      "name": "B",
+      "type": "int"
+    },
+    {
+      "name": "C",
+      "type": "int"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "In a BST, you can use the property that left subtree contains smaller values and right subtree contains larger values.",
+    "If both B and C are less than current node's value, LCA is in the left subtree.",
+    "If both B and C are greater than current node's value, LCA is in the right subtree.",
+    "If one is less and one is greater (or one equals current node), current node is the LCA.",
+    "You can solve this iteratively or recursively.",
+    "Since it's guaranteed that both nodes exist, you don't need to check for their existence.",
+    "The LCA is the first node where B and C are in different subtrees (or one is the node itself)."
+  ]
+}
+
+

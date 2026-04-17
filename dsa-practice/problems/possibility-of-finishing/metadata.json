@@ -1,0 +1,58 @@
+{
+  "id": "possibility-of-finishing",
+  "title": "Possibility of Finishing",
+  "difficulty": "Medium",
+  "category": "graphs4-topological-sort",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 3\nB = [1, 2]\nC = [2, 3]",
+      "output": "1"
+    },
+    {
+      "input": "A = 2\nB = [1, 2]\nC = [2, 1]",
+      "output": "0"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int A, int[] B, int[] C) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : integer\n    # @param B : list of integers\n    # @param C : list of integers\n    # @return an integer\n    def solve(self, A, B, C):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(int A, vector<int>& B, vector<int>& C) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "3",
+      "B": "[1,2]",
+      "C": "[2,3]"
+    },
+    {
+      "A": "2",
+      "B": "[1,2]",
+      "C": "[2,1]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int"
+    },
+    {
+      "name": "B",
+      "type": "int[]"
+    },
+    {
+      "name": "C",
+      "type": "int[]"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "This problem is equivalent to detecting a cycle in a directed graph.",
+    "Use Kahn's algorithm for topological sorting.",
+    "Build a graph and calculate in-degrees for each node.",
+    "Start with nodes having in-degree 0 and process them.",
+    "If all nodes are processed, return 1; otherwise, return 0 (cycle exists)."
+  ]
+}
+

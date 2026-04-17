@@ -1,0 +1,49 @@
+{
+  "id": "longest-subarray-zero-sum",
+  "title": "Longest Subarray Zero Sum",
+  "difficulty": "Medium",
+  "category": "hashing3",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [1, -2, 1, 2]",
+      "output": "3"
+    },
+    {
+      "input": "A = [3, 2, -1]",
+      "output": "0"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int[] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @return an integer\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(vector<int>& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1,-2,1,2]"
+    },
+    {
+      "A": "[3,2,-1]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int_array"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use prefix sum technique with a hash map.",
+    "If prefix sum at index i equals prefix sum at index j (i < j), then subarray from i+1 to j sums to zero.",
+    "Store the first occurrence of each prefix sum in a hash map.",
+    "If prefix sum is 0, the subarray from start to current index sums to zero.",
+    "If a prefix sum repeats, calculate the length of the subarray between the two occurrences.",
+    "Keep track of the maximum length found.",
+    "Time complexity is O(n) and space complexity is O(n)."
+  ]
+}
+
+

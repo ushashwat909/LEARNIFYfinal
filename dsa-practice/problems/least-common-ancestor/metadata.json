@@ -1,0 +1,62 @@
+{
+  "id": "least-common-ancestor",
+  "title": "Least Common Ancestor",
+  "difficulty": "Medium",
+  "category": "trees4",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [1, 2, 3]\nB = 2\nC = 3",
+      "output": "1"
+    },
+    {
+      "input": "A = [1, 2, 3, 4, 5]\nB = 4\nC = 5",
+      "output": "2"
+    }
+  ],
+  "starterCode": {
+    "java": "// Definition for a binary tree node\n// class TreeNode {\n//     int val;\n//     TreeNode left;\n//     TreeNode right;\n//     TreeNode(int x) { val = x; }\n// }\n\nclass Solution {\n    public int lca(TreeNode A, int B, int C) {\n        \n    }\n}",
+    "python": "# Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, x):\n#         self.val = x\n#         self.left = None\n#         self.right = None\n\nclass Solution:\n    # @param A : root node of tree\n    # @param B : integer\n    # @param C : integer\n    # @return an integer\n    def lca(self, A, B, C):\n        ",
+    "cpp": "// Definition for a binary tree node.\n// struct TreeNode {\n//     int val;\n//     TreeNode *left;\n//     TreeNode *right;\n//     TreeNode(int x) : val(x), left(NULL), right(NULL) {}\n// };\n\nclass Solution {\npublic:\n    int lca(TreeNode* A, int B, int C) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1,2,3]",
+      "B": "2",
+      "C": "3"
+    },
+    {
+      "A": "[1,2,3,4,5]",
+      "B": "4",
+      "C": "5"
+    }
+  ],
+  "functionName": "lca",
+  "params": [
+    {
+      "name": "A",
+      "type": "TreeNode"
+    },
+    {
+      "name": "B",
+      "type": "int"
+    },
+    {
+      "name": "C",
+      "type": "int"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use a recursive approach to traverse the tree.",
+    "For each node, check if it matches B or C.",
+    "Recursively search in left and right subtrees.",
+    "If both left and right subtrees return non-null, the current node is the LCA.",
+    "If only one subtree returns non-null, return that result.",
+    "Handle the special case where B == C - check if the value exists in the tree.",
+    "Track whether both B and C are found in the tree using flags.",
+    "Return -1 if either B or C is not found in the tree."
+  ]
+}
+
+

@@ -1,0 +1,50 @@
+{
+  "id": "max-of-an-array-using-recursion",
+  "title": "Max of an Array Using Recursion",
+  "difficulty": "Easy",
+  "category": "recursion-2",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [12, 10, 3, 4, 5]",
+      "output": "12"
+    },
+    {
+      "input": "A = [1, -5, 80, -40]",
+      "output": "80"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int getMax(int[] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @return an integer\n    def getMax(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int getMax(vector<int>& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[12, 10, 3, 4, 5]"
+    },
+    {
+      "A": "[1, -5, 80, -40]"
+    }
+  ],
+  "functionName": "getMax",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use recursion to find the maximum element.",
+    "Create a helper function that takes an index parameter.",
+    "Compare the current element with the maximum of the rest of the array.",
+    "Base case: when index equals array length, return negative infinity (or a very small number).",
+    "Recursive case: return the maximum of current element and the result of recursive call."
+  ]
+}
+
+
+
+
+

@@ -1,0 +1,56 @@
+{
+  "id": "greatest-common-divisor",
+  "title": "Greatest Common Divisor",
+  "difficulty": "Easy",
+  "category": "modular-arithmetic-and-gcd",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 4\nB = 6",
+      "output": "2"
+    },
+    {
+      "input": "A = 6\nB = 7",
+      "output": "1"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int gcd(int A, int B) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : integer\n    # @param B : integer\n    # @return an integer\n    def gcd(self, A, B):\n        ",
+    "cpp": "class Solution {\npublic:\n    int gcd(int A, int B) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "4",
+      "B": "6"
+    },
+    {
+      "A": "6",
+      "B": "7"
+    }
+  ],
+  "functionName": "gcd",
+  "params": [
+    {
+      "name": "A",
+      "type": "int"
+    },
+    {
+      "name": "B",
+      "type": "int"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use the Euclidean algorithm to find GCD.",
+    "The Euclidean algorithm states: gcd(A, B) = gcd(B, A % B).",
+    "Base case: if B == 0, then gcd(A, B) = A.",
+    "Recursively apply: gcd(A, B) = gcd(B, A % B) until B becomes 0.",
+    "Handle the case when A or B is 0."
+  ]
+}
+
+
+
+
+

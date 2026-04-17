@@ -1,0 +1,47 @@
+{
+  "id": "perfect-numbers",
+  "title": "Perfect Numbers",
+  "difficulty": "Medium",
+  "category": "queues",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 2",
+      "output": "22"
+    },
+    {
+      "input": "A = 3",
+      "output": "1111"
+    }
+  ],
+  "starterCode": {
+    "java": "import java.util.*;\n\nclass Solution {\n    public String solve(int A) {\n        \n    }\n}",
+    "python": "from collections import deque\n\nclass Solution:\n    # @param A : integer\n    # @return a strings\n    def solve(self, A):\n        ",
+    "cpp": "#include <deque>\n#include <string>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    string solve(int A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "2"
+    },
+    {
+      "A": "3"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int"
+    }
+  ],
+  "outputType": "string",
+  "hints": [
+    "Use a queue (deque) to generate perfect numbers in order.",
+    "Start with '1' and '2' in the queue.",
+    "For each number x, the perfect number is x + reverse(x) to form a palindrome.",
+    "After generating a perfect number, add x+'1' and x+'2' to the queue for the next iterations.",
+    "Process numbers in order (FIFO) to get the Ath perfect number.",
+    "The pattern: 1st is '11' (from '1'), 2nd is '22' (from '2'), 3rd is '1111' (from '11'), etc."
+  ]
+}
+

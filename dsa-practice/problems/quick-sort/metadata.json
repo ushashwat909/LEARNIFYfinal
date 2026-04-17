@@ -1,0 +1,50 @@
+{
+  "id": "quick-sort",
+  "title": "Quick Sort",
+  "difficulty": "Medium",
+  "category": "quick-sort-and-comparator-problems",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [1, 4, 10, 2, 1, 5]",
+      "output": "[1, 1, 2, 4, 5, 10]"
+    },
+    {
+      "input": "A = [3, 7, 1]",
+      "output": "[1, 3, 7]"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int[] solve(int[] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @return a list of integers\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    vector<int> solve(vector<int>& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1,4,10,2,1,5]"
+    },
+    {
+      "A": "[3,7,1]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    }
+  ],
+  "outputType": "int_array",
+  "hints": [
+    "Implement the Quick Sort algorithm using divide and conquer approach.",
+    "Choose a pivot element (commonly first, last, or middle element).",
+    "Partition the array such that all elements less than pivot are on the left, and all elements greater than pivot are on the right.",
+    "Recursively sort the left and right subarrays.",
+    "The base case is when the subarray has 0 or 1 element (already sorted)."
+  ]
+}
+
+
+
+
+

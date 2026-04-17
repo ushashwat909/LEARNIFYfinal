@@ -1,0 +1,47 @@
+{
+  "id": "sorted-permutation-rank",
+  "title": "Sorted Permutation Rank",
+  "difficulty": "Medium",
+  "category": "maths-prime-numbers",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = \"acb\"",
+      "output": "2"
+    },
+    {
+      "input": "A = \"a\"",
+      "output": "1"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int findRank(String A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : string\n    # @return an integer\n    def findRank(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int findRank(string A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "\"acb\""
+    },
+    {
+      "A": "\"a\""
+    }
+  ],
+  "functionName": "findRank",
+  "params": [
+    {
+      "name": "A",
+      "type": "string"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "For each position i, count how many characters to the right are smaller than A[i].",
+    "For each smaller character found, there are factorial(n-i-1) permutations that would come before the current string.",
+    "Precompute factorials modulo 1000003 to avoid overflow.",
+    "The rank is 1-indexed, so start with rank = 1.",
+    "For position i, add count_smaller * factorial(n-i-1) to the rank.",
+    "Use modular arithmetic: (a + b) % MOD = ((a % MOD) + (b % MOD)) % MOD."
+  ]
+}
+

@@ -1,0 +1,56 @@
+{
+  "id": "reverse-in-a-range",
+  "title": "Reverse in a range",
+  "difficulty": "Easy",
+  "category": "introduction-to-arrays",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [1, 2, 3, 4]\nB = 2\nC = 3",
+      "output": "[1, 2, 4, 3]"
+    },
+    {
+      "input": "A = [2, 5, 6]\nB = 0\nC = 2",
+      "output": "[6, 5, 2]"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int[] solve(int[] A, int B, int C) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @param B : integer\n    # @param C : integer\n    # @return a list of integers\n    def solve(self, A, B, C):\n        ",
+    "cpp": "class Solution {\npublic:\n    vector<int> solve(vector<int>& A, int B, int C) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1,2,3,4]",
+      "B": "2",
+      "C": "3"
+    },
+    {
+      "A": "[2,5,6]",
+      "B": "0",
+      "C": "2"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    },
+    {
+      "name": "B",
+      "type": "int"
+    },
+    {
+      "name": "C",
+      "type": "int"
+    }
+  ],
+  "outputType": "int_array",
+  "hints": [
+    "Use two pointers approach - one starting from B and one from C.",
+    "Swap elements at these positions and move pointers towards each other.",
+    "Continue until the pointers cross each other."
+  ]
+}
+

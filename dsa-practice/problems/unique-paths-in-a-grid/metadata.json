@@ -1,0 +1,48 @@
+{
+  "id": "unique-paths-in-a-grid",
+  "title": "Unique Paths in a Grid",
+  "difficulty": "Medium",
+  "category": "dp-2dimensional",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]",
+      "output": "2"
+    },
+    {
+      "input": "A = [[0, 0, 0], [1, 1, 1], [0, 0, 0]]",
+      "output": "0"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int uniquePathsWithObstacles(int[][] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of list of integers\n    # @return an integer\n    def uniquePathsWithObstacles(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int uniquePathsWithObstacles(vector<vector<int> >& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[[0,0,0],[0,1,0],[0,0,0]]"
+    },
+    {
+      "A": "[[0,0,0],[1,1,1],[0,0,0]]"
+    }
+  ],
+  "functionName": "uniquePathsWithObstacles",
+  "params": [
+    {
+      "name": "A",
+      "type": "int_array_2d"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use dynamic programming with a 2D dp array where dp[i][j] represents the number of unique paths to reach (i, j).",
+    "If the starting cell (0,0) or ending cell (n-1, m-1) has an obstacle, return 0 immediately.",
+    "Initialize dp[0][0] = 1 if there's no obstacle at the start.",
+    "For the first row, you can only come from the left, so dp[0][j] = dp[0][j-1] if A[0][j] == 0, else 0.",
+    "For the first column, you can only come from the top, so dp[i][0] = dp[i-1][0] if A[i][0] == 0, else 0.",
+    "For other cells, if there's no obstacle, dp[i][j] = dp[i-1][j] + dp[i][j-1] (can come from top or left).",
+    "If a cell has an obstacle, set dp[i][j] = 0."
+  ]
+}
+

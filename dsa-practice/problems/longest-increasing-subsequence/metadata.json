@@ -1,0 +1,49 @@
+{
+  "id": "longest-increasing-subsequence",
+  "title": "Longest Increasing Subsequence",
+  "difficulty": "Medium",
+  "category": "hashing3",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [1, 2, 1, 5]",
+      "output": "3"
+    },
+    {
+      "input": "A = [0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15]",
+      "output": "6"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int lis(int[] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : tuple of integers\n    # @return an integer\n    def lis(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int lis(vector<int>& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1,2,1,5]"
+    },
+    {
+      "A": "[0,8,4,12,2,10,6,14,1,9,5,13,3,11,7,15]"
+    }
+  ],
+  "functionName": "lis",
+  "params": [
+    {
+      "name": "A",
+      "type": "int_array"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use dynamic programming approach.",
+    "Create an array to store the length of LIS ending at each index.",
+    "For each element, check all previous elements.",
+    "If current element is greater than a previous element, update the LIS length.",
+    "Initialize all LIS lengths to 1 (each element is a subsequence of length 1).",
+    "The answer is the maximum value in the LIS lengths array.",
+    "Time complexity is O(n^2) where n is the length of the array."
+  ]
+}
+
+

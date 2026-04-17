@@ -1,0 +1,59 @@
+{
+  "id": "fractional-knapsack",
+  "title": "Fractional Knapsack",
+  "difficulty": "Easy",
+  "category": "dp3-knapsack",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [60, 100, 120]\nB = [10, 20, 30]\nC = 50",
+      "output": "24000"
+    },
+    {
+      "input": "A = [10, 20, 30, 40]\nB = [12, 13, 15, 19]\nC = 10",
+      "output": "2105"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int[] A, int[] B, int C) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @param B : list of integers\n    # @param C : integer\n    # @return an integer\n    def solve(self, A, B, C):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(vector<int>& A, vector<int>& B, int C) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[60,100,120]",
+      "B": "[10,20,30]",
+      "C": "50"
+    },
+    {
+      "A": "[10,20,30,40]",
+      "B": "[12,13,15,19]",
+      "C": "10"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int_array"
+    },
+    {
+      "name": "B",
+      "type": "int_array"
+    },
+    {
+      "name": "C",
+      "type": "int"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Since items can be broken, this is a greedy problem, not a DP problem.",
+    "Calculate the value per weight ratio for each item: value/weight.",
+    "Sort items in descending order of value per weight ratio.",
+    "Take items greedily: if an item fits completely, take it. Otherwise, take a fraction of it.",
+    "Continue until the knapsack is full or all items are processed.",
+    "Multiply the final value by 100 and take the floor to get the answer."
+  ]
+}
+

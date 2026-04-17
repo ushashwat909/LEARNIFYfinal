@@ -1,0 +1,47 @@
+{
+  "id": "stairs",
+  "title": "Stairs",
+  "difficulty": "Easy",
+  "category": "dp-1dimensional",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 2",
+      "output": "2"
+    },
+    {
+      "input": "A = 3",
+      "output": "3"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int climbStairs(int A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : integer\n    # @return an integer\n    def climbStairs(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int climbStairs(int A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "2"
+    },
+    {
+      "A": "3"
+    }
+  ],
+  "functionName": "climbStairs",
+  "params": [
+    {
+      "name": "A",
+      "type": "int"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Think about the base cases: how many ways to reach step 1? How many ways to reach step 2?",
+    "For step n, you can reach it from step (n-1) by taking 1 step, or from step (n-2) by taking 2 steps.",
+    "The number of ways to reach step n is the sum of ways to reach step (n-1) and step (n-2).",
+    "This is similar to the Fibonacci sequence.",
+    "Use dynamic programming to avoid recalculating the same subproblems.",
+    "Remember to take modulo 1000000007 at each step to prevent integer overflow."
+  ]
+}
+

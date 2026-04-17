@@ -1,0 +1,46 @@
+{
+  "id": "rotten-oranges",
+  "title": "Rotten Oranges",
+  "difficulty": "Medium",
+  "category": "graphs2-bfs-matrix",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [   [2, 1, 1]\n        [1, 1, 0]\n        [0, 1, 1]   ]",
+      "output": "4"
+    },
+    {
+      "input": "A = [   [2, 1, 1]\n        [0, 1, 1]\n        [1, 0, 1]   ]",
+      "output": "-1"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int[][] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of list of integers\n    # @return an integer\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(vector<vector<int>>& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[[2,1,1],[1,1,0],[0,1,1]]"
+    },
+    {
+      "A": "[[2,1,1],[0,1,1],[1,0,1]]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[][]"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use BFS starting from all rotten oranges simultaneously.",
+    "Track the time (minutes) for each orange that gets rotten.",
+    "Count the number of fresh oranges initially.",
+    "Decrement the fresh count as oranges become rotten.",
+    "If after BFS there are still fresh oranges remaining, return -1."
+  ]
+}
+

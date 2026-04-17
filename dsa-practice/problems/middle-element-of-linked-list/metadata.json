@@ -1,0 +1,46 @@
+{
+  "id": "middle-element-of-linked-list",
+  "title": "Middle element of linked list",
+  "difficulty": "Easy",
+  "category": "linked-list-sorting-detecting-loops",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 1 -> 2 -> 3 -> 4 -> 5",
+      "output": "3"
+    },
+    {
+      "input": "A = 1 -> 5 -> 6 -> 2 -> 3 -> 4",
+      "output": "2"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(ListNode A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : head node of linked list\n    # @return an integer\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(ListNode* A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1,2,3,4,5]"
+    },
+    {
+      "A": "[1,5,6,2,3,4]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "ListNode"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use slow and fast pointers (tortoise and hare algorithm).",
+    "Initialize both pointers at the head of the linked list.",
+    "Move slow pointer one step at a time and fast pointer two steps at a time.",
+    "When fast pointer reaches the end, slow pointer will be at the middle.",
+    "For even length lists, this will give you the (N/2 + 1)th element as required."
+  ]
+}
+

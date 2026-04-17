@@ -1,0 +1,64 @@
+{
+  "id": "painters-partition-problem",
+  "title": "Painter's Partition Problem",
+  "difficulty": "Hard",
+  "category": "binary-search-on-answer",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 2\nB = 5\nC = [1, 10]",
+      "output": "50"
+    },
+    {
+      "input": "A = 10\nB = 1\nC = [1, 8, 11, 3]",
+      "output": "11"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int paint(int A, int B, int[] C) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : integer painter available\n    # @param B : integer time taken to paint 1 unit\n    # @param C : list of integers\n    # @return an integer\n    def paint(self, A, B, C):\n        ",
+    "cpp": "class Solution {\npublic:\n    int paint(int A, int B, vector<int>& C) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "2",
+      "B": "5",
+      "C": "[1,10]"
+    },
+    {
+      "A": "10",
+      "B": "1",
+      "C": "[1,8,11,3]"
+    }
+  ],
+  "functionName": "paint",
+  "params": [
+    {
+      "name": "A",
+      "type": "int"
+    },
+    {
+      "name": "B",
+      "type": "int"
+    },
+    {
+      "name": "C",
+      "type": "int[]"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use binary search on answer to find the minimum time required.",
+    "The minimum time is at least max(C) * B (one painter paints the largest board).",
+    "The maximum time is at most sum(C) * B (one painter paints all boards).",
+    "For a given time 'mid', check if it's possible to paint all boards with A painters.",
+    "In the check function, greedily assign boards to painters, ensuring no painter exceeds the time limit.",
+    "If a time is feasible, try to find a smaller time. Otherwise, increase the time.",
+    "Return the answer modulo 10000003."
+  ]
+}
+
+
+
+
+

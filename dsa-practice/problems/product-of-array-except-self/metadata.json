@@ -1,0 +1,11 @@
+{
+    "title": "Product of Array Except Self",
+    "difficulty": "Medium",
+    "category": "Arrays",
+    "functionName": "productExceptSelf",
+    "testCases": [
+        {
+            "nums": "[1,2,3,4]"
+        }
+    ]
+}

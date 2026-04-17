@@ -1,0 +1,47 @@
+{
+  "id": "excel-column-title",
+  "title": "Excel Column Title",
+  "difficulty": "Easy",
+  "category": "maths-combinatoric-basics",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 3",
+      "output": "\"C\""
+    },
+    {
+      "input": "A = 27",
+      "output": "\"AA\""
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public String convertToTitle(int A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : integer\n    # @return a string\n    def convertToTitle(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    string convertToTitle(int A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "3"
+    },
+    {
+      "A": "27"
+    }
+  ],
+  "functionName": "convertToTitle",
+  "params": [
+    {
+      "name": "A",
+      "type": "int"
+    }
+  ],
+  "outputType": "string",
+  "hints": [
+    "This is similar to converting a number to base-26, but with a twist: it's 1-indexed instead of 0-indexed.",
+    "Before taking modulo, subtract 1 from A to convert from 1-indexed to 0-indexed.",
+    "The remainder gives you the current character (0-25 maps to A-Z).",
+    "After getting the character, divide A by 26 and continue.",
+    "Build the result from right to left, then reverse it at the end.",
+    "For example: 27 -> subtract 1 to get 26 -> 26 % 26 = 0 (A), 26 / 26 = 1 -> subtract 1 to get 0 -> 0 % 26 = 0 (A) -> result is 'AA'."
+  ]
+}
+

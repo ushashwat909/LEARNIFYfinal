@@ -1,0 +1,49 @@
+{
+  "id": "check-palindrome-using-recursion",
+  "title": "Check Palindrome using Recursion",
+  "difficulty": "Easy",
+  "category": "recursion-2",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = \"naman\"",
+      "output": "1"
+    },
+    {
+      "input": "A = \"strings\"",
+      "output": "0"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(String A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : string\n    # @return an integer\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(string A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "\"naman\""
+    },
+    {
+      "A": "\"strings\""
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "string"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use recursion with two pointers - one from the start and one from the end.",
+    "Compare characters at both ends. If they match, recursively check the substring between them.",
+    "Base case: when the start index is greater than or equal to the end index, return 1 (it's a palindrome).",
+    "If characters don't match at any point, return 0 immediately."
+  ]
+}
+
+
+
+
+

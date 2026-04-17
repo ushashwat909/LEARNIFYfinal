@@ -1,0 +1,55 @@
+{
+  "id": "delete-a-node-in-bst",
+  "title": "Delete a node in BST",
+  "difficulty": "Medium",
+  "category": "trees3-bst",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = Tree: 15 -> (12, 20), 12 -> (10, 14), 10 -> (8, null), 20 -> (16, 27)\nB = 10",
+      "output": "Tree: 15 -> (12, 20), 12 -> (8, 14), 20 -> (16, 27)"
+    },
+    {
+      "input": "A = Tree: 8 -> (6, 21), 6 -> (1, 7)\nB = 6",
+      "output": "Tree: 8 -> (1, 21), 1 -> (null, 7)"
+    }
+  ],
+  "starterCode": {
+    "java": "// Definition for a binary tree node.\n// class TreeNode {\n//     int val;\n//     TreeNode left;\n//     TreeNode right;\n//     TreeNode(int x) { val = x; }\n// }\n\nclass Solution {\n    public TreeNode solve(TreeNode A, int B) {\n        \n    }\n}",
+    "python": "# Definition for a  binary tree node\n# class TreeNode:\n#    def __init__(self, x):\n#        self.val = x\n#        self.left = None\n#        self.right = None\n\nclass Solution:\n    # @param A : root node of tree\n    # @param B : integer\n    # @return the root node in the tree\n    def solve(self, A, B):\n        ",
+    "cpp": "// Definition for binary tree\n// struct TreeNode {\n//     int val;\n//     TreeNode *left;\n//     TreeNode *right;\n//     TreeNode(int x) : val(x), left(NULL), right(NULL) {}\n// };\n\nclass Solution {\npublic:\n    TreeNode* solve(TreeNode* A, int B) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "Tree: 15 -> (12, 20), 12 -> (10, 14), 10 -> (8, null), 20 -> (16, 27)",
+      "B": "10"
+    },
+    {
+      "A": "Tree: 8 -> (6, 21), 6 -> (1, 7)",
+      "B": "6"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "TreeNode"
+    },
+    {
+      "name": "B",
+      "type": "int"
+    }
+  ],
+  "outputType": "TreeNode",
+  "hints": [
+    "Use recursive approach to find and delete the node.",
+    "If current node value < B, recursively delete from right subtree.",
+    "If current node value > B, recursively delete from left subtree.",
+    "If current node value == B, handle three cases:",
+    "  - No children: return null",
+    "  - One child: return the non-null child",
+    "  - Two children: replace with in-order predecessor (rightmost node in left subtree), then delete the predecessor.",
+    "In-order predecessor is the rightmost node in the left subtree."
+  ]
+}
+

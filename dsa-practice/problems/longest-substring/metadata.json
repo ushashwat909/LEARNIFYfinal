@@ -1,0 +1,11 @@
+{
+    "title": "Longest Substring Without Repeating",
+    "difficulty": "Medium",
+    "category": "Strings",
+    "functionName": "lengthOfLongestSubstring",
+    "testCases": [
+        {
+            "s": "'abcabcbb'"
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "n-digit-numbers",
+  "title": "N digit numbers",
+  "difficulty": "Medium",
+  "category": "dp-2dimensional",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 2\nB = 4",
+      "output": "4"
+    },
+    {
+      "input": "A = 1\nB = 3",
+      "output": "1"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int A, int B) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : integer\n    # @param B : integer\n    # @return an integer\n    def solve(self, A, B):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(int A, int B) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "2",
+      "B": "4"
+    },
+    {
+      "A": "1",
+      "B": "3"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int"
+    },
+    {
+      "name": "B",
+      "type": "int"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use dynamic programming with a 2D table where dp[digits][sum] represents the number of ways to form a number with 'digits' digits that sum to 'sum'.",
+    "For 1-digit numbers, the first digit must be 1-9 (no leading zeros). So dp[1][d] = 1 for d from 1 to 9.",
+    "For numbers with more than 1 digit, you can use digits 0-9 for positions after the first digit.",
+    "For dp[digits][sum], try all possible digits d (0-9) and add dp[digits-1][sum-d] if sum-d >= 0.",
+    "Remember to take modulo 1000000007 at each step to prevent integer overflow.",
+    "The answer will be dp[A][B]."
+  ]
+}
+

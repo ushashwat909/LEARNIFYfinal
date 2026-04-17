@@ -1,0 +1,52 @@
+{
+  "id": "add-binary-strings",
+  "title": "Add Binary Strings",
+  "difficulty": "Easy",
+  "category": "bit-manipulation-basics",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = \"100\"\nB = \"11\"",
+      "output": "\"111\""
+    },
+    {
+      "input": "A = \"110\"\nB = \"10\"",
+      "output": "\"1000\""
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public String solve(String A, String B) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : string\n    # @param B : string\n    # @return a string\n    def solve(self, A, B):\n        ",
+    "cpp": "class Solution {\npublic:\n    string solve(string A, string B) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "\"100\"",
+      "B": "\"11\""
+    },
+    {
+      "A": "\"110\"",
+      "B": "\"10\""
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "string"
+    },
+    {
+      "name": "B",
+      "type": "string"
+    }
+  ],
+  "outputType": "string",
+  "hints": [
+    "Start adding from the rightmost digits (least significant bit).",
+    "Use a carry variable to track overflow.",
+    "Process both strings from right to left, handling cases where one string is longer than the other.",
+    "After processing all digits, if there's still a carry, add it to the result.",
+    "Build the result string from right to left (or build it left to right and reverse at the end)."
+  ]
+}
+

@@ -1,0 +1,54 @@
+{
+  "id": "intersection-of-linked-lists",
+  "title": "Intersection of Linked Lists",
+  "difficulty": "Medium",
+  "category": "doubly-linked-list",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [1, 2, 3, 4, 5]\nB = [6, 3, 4, 5]",
+      "output": "[3, 4, 5]"
+    },
+    {
+      "input": "A = [1, 2, 3]\nB = [4, 5]",
+      "output": "[]"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public ListNode getIntersectionNode(ListNode A, ListNode B) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : head node of linked list\n    # @param B : head node of linked list\n    # @return the head node in the linked list\n    def getIntersectionNode(self, A, B):\n        ",
+    "cpp": "class Solution {\npublic:\n    ListNode* getIntersectionNode(ListNode* A, ListNode* B) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1,2,3,4,5]",
+      "B": "[6,3,4,5]"
+    },
+    {
+      "A": "[1,2,3]",
+      "B": "[4,5]"
+    }
+  ],
+  "functionName": "getIntersectionNode",
+  "params": [
+    {
+      "name": "A",
+      "type": "ListNode"
+    },
+    {
+      "name": "B",
+      "type": "ListNode"
+    }
+  ],
+  "outputType": "ListNode",
+  "hints": [
+    "If the two linked lists intersect, they will share the same tail nodes.",
+    "The key insight is that if you traverse both lists, they will meet at the intersection point.",
+    "Use two pointers, one starting from each list. When one pointer reaches the end, switch it to the other list.",
+    "If the lists intersect, the pointers will meet at the intersection node.",
+    "If the lists don't intersect, both pointers will become null at the same time.",
+    "This approach works because it equalizes the path lengths by switching lists."
+  ]
+}
+
+

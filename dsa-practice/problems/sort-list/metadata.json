@@ -1,0 +1,47 @@
+{
+  "id": "sort-list",
+  "title": "Sort List",
+  "difficulty": "Medium",
+  "category": "linked-list-sorting-detecting-loops",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [3, 4, 2, 8]",
+      "output": "[2, 3, 4, 8]"
+    },
+    {
+      "input": "A = [1]",
+      "output": "[1]"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public ListNode sortList(ListNode A) {\n        \n    }\n}",
+    "python": "class Solution:\n\t# @param A : head node of linked list\n\t# @return the head node in the linked list\n\tdef sortList(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    ListNode* sortList(ListNode* A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[3,4,2,8]"
+    },
+    {
+      "A": "[1]"
+    }
+  ],
+  "functionName": "sortList",
+  "params": [
+    {
+      "name": "A",
+      "type": "ListNode"
+    }
+  ],
+  "outputType": "ListNode",
+  "hints": [
+    "Use merge sort algorithm to achieve O(n log n) time complexity.",
+    "Find the middle of the linked list using slow and fast pointers.",
+    "Split the list into two halves at the middle point.",
+    "Recursively sort both halves.",
+    "Merge the two sorted halves back together.",
+    "Handle base cases: empty list or single node list."
+  ]
+}
+

@@ -1,0 +1,52 @@
+{
+  "id": "unset-i-th-bit",
+  "title": "Unset i-th bit",
+  "difficulty": "Easy",
+  "category": "bit-manipulation-1",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 4\nB = 1",
+      "output": "4"
+    },
+    {
+      "input": "A = 5\nB = 2",
+      "output": "1"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int A, int B) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : integer\n    # @param B : integer\n    # @return an integer\n    def solve(self, A, B):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(int A, int B) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "4",
+      "B": "1"
+    },
+    {
+      "A": "5",
+      "B": "2"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int"
+    },
+    {
+      "name": "B",
+      "type": "int"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use bitwise AND to check if the B-th bit is set: A & (1 << B).",
+    "If the bit is set, use XOR to unset it: A ^ (1 << B).",
+    "If the bit is already unset, return A as is.",
+    "Remember: bit positions are 0-indexed, so the LSB is at position 0.",
+    "The expression (1 << B) creates a mask with only the B-th bit set."
+  ]
+}
+

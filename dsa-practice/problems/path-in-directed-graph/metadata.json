@@ -1,0 +1,52 @@
+{
+  "id": "path-in-directed-graph",
+  "title": "Path in Directed Graph",
+  "difficulty": "Medium",
+  "category": "graphs1-dfs-cycle-detection",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 5\nB = [  [1, 2] \n       [4, 1] \n       [2, 4] \n       [3, 4] \n       [5, 2] \n       [1, 3] ]",
+      "output": "0"
+    },
+    {
+      "input": "A = 5\nB = [  [1, 2]\n       [2, 3] \n       [3, 4] \n       [4, 5] ]",
+      "output": "1"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int A, int[][] B) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : integer\n    # @param B : list of list of integers\n    # @return an integer\n    def solve(self, A, B):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(int A, vector<vector<int>>& B) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "5",
+      "B": "[[1,2],[4,1],[2,4],[3,4],[5,2],[1,3]]"
+    },
+    {
+      "A": "5",
+      "B": "[[1,2],[2,3],[3,4],[4,5]]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int"
+    },
+    {
+      "name": "B",
+      "type": "int[][]"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use graph traversal (DFS or BFS) to check if node A is reachable from node 1.",
+    "Build an adjacency list from the edge list.",
+    "Start traversal from node 1 and mark visited nodes to avoid cycles.",
+    "If you reach node A during traversal, return 1.",
+    "If traversal completes without reaching node A, return 0."
+  ]
+}
+

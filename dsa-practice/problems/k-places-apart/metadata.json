@@ -1,0 +1,54 @@
+{
+  "id": "k-places-apart",
+  "title": "K Places Apart",
+  "difficulty": "Medium",
+  "category": "review-problems",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [1, 40, 2, 3], B = 2",
+      "output": "[1, 2, 3, 40]"
+    },
+    {
+      "input": "A = [2, 1, 17, 10, 21, 95], B = 1",
+      "output": "[1, 2, 10, 17, 21, 95]"
+    }
+  ],
+  "starterCode": {
+    "java": "import java.util.*;\nclass Solution {\n    public int[] solve(int[] A, int B) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @param B : integer\n    # @return a list of integers\n    def solve(self, A, B):\n        ",
+    "cpp": "class Solution {\npublic:\n    vector<int> solve(vector<int>& A, int B) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1,40,2,3]",
+      "B": "2"
+    },
+    {
+      "A": "[2,1,17,10,21,95]",
+      "B": "1"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int_array"
+    },
+    {
+      "name": "B",
+      "type": "int"
+    }
+  ],
+  "outputType": "int_array",
+  "hints": [
+    "Use a min heap to efficiently find the minimum element in a sliding window.",
+    "Since each element is at most B places away from its sorted position, maintain a heap of size B+1.",
+    "Add the first B+1 elements to the min heap.",
+    "For each subsequent element, extract the minimum from the heap and add the next element.",
+    "After processing all elements, extract all remaining elements from the heap.",
+    "This approach achieves O(NlogB) complexity by maintaining a heap of size at most B+1."
+  ]
+}
+
+

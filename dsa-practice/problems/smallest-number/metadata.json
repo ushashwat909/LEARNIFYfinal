@@ -1,0 +1,50 @@
+{
+  "id": "smallest-number",
+  "title": "Smallest Number",
+  "difficulty": "Easy",
+  "category": "count-sort-merge-sort",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [6, 3, 4, 2, 7, 2, 1]",
+      "output": "[1, 2, 2, 3, 4, 6, 7]"
+    },
+    {
+      "input": "A = [4, 2, 7, 3, 9, 0]",
+      "output": "[0, 2, 3, 4, 7, 9]"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int[] smallestNumber(int[] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @return a list of integers\n    def smallestNumber(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    vector<int> smallestNumber(vector<int>& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[6, 3, 4, 2, 7, 2, 1]"
+    },
+    {
+      "A": "[4, 2, 7, 3, 9, 0]"
+    }
+  ],
+  "functionName": "smallestNumber",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    }
+  ],
+  "outputType": "int_array",
+  "hints": [
+    "Use counting sort approach - count the frequency of each digit (0-9).",
+    "Since digits are in range 0-9, you can use a frequency array of size 10.",
+    "Iterate through the frequency array and add each digit as many times as its frequency.",
+    "This gives you the digits in sorted order without using a traditional sorting algorithm.",
+    "Time complexity is O(n) where n is the length of the array."
+  ]
+}
+
+
+
+
+

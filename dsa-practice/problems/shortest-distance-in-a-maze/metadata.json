@@ -1,0 +1,58 @@
+{
+  "id": "shortest-distance-in-a-maze",
+  "title": "Shortest Distance in a Maze",
+  "difficulty": "Medium",
+  "category": "graphs2-bfs-matrix",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [ [0, 0], \n      [0, 0] ]\nB = [0, 0]\nC = [0, 1]",
+      "output": "1"
+    },
+    {
+      "input": "A = [ [0, 1], \n      [1, 0] ]\nB = [0, 0]\nC = [1, 1]",
+      "output": "-1"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int[][] A, int[] B, int[] C) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of list of integers\n    # @param B : list of integers\n    # @param C : list of integers\n    # @return an integer\n    def solve(self, A, B, C):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(vector<vector<int>>& A, vector<int>& B, vector<int>& C) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[[0,0],[0,0]]",
+      "B": "[0,0]",
+      "C": "[0,1]"
+    },
+    {
+      "A": "[[0,1],[1,0]]",
+      "B": "[0,0]",
+      "C": "[1,1]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[][]"
+    },
+    {
+      "name": "B",
+      "type": "int[]"
+    },
+    {
+      "name": "C",
+      "type": "int[]"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use Dijkstra's algorithm with a priority queue to find the shortest path.",
+    "The ball rolls until it hits a wall, so simulate rolling in each direction until hitting a wall.",
+    "Track visited positions to avoid revisiting the same stopping points.",
+    "The distance is the number of empty spaces traveled (excluding start, including destination).",
+    "If the destination is unreachable after exploring all possibilities, return -1."
+  ]
+}
+

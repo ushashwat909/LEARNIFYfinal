@@ -1,0 +1,45 @@
+{
+  "id": "matrix-transpose",
+  "title": "Matrix Transpose",
+  "difficulty": "Easy",
+  "category": "2d-matrices",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]",
+      "output": "[[1, 4, 7], [2, 5, 8], [3, 6, 9]]"
+    },
+    {
+      "input": "A = [[1, 2], [1, 2], [1, 2]]",
+      "output": "[[1, 1, 1], [2, 2, 2]]"
+    }
+  ],
+  "starterCode": {
+    "java": "import java.util.*;\nclass Solution {\n    public List<List<Integer>> solve(int[][] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of list of integers\n    # @return a list of list of integers\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    vector<vector<int> > solve(vector<vector<int> >& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[[1,2,3],[4,5,6],[7,8,9]]"
+    },
+    {
+      "A": "[[1,2],[1,2],[1,2]]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int_array_2d"
+    }
+  ],
+  "outputType": "int_list_2d",
+  "hints": [
+    "The transpose of a matrix swaps rows and columns.",
+    "For a matrix A of size m x n, the transpose will be of size n x m.",
+    "Element at position (i, j) in original matrix becomes element at (j, i) in transpose.",
+    "Create a new matrix with swapped dimensions and copy elements accordingly."
+  ]
+}
+

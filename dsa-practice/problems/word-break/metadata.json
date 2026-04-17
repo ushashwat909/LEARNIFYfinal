@@ -1,0 +1,12 @@
+{
+    "title": "Word Break",
+    "difficulty": "Medium",
+    "category": "Dynamic Programming",
+    "functionName": "wordBreak",
+    "testCases": [
+        {
+            "s": "'leetcode'",
+            "wordDict": "['leet','code']"
+        }
+    ]
+}

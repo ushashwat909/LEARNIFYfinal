@@ -1,0 +1,53 @@
+{
+  "id": "pairs-with-given-sum-ii",
+  "title": "Pairs with given sum II",
+  "difficulty": "Medium",
+  "category": "two-pointers",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [1, 1, 1]\nB = 2",
+      "output": "3"
+    },
+    {
+      "input": "A = [1, 5, 7, 10]\nB = 8",
+      "output": "1"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int[] A, int B) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @param B : integer\n    # @return an integer\n    def solve(self, A, B):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(vector<int>& A, int B) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1,1,1]",
+      "B": "2"
+    },
+    {
+      "A": "[1,5,7,10]",
+      "B": "8"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    },
+    {
+      "name": "B",
+      "type": "int"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use two pointers approach starting from both ends of the sorted array.",
+    "When A[i] + A[j] == B, count all pairs with these values.",
+    "If A[i] == A[j], count all pairs in that range using combination formula: n*(n-1)/2.",
+    "If A[i] != A[j], count duplicates on left (l) and right (r), then add l*r to answer.",
+    "Move pointers based on whether current sum is less than or greater than B.",
+    "Remember to return answer modulo (10^9 + 7)."
+  ]
+}
+

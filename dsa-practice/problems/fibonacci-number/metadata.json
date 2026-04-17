@@ -1,0 +1,46 @@
+{
+  "id": "fibonacci-number",
+  "title": "Fibonacci Number",
+  "difficulty": "Easy",
+  "category": "dp-1dimensional",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 4",
+      "output": "3"
+    },
+    {
+      "input": "A = 6",
+      "output": "8"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : integer\n    # @return an integer\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(int A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "4"
+    },
+    {
+      "A": "6"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "The Fibonacci sequence starts with f(0) = 0 and f(1) = 1.",
+    "For any n >= 2, f(n) = f(n-1) + f(n-2).",
+    "Use dynamic programming to avoid recalculating the same subproblems.",
+    "Handle base cases: A = 0 returns 0, A = 1 returns 1.",
+    "Build the solution bottom-up using an array to store previously computed values."
+  ]
+}
+

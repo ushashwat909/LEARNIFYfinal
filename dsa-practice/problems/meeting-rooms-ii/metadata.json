@@ -1,0 +1,54 @@
+{
+  "id": "meeting-rooms-ii",
+  "title": "Meeting Rooms II",
+  "difficulty": "Medium",
+  "category": "review-problems",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 3, B = [[0, 30], [5, 10], [15, 20]]",
+      "output": "2"
+    },
+    {
+      "input": "A = 1, B = [[0, 1]]",
+      "output": "1"
+    }
+  ],
+  "starterCode": {
+    "java": "import java.util.*;\nclass Solution {\n    public int solve(int A, int[][] B) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : integer\n    # @param B : list of list of integers\n    # @return an integer\n    def solve(self, A, B):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(int A, vector<vector<int> >& B) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "3",
+      "B": "[[0,30],[5,10],[15,20]]"
+    },
+    {
+      "A": "1",
+      "B": "[[0,1]]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int"
+    },
+    {
+      "name": "B",
+      "type": "int_array_2d"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Sort the meetings by their start time.",
+    "Use a min heap to track the end times of ongoing meetings.",
+    "For each meeting, check if the earliest ending meeting has finished before the current meeting starts.",
+    "If a room is free (earliest end time <= current start time), reuse that room by updating its end time.",
+    "Otherwise, allocate a new room by adding the current meeting's end time to the heap.",
+    "The size of the heap at the end represents the minimum number of rooms needed."
+  ]
+}
+
+

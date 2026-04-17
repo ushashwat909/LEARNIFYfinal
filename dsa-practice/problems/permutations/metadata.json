@@ -1,0 +1,40 @@
+{
+  "id": "permutations",
+  "title": "Permutations",
+  "difficulty": "Medium",
+  "category": "backtracking1",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [1, 2, 3]",
+      "output": "[ [1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1] ]"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public ArrayList<ArrayList<Integer>> permute(ArrayList<Integer> A) {\n        \n    }\n}",
+    "python": "class Solution:\n\t# @param A : list of integers\n\t# @return a list of list of integers\n    def permute(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> permute(vector<int>& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1,2,3]"
+    }
+  ],
+  "functionName": "permute",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    }
+  ],
+  "outputType": "int_list_2d",
+  "hints": [
+    "Use backtracking/DFS approach to generate all permutations.",
+    "Swap elements at current index with elements at later indices.",
+    "Recursively generate permutations for the remaining positions.",
+    "After recursion, swap back to restore the original state (backtrack).",
+    "When you reach the last index, add the current permutation to the result.",
+    "Make sure to create a copy of the array before adding to result."
+  ]
+}
+

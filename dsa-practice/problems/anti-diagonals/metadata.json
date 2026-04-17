@@ -1,0 +1,45 @@
+{
+  "id": "anti-diagonals",
+  "title": "Anti Diagonals",
+  "difficulty": "Easy",
+  "category": "2d-matrices",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]",
+      "output": "[[1, 0, 0], [2, 4, 0], [3, 5, 7], [6, 8, 0], [9, 0, 0]]"
+    },
+    {
+      "input": "A = [[1, 2], [3, 4]]",
+      "output": "[[1, 0], [2, 3], [4, 0]]"
+    }
+  ],
+  "starterCode": {
+    "java": "import java.util.*;\nclass Solution {\n    public List<List<Integer>> solve(int[][] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of list of integers\n    # @return a list of list of integers\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    vector<vector<int> > solve(vector<vector<int> >& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[[1,2,3],[4,5,6],[7,8,9]]"
+    },
+    {
+      "A": "[[1,2],[3,4]]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int_array_2d"
+    }
+  ],
+  "outputType": "int_list_2d",
+  "hints": [
+    "Anti-diagonals are diagonals that go from top-right to bottom-left.",
+    "For each anti-diagonal, start from the top row and move down-right, or start from the rightmost column and move down-left.",
+    "The number of anti-diagonals is 2*N-1 for an N*N matrix.",
+    "Fill vacant spaces with 0 to make each row of length N."
+  ]
+}
+

@@ -1,0 +1,59 @@
+{
+  "id": "0-1-knapsack",
+  "title": "0-1 Knapsack",
+  "difficulty": "Medium",
+  "category": "dp3-knapsack",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [60, 100, 120]\nB = [10, 20, 30]\nC = 50",
+      "output": "220"
+    },
+    {
+      "input": "A = [10, 20, 30, 40]\nB = [12, 13, 15, 19]\nC = 10",
+      "output": "0"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int[] A, int[] B, int C) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @param B : list of integers\n    # @param C : integer\n    # @return an integer\n    def solve(self, A, B, C):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(vector<int>& A, vector<int>& B, int C) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[60,100,120]",
+      "B": "[10,20,30]",
+      "C": "50"
+    },
+    {
+      "A": "[10,20,30,40]",
+      "B": "[12,13,15,19]",
+      "C": "10"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int_array"
+    },
+    {
+      "name": "B",
+      "type": "int_array"
+    },
+    {
+      "name": "C",
+      "type": "int"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "This is a classic 0-1 knapsack problem where each item can be taken at most once.",
+    "Use dynamic programming: dp[w] represents the maximum value achievable with capacity w.",
+    "For each item, iterate backwards through capacities from C down to the item's weight.",
+    "For each capacity w, decide whether to include the current item: dp[w] = max(dp[w], dp[w - B[i]] + A[i]).",
+    "Iterating backwards ensures we don't use the same item twice in one iteration.",
+    "The answer will be dp[C], the maximum value achievable with full capacity."
+  ]
+}
+

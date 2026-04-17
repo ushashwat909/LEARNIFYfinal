@@ -260,6 +260,19 @@ async def process_transcript(data: TranscriptSubmission):
 async def get_brain_gps(user_id: int):
     return graph_engine.get_react_flow_data(user_id)
 
+@app.post("/api/chat")
+async def chat_endpoint(chat: ChatMessage):
+    conn = get_db_connection()
+    try:
+        user = conn.execute("SELECT username, study_track, experience_level FROM Students WHERE student_id = ?", (chat.user_id,)).fetchone()
+        user_profile = {
+            "username": user['username'],
+            "study_track": user['study_track'],
+            "experience_level": user['experience_level']
+        } if user else None
+    finally:
+        conn.close()
+
     # Get reply asynchronously
     reply = await generate_chat_response(chat.message, user_id=chat.user_id, user_profile=user_profile)
     return {"reply": reply}
@@ -422,10 +435,6 @@ async def run_problem_code(problem_id: str, submission: CodeSubmission):
         print(f"Runner Error: {e}")
         return {"status": "error", "stderr": f"System execution fault: {str(e)}"}
 
-# ========================
-# USER PROGRESS
-# ========================
-
 @app.get("/api/progress/{user_id}")
 async def get_user_progress(user_id: int):
     conn = get_db_connection()
@@ -437,3 +446,33 @@ async def get_user_progress(user_id: int):
         return {"progress": [dict(row) for row in rows]}
     finally:
         conn.close()
+
+# OSSU Study Material Endpoint
+@app.get("/api/curriculum/material")
+async def get_curriculum_material(path: str):
+    """
+    Fetches the content of a markdown file from the csdp directory.
+    """
+    # Robust path resolution: Get root directory (parent of backend)
+    backend_dir = os.path.dirname(os.path.abspath(__file__))
+    root_dir = os.path.dirname(backend_dir)
+    base_path = os.path.abspath(os.path.join(root_dir, "csdp"))
+    
+    # The client sends paths like 'coursepages/intro-cs/README.md'
+    target_path = os.path.abspath(os.path.join(base_path, path))
+    
+    # Security: Ensure target_path is within base_path
+    if not target_path.startswith(base_path):
+         raise HTTPException(status_code=403, detail="Forbidden: Path out of bounds")
+    
+    if not os.path.exists(target_path):
+         print(f"File not found: {target_path}") # Debug log
+         raise HTTPException(status_code=404, detail=f"File not found: {path}")
+
+    try:
+        with open(target_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        return {"content": content}
+    except Exception as e:
+        print(f"Error reading curriculum material: {e}")
+        raise HTTPException(status_code=500, detail=str(e))

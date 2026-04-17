@@ -1,0 +1,54 @@
+{
+  "id": "lru-cache",
+  "title": "LRU Cache",
+  "difficulty": "Hard",
+  "category": "doubly-linked-list",
+  "link": "",
+  "examples": [
+    {
+      "input": "capacity = 2\nset(1, 10)\nset(5, 12)\nget(5) returns 12\nget(1) returns 10\nget(10) returns -1\nset(6, 14)\nget(5) returns -1",
+      "output": "[12, 10, -1, -1]"
+    },
+    {
+      "input": "capacity = 3\nset(1, 1)\nset(2, 2)\nset(3, 3)\nget(1) returns 1\nset(4, 4)\nget(2) returns -1",
+      "output": "[1, -1]"
+    }
+  ],
+  "starterCode": {
+    "java": "class LRUCache {\n    public LRUCache(int capacity) {\n        \n    }\n    \n    public int get(int key) {\n        \n    }\n    \n    public void set(int key, int value) {\n        \n    }\n}\n\nclass Solution {\n    public int[] executeLRUCache(int capacity, String operations) {\n        \n    }\n}",
+    "python": "class Node:\n    def __init__(self, key, value):\n        self.key = key\n        self.value = value\n        self.prev = None\n        self.next = None\n\nclass LRUCache:\n    def __init__(self, capacity):\n        \n    def get(self, key):\n        \n    def set(self, key, value):\n        \n\nclass Solution:\n    def executeLRUCache(self, capacity, operations):\n        ",
+    "cpp": "class LRUCache {\npublic:\n    LRUCache(int capacity) {\n        \n    }\n    \n    int get(int key) {\n        \n    }\n    \n    void set(int key, int value) {\n        \n    }\n};\n\nclass Solution {\npublic:\n    vector<int> executeLRUCache(int capacity, string operations) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "capacity": "2",
+      "operations": "7 S 1 10 S 5 12 G 5 G 1 G 10 S 6 14 G 5"
+    },
+    {
+      "capacity": "3",
+      "operations": "5 S 1 1 S 2 2 S 3 3 G 1 S 4 4 G 2"
+    }
+  ],
+  "functionName": "executeLRUCache",
+  "params": [
+    {
+      "name": "capacity",
+      "type": "int"
+    },
+    {
+      "name": "operations",
+      "type": "string"
+    }
+  ],
+  "outputType": "int_array",
+  "hints": [
+    "Use a doubly linked list to maintain the order of recently used items.",
+    "Use a hash map to store key -> node mappings for O(1) access.",
+    "The head of the list should point to the least recently used item.",
+    "The tail of the list should point to the most recently used item.",
+    "When accessing an item (get or set), move it to the tail (most recently used).",
+    "When the cache is full and you need to insert, remove the head node (LRU).",
+    "Use dummy head and tail nodes to simplify edge case handling."
+  ]
+}
+

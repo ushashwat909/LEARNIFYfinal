@@ -1,0 +1,51 @@
+{
+  "id": "find-a-peak-element",
+  "title": "Find a peak element",
+  "difficulty": "Medium",
+  "category": "binary-search-on-array",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [1, 2, 3, 4, 5]",
+      "output": "5"
+    },
+    {
+      "input": "A = [5, 17, 100, 11]",
+      "output": "100"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int[] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @return an integer\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(vector<int>& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1,2,3,4,5]"
+    },
+    {
+      "A": "[5,17,100,11]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Check the corner elements first - they only need to be compared with one neighbor.",
+    "Use binary search to find the peak in the middle elements.",
+    "If A[mid] is a peak (greater than or equal to both neighbors), return it.",
+    "If A[mid] > A[mid-1], the peak must be on the right side (move lo = mid + 1).",
+    "Otherwise, the peak must be on the left side (move hi = mid - 1).",
+    "The time complexity should be O(log N)."
+  ]
+}
+
+
+
+
+

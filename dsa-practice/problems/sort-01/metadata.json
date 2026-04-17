@@ -1,0 +1,46 @@
+{
+  "id": "sort-01",
+  "title": "Sort 01",
+  "difficulty": "Easy",
+  "category": "quick-sort-and-comparator-problems",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [0,0,1,0,1,1,0]",
+      "output": "[0,0,0,0,1,1,1]"
+    },
+    {
+      "input": "A = [1,0]",
+      "output": "[0,1]"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int[] sort01(int[] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @return a list of integers\n    def sort01(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    vector<int> sort01(vector<int>& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[0,0,1,0,1,1,0]"
+    },
+    {
+      "A": "[1,0]"
+    }
+  ],
+  "functionName": "sort01",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    }
+  ],
+  "outputType": "int_array",
+  "hints": [
+    "Use two pointers technique - one from the start and one from the end.",
+    "Move the left pointer forward when you encounter 0, move the right pointer backward when you encounter 1.",
+    "When left pointer finds 1 and right pointer finds 0, swap them.",
+    "Continue until the pointers meet or cross each other.",
+    "This approach sorts the array in a single pass without using any sorting algorithm."
+  ]
+}
+

@@ -1,0 +1,53 @@
+{
+  "id": "search-in-row-wise-and-column-wise-sorted-matrix",
+  "title": "Search in a row wise and column wise sorted matrix",
+  "difficulty": "Medium",
+  "category": "two-dimensional-array",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\nB = 2",
+      "output": "1011"
+    },
+    {
+      "input": "A = [[1, 2], [3, 3]]\nB = 3",
+      "output": "2019"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int[][] A, int B) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of list of integers\n    # @param B : integer\n    # @return an integer\n    def solve(self, A, B):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(vector<vector<int> >& A, int B) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[[1,2,3],[4,5,6],[7,8,9]]",
+      "B": "2"
+    },
+    {
+      "A": "[[1,2],[3,3]]",
+      "B": "3"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int_array_2d"
+    },
+    {
+      "name": "B",
+      "type": "int"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Since the matrix is sorted row-wise and column-wise, you can use this property to search efficiently.",
+    "Start from the top-right corner (or bottom-left corner) of the matrix.",
+    "If the current element is greater than B, move left (all elements in that column are greater).",
+    "If the current element is less than B, move down (all elements in that row are smaller).",
+    "If you find B, search left in the same row to find the leftmost occurrence (smallest j value).",
+    "Use 1-based indexing when calculating the result: (i+1)*1009 + (j+1)."
+  ]
+}
+

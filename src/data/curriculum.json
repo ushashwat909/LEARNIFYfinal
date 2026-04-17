@@ -1,0 +1,1477 @@
+[
+    {
+        "title": "Intro to Programming",
+        "categories": [
+            {
+                "title": "Foundation",
+                "subcategories": [
+                    {
+                        "title": "CS50P: Introduction to Programming with Python",
+                        "courses": [
+                            {
+                                "title": "CS50P: Introduction to Programming with Python",
+                                "link": "https://cs50.harvard.edu/python/",
+                                "duration": "Self-paced",
+                                "effort": "-",
+                                "type": "course"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Python for Everybody",
+                        "courses": [
+                            {
+                                "title": "Python for Everybody",
+                                "link": "https://www.py4e.com/lessons",
+                                "duration": "Self-paced",
+                                "effort": "-",
+                                "type": "course"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Main Curriculum",
+        "categories": [
+            {
+                "title": "Intro CS",
+                "subcategories": [
+                    {
+                        "title": "General",
+                        "courses": [
+                            {
+                                "title": "Introduction to Computer Science and Programming using Python",
+                                "link": "coursepages/intro-cs/README.md",
+                                "duration": "14 weeks",
+                                "effort": "6-10 hours/week",
+                                "type": "course"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Core CS",
+                "subcategories": [
+                    {
+                        "title": "Core programming",
+                        "courses": [
+                            {
+                                "title": "Systematic Program Design",
+                                "link": "coursepages/spd/README.md",
+                                "duration": "13 weeks",
+                                "effort": "8-10 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Class-based Program Design",
+                                "link": "coursepages/class-based/README.md",
+                                "duration": "13 weeks",
+                                "effort": "5-10 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Programming Languages",
+                                "link": "https://courses.cs.washington.edu/courses/cse341/19sp/#lectures",
+                                "duration": "11 weeks",
+                                "effort": "4-8 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Object-Oriented Design",
+                                "link": "https://course.ccs.neu.edu/cs3500f19/",
+                                "duration": "13 weeks",
+                                "effort": "5-10 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Software Architecture",
+                                "link": "https://www.coursera.org/learn/software-architecture",
+                                "duration": "4 weeks",
+                                "effort": "2-5 hours/week",
+                                "type": "course"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Core math",
+                        "courses": [
+                            {
+                                "title": "Calculus 1A: Differentiation",
+                                "link": "https://openlearninglibrary.mit.edu/courses/course-v1:MITx+18.01.1x+2T2019/about",
+                                "duration": "13 weeks",
+                                "effort": "6-10 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Calculus 1B: Integration",
+                                "link": "https://openlearninglibrary.mit.edu/courses/course-v1:MITx+18.01.2x+3T2019/about",
+                                "duration": "13 weeks",
+                                "effort": "5-10 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Calculus 1C: Coordinate Systems & Infinite Series",
+                                "link": "https://openlearninglibrary.mit.edu/courses/course-v1:MITx+18.01.3x+1T2020/about",
+                                "duration": "6 weeks",
+                                "effort": "5-10 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Mathematics for Computer Science",
+                                "link": "https://openlearninglibrary.mit.edu/courses/course-v1:OCW+6.042J+2T2019/about",
+                                "duration": "13 weeks",
+                                "effort": "5 hours/week",
+                                "type": "course"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "CS Tools",
+                        "courses": [
+                            {
+                                "title": "The Missing Semester of Your CS Education",
+                                "link": "https://missing.csail.mit.edu/",
+                                "duration": "2 weeks",
+                                "effort": "12 hours/week",
+                                "type": "course"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Core systems",
+                        "courses": [
+                            {
+                                "title": "Build a Modern Computer from First Principles: From Nand to Tetris",
+                                "link": "https://www.coursera.org/learn/build-a-computer",
+                                "duration": "6 weeks",
+                                "effort": "7-13 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Build a Modern Computer from First Principles: Nand to Tetris Part II",
+                                "link": "https://www.coursera.org/learn/nand2tetris2",
+                                "duration": "6 weeks",
+                                "effort": "12-18 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Operating Systems: Three Easy Pieces",
+                                "link": "coursepages/ostep/README.md",
+                                "duration": "10-12 weeks",
+                                "effort": "6-10 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Computer Networking: a Top-Down Approach",
+                                "link": "http://gaia.cs.umass.edu/kurose_ross/online_lectures.htm",
+                                "duration": "8 weeks",
+                                "effort": "4\u201312 hours/week",
+                                "type": "course"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Core theory",
+                        "courses": [
+                            {
+                                "title": "Algorithms: Design and Analysis, Part 1",
+                                "link": "https://www.edx.org/learn/algorithms/stanford-university-algorithms-design-and-analysis-part-1",
+                                "duration": "8 weeks",
+                                "effort": "4-8 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Algorithms: Design and Analysis, Part 2",
+                                "link": "https://www.edx.org/learn/algorithms/stanford-university-algorithms-design-and-analysis-part-2",
+                                "duration": "8 weeks",
+                                "effort": "4-8 hours/week",
+                                "type": "course"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Core security",
+                        "courses": [
+                            {
+                                "title": "Cybersecurity Fundamentals",
+                                "link": "https://www.edx.org/learn/cybersecurity/rochester-institute-of-technology-cybersecurity-fundamentals",
+                                "duration": "8 weeks",
+                                "effort": "10-12 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Principles of Secure Coding",
+                                "link": "https://www.coursera.org/learn/secure-coding-principles",
+                                "duration": "4 weeks",
+                                "effort": "4 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Identifying Security Vulnerabilities",
+                                "link": "https://www.coursera.org/learn/identifying-security-vulnerabilities",
+                                "duration": "4 weeks",
+                                "effort": "4 hours/week",
+                                "type": "course"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Core applications",
+                        "courses": [
+                            {
+                                "title": "Databases: Modeling and Theory",
+                                "link": "https://www.edx.org/learn/databases/stanford-university-databases-modeling-and-theory",
+                                "duration": "2 weeks",
+                                "effort": "10 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Databases: Relational Databases and SQL",
+                                "link": "https://www.edx.org/learn/relational-databases/stanford-university-databases-relational-databases-and-sql",
+                                "duration": "2 weeks",
+                                "effort": "10 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Databases: Semistructured Data",
+                                "link": "https://www.edx.org/learn/relational-databases/stanford-university-databases-semistructured-data",
+                                "duration": "2 weeks",
+                                "effort": "10 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Machine Learning",
+                                "link": "https://www.deeplearning.ai/courses/machine-learning-specialization/",
+                                "duration": "11 weeks",
+                                "effort": "9 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Computer Graphics",
+                                "link": "https://www.edx.org/learn/computer-graphics/the-university-of-california-san-diego-computer-graphics",
+                                "duration": "6 weeks",
+                                "effort": "12 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Software Engineering: Introduction",
+                                "link": "https://www.edx.org/learn/software-engineering/university-of-british-columbia-software-engineering-introduction",
+                                "duration": "6 weeks",
+                                "effort": "8-10 hours/week",
+                                "type": "course"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Core ethics",
+                        "courses": [
+                            {
+                                "title": "Ethics, Technology and Engineering",
+                                "link": "https://www.coursera.org/learn/ethics-technology-engineering",
+                                "duration": "9 weeks",
+                                "effort": "2 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Introduction to Intellectual Property",
+                                "link": "https://www.coursera.org/learn/introduction-intellectual-property",
+                                "duration": "4 weeks",
+                                "effort": "2 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Data Privacy Fundamentals",
+                                "link": "https://www.coursera.org/learn/northeastern-data-privacy",
+                                "duration": "3 weeks",
+                                "effort": "3 hours/week",
+                                "type": "course"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Advanced CS",
+                "subcategories": [
+                    {
+                        "title": "Advanced programming",
+                        "courses": [
+                            {
+                                "title": "Parallel Programming",
+                                "link": "https://www.coursera.org/learn/scala-parallel-programming",
+                                "duration": "4 weeks",
+                                "effort": "6-8 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Compilers",
+                                "link": "https://www.edx.org/learn/computer-science/stanford-university-compilers",
+                                "duration": "9 weeks",
+                                "effort": "6-8 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Introduction to Haskell",
+                                "link": "https://www.seas.upenn.edu/~cis194/fall16/",
+                                "duration": "14 weeks",
+                                "effort": "-",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Learn Prolog Now!",
+                                "link": "https://www.let.rug.nl/bos/lpn//lpnpage.php?pageid=online",
+                                "duration": "12 weeks",
+                                "effort": "-",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Software Debugging",
+                                "link": "https://www.youtube.com/playlist?list=PLAwxTw4SYaPkxK63TiT88oEe-AIBhr96A",
+                                "duration": "8 weeks",
+                                "effort": "6 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Software Testing",
+                                "link": "https://www.youtube.com/playlist?list=PLAwxTw4SYaPkWVHeC_8aSIbSxE_NXI76g",
+                                "duration": "4 weeks",
+                                "effort": "6 hours/week",
+                                "type": "course"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Advanced systems",
+                        "courses": [
+                            {
+                                "title": "Computation Structures 1: Digital Circuits",
+                                "link": "https://learning.edx.org/course/course-v1:MITx+6.004.1x_3+3T2016",
+                                "duration": "10 weeks",
+                                "effort": "6 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Computation Structures 2: Computer Architecture",
+                                "link": "https://learning.edx.org/course/course-v1:MITx+6.004.2x+3T2015",
+                                "duration": "10 weeks",
+                                "effort": "6 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Computation Structures 3: Computer Organization",
+                                "link": "https://learning.edx.org/course/course-v1:MITx+6.004.3x_2+1T2017",
+                                "duration": "10 weeks",
+                                "effort": "6 hours/week",
+                                "type": "course"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Advanced theory",
+                        "courses": [
+                            {
+                                "title": "Theory of Computation",
+                                "link": "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/",
+                                "duration": "13 weeks",
+                                "effort": "10 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Computational Geometry",
+                                "link": "https://www.edx.org/learn/geometry/tsinghua-university-ji-suan-ji-he-computational-geometry",
+                                "duration": "16 weeks",
+                                "effort": "8 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Algorithmic Game Theory",
+                                "link": "https://timroughgarden.org/f13/f13.html",
+                                "duration": "10 weeks",
+                                "effort": "12 hours/week",
+                                "type": "course"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Advanced Information Security",
+                        "courses": [
+                            {
+                                "title": "Web Security Fundamentals",
+                                "link": "https://www.edx.org/learn/computer-security/ku-leuven-web-security-fundamentals",
+                                "duration": "5 weeks",
+                                "effort": "4-6 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Security Governance & Compliance",
+                                "link": "https://www.coursera.org/learn/security-governance-compliance",
+                                "duration": "3 weeks",
+                                "effort": "3 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Digital Forensics Concepts",
+                                "link": "https://www.coursera.org/learn/digital-forensics-concepts",
+                                "duration": "3 weeks",
+                                "effort": "2-3 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Secure Software Development: Requirements, Design, and Reuse",
+                                "link": "https://www.edx.org/learn/software-development/the-linux-foundation-secure-software-development-requirements-design-and-reuse",
+                                "duration": "7 weeks",
+                                "effort": "1-2 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Secure Software Development: Implementation",
+                                "link": "https://www.edx.org/learn/software-development/the-linux-foundation-secure-software-development-implementation",
+                                "duration": "7 weeks",
+                                "effort": "1-2 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Secure Software Development: Verification and More Specialized Topics",
+                                "link": "https://www.edx.org/learn/software-engineering/the-linux-foundation-secure-software-development-verification-and-more-specialized-topics",
+                                "duration": "7 weeks",
+                                "effort": "1-2 hours/week",
+                                "type": "course"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Advanced math",
+                        "courses": [
+                            {
+                                "title": "Essence of Linear Algebra",
+                                "link": "https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab",
+                                "duration": "-",
+                                "effort": "-",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Linear Algebra",
+                                "link": "https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/",
+                                "duration": "14 weeks",
+                                "effort": "12 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Introduction to Numerical Methods",
+                                "link": "https://ocw.mit.edu/courses/mathematics/18-335j-introduction-to-numerical-methods-spring-2019/index.htm",
+                                "duration": "14 weeks",
+                                "effort": "12 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Introduction to Formal Logic",
+                                "link": "https://forallx.openlogicproject.org/",
+                                "duration": "10 weeks",
+                                "effort": "4-8 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Probability",
+                                "link": "https://stat110.hsites.harvard.edu/",
+                                "duration": "15 weeks",
+                                "effort": "5-10 hours/week",
+                                "type": "course"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Final project",
+                "subcategories": [
+                    {
+                        "title": "General",
+                        "courses": [
+                            {
+                                "title": "Fullstack Open",
+                                "link": "https://fullstackopen.com/en/",
+                                "duration": "12 weeks",
+                                "effort": "15 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Modern Robotics",
+                                "link": "https://modernrobotics.northwestern.edu",
+                                "duration": "26 weeks",
+                                "effort": "2-5 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Data Mining (Specialization)",
+                                "link": "https://www.coursera.org/specializations/data-mining",
+                                "duration": "30 weeks",
+                                "effort": "2-5 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Big Data (Specialization)",
+                                "link": "https://www.coursera.org/specializations/big-data",
+                                "duration": "30 weeks",
+                                "effort": "3-5 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Internet of Things (Specialization)",
+                                "link": "https://www.coursera.org/specializations/internet-of-things",
+                                "duration": "30 weeks",
+                                "effort": "1-5 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Cloud Computing (Specialization)",
+                                "link": "https://www.coursera.org/specializations/cloud-computing",
+                                "duration": "30 weeks",
+                                "effort": "2-6 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Data Science (Specialization)",
+                                "link": "https://www.coursera.org/specializations/jhu-data-science",
+                                "duration": "43 weeks",
+                                "effort": "1-6 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Functional Programming in Scala (Specialization)",
+                                "link": "https://www.coursera.org/specializations/scala",
+                                "duration": "29 weeks",
+                                "effort": "4-5 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Game Design and Development with Unity 2020 (Specialization)",
+                                "link": "https://www.coursera.org/specializations/game-design-and-development",
+                                "duration": "6 months",
+                                "effort": "5 hours/week",
+                                "type": "course"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Electives (Great Courses)",
+        "categories": [
+            {
+                "title": "Programming",
+                "subcategories": [
+                    {
+                        "title": "Items",
+                        "courses": [
+                            {
+                                "title": "Introduction to Computational Thinking and Data Science",
+                                "link": "https://www.edx.org/learn/computer-science/massachusetts-institute-of-technology-introduction-to-computational-thinking-and-data-science#!",
+                                "duration": "10 weeks",
+                                "effort": "15 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Introduction to Computer Science - CS50",
+                                "link": "https://www.edx.org/learn/computer-science/harvard-university-cs50-s-introduction-to-computer-science#!",
+                                "duration": "12 weeks",
+                                "effort": "10-20 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Introduction to Computer Science (Udacity)",
+                                "link": "https://www.udacity.com/course/intro-to-computer-science--cs101",
+                                "duration": "7 weeks",
+                                "effort": "10-20 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "An Introduction to Interactive Programming in Python (Part 1)",
+                                "link": "https://www.coursera.org/learn/interactive-python-1",
+                                "duration": "5 weeks",
+                                "effort": "-",
+                                "type": "course"
+                            },
+                            {
+                                "title": "An Introduction to Interactive Programming in Python (Part 2)",
+                                "link": "https://www.coursera.org/learn/interactive-python-2",
+                                "duration": "-",
+                                "effort": "-",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Computing In Python, Part I: Fundamentals and Procedural Programming",
+                                "link": "https://www.edx.org/learn/python/the-georgia-institute-of-technology-computing-in-python-i-fundamentals-and-procedural-programming",
+                                "duration": "5 weeks",
+                                "effort": "10 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Computing In Python, Part II: Control Structures",
+                                "link": "https://www.edx.org/learn/python/the-georgia-institute-of-technology-computing-in-python-ii-control-structures",
+                                "duration": "5 weeks",
+                                "effort": "10 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Computing In Python, Part III: Data Structures",
+                                "link": "https://www.edx.org/learn/python/the-georgia-institute-of-technology-computing-in-python-iii-data-structures",
+                                "duration": "5 weeks",
+                                "effort": "10 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Computing In Python, Part IV: Objects & Algorithms",
+                                "link": "https://www.edx.org/learn/python/the-georgia-institute-of-technology-computing-in-python-iv-objects-algorithms",
+                                "duration": "5 weeks",
+                                "effort": "10 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Programming Basics",
+                                "link": "https://www.edx.org/learn/computer-programming/iitbombay-programming-basics",
+                                "duration": "9 weeks",
+                                "effort": "8 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Object-Oriented Programming with Java",
+                                "link": "https://java-programming.mooc.fi/",
+                                "duration": "14 weeks",
+                                "effort": "10 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Introduction to Programming with MATLAB",
+                                "link": "https://www.coursera.org/learn/matlab",
+                                "duration": "-",
+                                "effort": "-",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Introduction to Functional Programming",
+                                "link": "https://www.edx.org/learn/computer-programming/delft-university-of-technology-introduction-to-functional-programming",
+                                "duration": "7 weeks",
+                                "effort": "4-6 hours/week <!-- currently 404's as of 2025-06-23 but redirects and search results on edx point to this URL -->",
+                                "type": "course"
+                            },
+                            {
+                                "title": "The Structure and Interpretation of Computer Programs (2022, Python)",
+                                "link": "http://cs61a.org/",
+                                "duration": "-",
+                                "effort": "-",
+                                "type": "course"
+                            },
+                            {
+                                "title": "The Structure and Interpretation of Computer Programs (2011, Scheme)",
+                                "link": "https://romanbird.github.io/sicp/",
+                                "duration": "-",
+                                "effort": "-",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Introduction to Haskell",
+                                "link": "https://www.seas.upenn.edu/~cis194/fall16/",
+                                "duration": "14 weeks",
+                                "effort": "4 hours/week",
+                                "type": "course"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Math",
+                "subcategories": [
+                    {
+                        "title": "Items",
+                        "courses": [
+                            {
+                                "title": "Effective Thinking Through Mathematics",
+                                "link": "https://www.edx.org/learn/math/the-university-of-texas-at-austin-effective-thinking-through-mathematics-2",
+                                "duration": "4 weeks",
+                                "effort": "2 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Introduction to Mathematical Thinking",
+                                "link": "https://www.coursera.org/learn/mathematical-thinking",
+                                "duration": "10 weeks",
+                                "effort": "10 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "High School Math",
+                                "link": "https://www.khanacademy.org/math/high-school-math",
+                                "duration": "-",
+                                "effort": "-",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Precalculus",
+                                "link": "https://www.futurelearn.com/courses/precalculus",
+                                "duration": "5 weeks",
+                                "effort": "6 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Advanced Precalculus",
+                                "link": "https://www.futurelearn.com/courses/advanced-precalculus",
+                                "duration": "4 weeks",
+                                "effort": "5 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Calculus Applied!",
+                                "link": "https://www.edx.org/learn/calculus/harvard-university-calculus-applied",
+                                "duration": "10 Weeks",
+                                "effort": "6hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Introduction to Probability and Data",
+                                "link": "https://www.coursera.org/learn/probability-intro",
+                                "duration": "-",
+                                "effort": "-",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Linear Algebra (Strang)",
+                                "link": "https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/index.htm",
+                                "duration": "-",
+                                "effort": "-",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Introduction to Computational Thinking",
+                                "link": "https://computationalthinking.mit.edu/Spring21/#introduction_to_computational_thinking",
+                                "duration": "-",
+                                "effort": "-",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Multivariable Calculus",
+                                "link": "https://ocw.mit.edu/courses/mathematics/18-02sc-multivariable-calculus-fall-2010/index.htm",
+                                "duration": "13 weeks",
+                                "effort": "12 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Introduction to Probability - The Science of Uncertainty",
+                                "link": "https://www.edx.org/learn/probability/massachusetts-institute-of-technology-probability-the-science-of-uncertainty-and-data",
+                                "duration": "18 weeks",
+                                "effort": "12 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Matrix Methods In Data Analysis, Signal Processing, And Machine Learning",
+                                "link": "https://ocw.mit.edu/courses/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/",
+                                "duration": "-",
+                                "effort": "-",
+                                "type": "course"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Systems",
+                "subcategories": [
+                    {
+                        "title": "Items",
+                        "courses": [
+                            {
+                                "title": "Cloud Computing / Distributed Programming",
+                                "link": "https://www.coursera.org/learn/cloud-computing",
+                                "duration": "5 weeks",
+                                "effort": "5-10 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Introduction to Parallel Programming",
+                                "link": "https://www.udacity.com/course/--cs344",
+                                "duration": "12 weeks",
+                                "effort": "8-10 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Intro to Computer Systems",
+                                "link": "http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15213-f15/www/",
+                                "duration": "15 weeks",
+                                "effort": "12 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Great Ideas in Computer Architecture (Machine Structures)",
+                                "link": "https://web.archive.org/web/20190919235114/https://inst.eecs.berkeley.edu/~cs61c/fa14/",
+                                "duration": "15 weeks",
+                                "effort": "12 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Computer Architecture",
+                                "link": "https://www.coursera.org/learn/comparch",
+                                "duration": "-",
+                                "effort": "5-8 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Operating System Engineering",
+                                "link": "http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-828-operating-system-engineering-fall-2012/",
+                                "duration": "-",
+                                "effort": "-",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Introduction to Operating Systems",
+                                "link": "https://www.udacity.com/course/operating-systems--ud923",
+                                "duration": "8 weeks",
+                                "effort": "5-8 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Advanced Operating Systems",
+                                "link": "https://www.udacity.com/course/ai-deep-learning--ud189",
+                                "duration": "5 weeks",
+                                "effort": "5-8 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Networking for Web Developers",
+                                "link": "https://www.udacity.com/course/computer-networking--ud436",
+                                "duration": "12 weeks",
+                                "effort": "5-8 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Playlist",
+                                "link": "https://www.youtube.com/playlist?list=PLrw6a1wE39_tb2fErI4-WkMbsvGQk9_UB",
+                                "duration": "-",
+                                "effort": "-",
+                                "type": "course"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Theory",
+                "subcategories": [
+                    {
+                        "title": "Items",
+                        "courses": [
+                            {
+                                "title": "Algorithms, Part I",
+                                "link": "https://www.coursera.org/learn/algorithms-part1",
+                                "duration": "6 weeks",
+                                "effort": "6-12 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Algorithms, Part II",
+                                "link": "https://www.coursera.org/learn/algorithms-part2",
+                                "duration": "6 weeks",
+                                "effort": "6-12 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Analysis of Algorithms (Sedgewick)",
+                                "link": "https://www.coursera.org/learn/analysis-of-algorithms",
+                                "duration": "6 weeks",
+                                "effort": "6-8 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Analysis of Algorithms (Skiena)",
+                                "link": "http://www3.cs.stonybrook.edu/~skiena/373/",
+                                "duration": "15 weeks",
+                                "effort": "6-8 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Programming Challenges (Skiena)",
+                                "link": "http://www3.cs.stonybrook.edu/~skiena/392/",
+                                "duration": "14 weeks",
+                                "effort": "6-8 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Data Structures and Algorithms (Specialization)",
+                                "link": "https://www.coursera.org/specializations/data-structures-algorithms",
+                                "duration": "25 weeks",
+                                "effort": "3-10 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Algorithmic Thinking (Part 1)",
+                                "link": "https://www.coursera.org/learn/algorithmic-thinking-1/",
+                                "duration": "-",
+                                "effort": "-",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Algorithmic Thinking (Part 2)",
+                                "link": "https://www.coursera.org/learn/algorithmic-thinking-2/",
+                                "duration": "-",
+                                "effort": "-",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Statistical Mechanics: Algorithms and Computations",
+                                "link": "https://www.coursera.org/learn/statistical-mechanics/",
+                                "duration": "-",
+                                "effort": "-",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Approximation Algorithms Part I",
+                                "link": "https://www.coursera.org/learn/approximation-algorithms-part-1/",
+                                "duration": "-",
+                                "effort": "-",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Approximation Algorithms Part II",
+                                "link": "https://www.coursera.org/learn/approximation-algorithms-part-2/",
+                                "duration": "-",
+                                "effort": "-",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Design And Analysis Of Algorithms",
+                                "link": "https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/",
+                                "duration": "-",
+                                "effort": "-",
+                                "type": "course"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Applications",
+                "subcategories": [
+                    {
+                        "title": "Items",
+                        "courses": [
+                            {
+                                "title": "Using Databases with Python",
+                                "link": "https://www.coursera.org/learn/python-databases",
+                                "duration": "5 weeks",
+                                "effort": "2-3 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Database Systems",
+                                "link": "https://15721.courses.cs.cmu.edu/spring2016/",
+                                "duration": "15 weeks",
+                                "effort": "12 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Database Management Essentials",
+                                "link": "https://www.coursera.org/learn/database-management",
+                                "duration": "7 weeks",
+                                "effort": "4-6 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Intro to Artificial Intelligence",
+                                "link": "https://www.udacity.com/course/intro-to-artificial-intelligence--cs271",
+                                "duration": "16 weeks",
+                                "effort": "6-10 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Intro to Machine Learning",
+                                "link": "https://www.udacity.com/course/intro-to-machine-learning--ud120",
+                                "duration": "10 weeks",
+                                "effort": "6-10 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Big Data Science with the BD2K-LINCS Data Coordination and Integration Center",
+                                "link": "https://www.coursera.org/course/bd2klincs",
+                                "duration": "7 weeks",
+                                "effort": "4-5 hours/week",
+                                "type": "course"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tools",
+                "subcategories": [
+                    {
+                        "title": "Items",
+                        "courses": [
+                            {
+                                "title": "How to Use Git and GitHub",
+                                "link": "https://www.udacity.com/blog/2015/06/a-beginners-git-github-tutorial.html",
+                                "duration": "3 weeks",
+                                "effort": "2-3 hours/week",
+                                "type": "course"
+                            },
+                            {
+                                "title": "Kubernetes Certified Application Developer",
+                                "link": "https://www.udemy.com/course/certified-kubernetes-application-developer/",
+                                "duration": "5 weeks",
+                                "effort": "2 hours/week",
+                                "type": "course"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Recommended Books",
+        "categories": [
+            {
+                "title": "Programming",
+                "subcategories": [
+                    {
+                        "title": "Items",
+                        "courses": [
+                            {
+                                "title": "Introduction to Computation and Programming Using Python 3e",
+                                "link": "https://mitpress.mit.edu/books/introduction-computation-and-programming-using-python-third-edition",
+                                "author": "John V. Guttag",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Think Python 2e",
+                                "link": "http://greenteapress.com/wp/think-python-2e/",
+                                "author": "Allen B. Downey",
+                                "type": "book"
+                            },
+                            {
+                                "title": "How to Design Programs 2e",
+                                "link": "https://www.htdp.org/",
+                                "author": "Matthias Felleisen, Robert Bruce Findler, Matthew Flatt, Shriram Krishnamurthi",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Structure and Interpretation of Computer Programs 2e",
+                                "link": "https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book.html",
+                                "author": "Hal Abelson, Jerry Sussman, Julie Sussman",
+                                "type": "book"
+                            },
+                            {
+                                "title": "The Structure and Interpretation of Computer Programs (2021, JavaScript)",
+                                "link": "https://sourceacademy.org/sicpjs/index",
+                                "author": "Harold Abelson, Gerald Jay Sussman, Julie Sussman, Martin Henz, Tobias Wrigstad and Samuel Fang",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Concepts, Techniques, and Models of Computer Programming",
+                                "link": "https://www.amazon.com/gp/product/0262220695",
+                                "author": "Peter Van Roy, Seif Haridi",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Design Patterns: Elements of Reusable Object-Oriented Software",
+                                "link": "https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612",
+                                "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Refactoring",
+                                "link": "https://www.refactoring.com/",
+                                "author": "Martin Fowler",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Clean Code",
+                                "link": "https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882",
+                                "author": "Robert Martin",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Code Complete 2e",
+                                "link": "https://www.amazon.com/Code-Complete-Practical-Handbook-Construction/dp/0735619670",
+                                "author": "Steve McConnell",
+                                "type": "book"
+                            },
+                            {
+                                "title": "The Pragmatic Programmer 2e",
+                                "link": "https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/",
+                                "author": "Andrew Hunt, David Thomas",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Programming Languages: Application and Interpretation",
+                                "link": "http://cs.brown.edu/~sk/Publications/Books/ProgLangs/",
+                                "author": "Shriram Krishnamurthi",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Programming and Programming Languages",
+                                "link": "https://papl.cs.brown.edu/2018/",
+                                "author": "Shriram Krishnamurthi, Benjamin S. Lerner, Joe Gibbs Politz",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Competitive Programming",
+                                "link": "https://cpbook.net/",
+                                "author": "Steven Halim, Felix Halim",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Introduction to computing in Java",
+                                "link": "https://introcs.cs.princeton.edu/java/home/",
+                                "author": "Robert Sedgewick, Kevin Wayne",
+                                "type": "book"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Math",
+                "subcategories": [
+                    {
+                        "title": "Items",
+                        "courses": [
+                            {
+                                "title": "Calculus Made Easy",
+                                "link": "http://www.gutenberg.org/ebooks/33283",
+                                "author": "Silvanus P. Thompson",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Ximera: Interactive Calculus Textbooks",
+                                "link": "https://ximera.osu.edu/",
+                                "author": "[Ximera team](https://ximera.osu.edu/about/team)",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Discrete Mathematics with Applications (4th Edition)",
+                                "link": "http://www.amazon.com/Discrete-Mathematics-Applications-Susanna-Epp/dp/0495391328/",
+                                "author": "Susanna S. Epp",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Discrete Mathematics: An Open Introduction",
+                                "link": "https://discrete.openmathbooks.org/dmoi4/frontmatter.html",
+                                "author": "Oscar Levin",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Applied Discrete Structures",
+                                "link": "http://faculty.uml.edu/klevasseur/ads2/",
+                                "author": "Alan Doerr, Ken Levasseur",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Grinstead and Snell\u2019s Introduction to Probability",
+                                "link": "https://math.dartmouth.edu/~prob/prob/prob.pdf",
+                                "author": "Charles M. Grinstead, J. Laurie Snell",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Linear Algebra for Everyone",
+                                "link": "https://math.mit.edu/~gs/everyone/",
+                                "author": "Gilbert Strang",
+                                "type": "book"
+                            },
+                            {
+                                "title": "The Art of Linear Algebra",
+                                "link": "https://github.com/kenjihiranabe/The-Art-of-Linear-Algebra",
+                                "author": "Kenji Hiranabe, Gilbert Strang",
+                                "type": "book"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Systems",
+                "subcategories": [
+                    {
+                        "title": "Items",
+                        "courses": [
+                            {
+                                "title": "But How Do It Know?",
+                                "link": "http://www.buthowdoitknow.com/",
+                                "author": "J. Clark Scott",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Computer Systems: A Programmer's Perspective (3rd Edition)",
+                                "link": "http://csapp.cs.cmu.edu/",
+                                "author": "Randal E. Bryant, David R. O'Hallaron",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Modern Operating Systems (4th Edition)",
+                                "link": "http://www.amazon.com/Modern-Operating-Systems-Andrew-Tanenbaum/dp/013359162X/",
+                                "author": "Andrew S. Tanenbaum, Herbert Bos",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Computer Organization and Design: The Hardware/Software Interface (6th Edition)",
+                                "link": "https://www.amazon.com/Computer-Organization-Design-MIPS-Architecture/dp/0128201096/",
+                                "author": "David Patternson, John Hennessy",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Computer Networks (5th Edition)",
+                                "link": "http://www.amazon.com/Computer-Networks-5th-Andrew-Tanenbaum/dp/0132126958/",
+                                "author": "Andrew S. Tanenbaum, David J. Wetherall",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Computer Networking: A Top-Down Approach (8th Edition)",
+                                "link": "https://gaia.cs.umass.edu/kurose_ross/index.html",
+                                "author": "James F Kurose, Keith W Ross",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Computer Networks: A Systems Approach",
+                                "link": "https://book.systemsapproach.org/",
+                                "author": "Larry Peterson and Bruce Davie",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Distributed Systems: Principles and Paradigms",
+                                "link": "https://www.amazon.com/Distributed-Systems-Principles-Andrew-Tanenbaum/dp/153028175X",
+                                "author": "Andrew Tanenbaum",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Operating Systems Design and Implementation",
+                                "link": "https://www.amazon.com/Operating-Systems-Design-Implementation-3rd/dp/0131429388",
+                                "author": "Andrew S. Tanenbaum, Albert S. Woodhull",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Crafting Interpreters",
+                                "link": "https://www.craftinginterpreters.com/contents.html",
+                                "author": "Robert Nystrom",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Principles of Compiler Design",
+                                "link": "https://www.amazon.com/Principles-Compiler-Addison-Wesley-information-processing/dp/0201000229",
+                                "author": "Alfred Aho, Jeffrey Ullman",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Distributed Systems Reading Group",
+                                "link": "http://dsrg.pdos.csail.mit.edu/papers/",
+                                "author": "Various",
+                                "type": "book"
+                            },
+                            {
+                                "title": "System Design: Design large-scale systems",
+                                "link": "https://github.com/donnemartin/system-design-primer",
+                                "author": "Various",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Code: The Hidden Language of Computer Hardware and Software",
+                                "link": "https://codehiddenlanguage.com/Chapter00/",
+                                "author": "Charles Petzold",
+                                "type": "book"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Theory",
+                "subcategories": [
+                    {
+                        "title": "Items",
+                        "courses": [
+                            {
+                                "title": "Introduction to Computing: Explorations in Language, Logic, and Machines",
+                                "link": "http://www.computingbook.org/",
+                                "author": "David Evans",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Introduction to the Theory of Computation (3rd Edition)",
+                                "link": "https://www.amazon.com/Introduction-Theory-Computation-Michael-Sipser/dp/113318779X",
+                                "author": "Michael Sipser",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Introduction to Algorithms (3rd Edition)",
+                                "link": "http://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844/",
+                                "author": "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein",
+                                "type": "book"
+                            },
+                            {
+                                "title": "The Algorithm Design Manual (3rd Edition)",
+                                "link": "https://www.algorist.com/",
+                                "author": "Steven Skiena",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Algorithms (4th Edition)",
+                                "link": "https://algs4.cs.princeton.edu/home/",
+                                "author": "Robert Sedgewick",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Algorithms Illuminated",
+                                "link": "https://algorithmsilluminated.org/",
+                                "author": "Tim Roughgarden",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Category Theory: A Gentle Introduction",
+                                "link": "http://www.logicmatters.net/resources/pdfs/GentleIntro.pdf",
+                                "author": "Peter Smith",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Category Theory for Programmers: The Preface",
+                                "link": "https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/",
+                                "author": "Bartosz Milewski",
+                                "type": "book"
+                            },
+                            {
+                                "title": "An Introduction to Information Retrieval",
+                                "link": "https://nlp.stanford.edu/IR-book/pdf/irbookonlinereading.pdf",
+                                "author": "Christopher D. Manning, Prabhakar Raghavan, Hinrich Sch\u00fctze",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Computer Science: An interdisciplinary approach",
+                                "link": "https://introcs.cs.princeton.edu/java/cs/",
+                                "author": "Robert Sedgewick, Kevin Wayne",
+                                "type": "book"
+                            },
+                            {
+                                "title": "DSA CS3: Data Structures & Algorithms",
+                                "link": "https://opendsa-server.cs.vt.edu/OpenDSA/Books/CS3/html/",
+                                "author": "The OpenDSA Project (supported by National Science Foundation)",
+                                "type": "book"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Applications",
+                "subcategories": [
+                    {
+                        "title": "Items",
+                        "courses": [
+                            {
+                                "title": "Architecture of a Database System",
+                                "link": "http://db.cs.berkeley.edu/papers/fntdb07-architecture.pdf",
+                                "author": "Joseph M. Hellerstein, Michael Stonebraker, James Hamilton",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Readings in Database Systems (5th Edition)",
+                                "link": "http://www.redbook.io/",
+                                "author": "Peter Bailis, Joseph M. Hellerstein, Michael Stonebraker, editors",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Database Management Systems (3rd Edition)",
+                                "link": "https://www.amazon.com/gp/product/0072465638",
+                                "author": "Raghu Ramakrishnan, Johannes Gehrke",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Transaction Processing: Concepts and Techniques",
+                                "link": "https://www.amazon.com/Transaction-Processing-Concepts-Techniques-Management/dp/1558601902",
+                                "author": "Jim Gray, Andreas Reuter",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Data and Reality: A Timeless Perspective on Perceiving and Managing Information in Our Imprecise World (3rd Edition)",
+                                "link": "https://www.amazon.com/Data-Reality-Perspective-Perceiving-Information/dp/1935504215",
+                                "author": "William Kent",
+                                "type": "book"
+                            },
+                            {
+                                "title": "The Architecture of Open Source Applications",
+                                "link": "http://aosabook.org/en/",
+                                "author": "Michael DiBernardo (editor)",
+                                "type": "book"
+                            },
+                            {
+                                "title": "An Introduction to Statistical Learning",
+                                "link": "https://www-bcf.usc.edu/~gareth/ISL/",
+                                "author": "Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Deep Learning",
+                                "link": "http://www.deeplearningbook.org/",
+                                "author": "Ian Goodfellow, Yoshua Bengio and Aaron Courville",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Bayesian Reasoning and Machine Learning",
+                                "link": "http://web4.cs.ucl.ac.uk/staff/D.Barber/pmwiki/pmwiki.php?n=Brml.HomePage",
+                                "author": "David Barber",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Language Implementation Patterns",
+                                "link": "https://www.amazon.com/gp/product/193435645X",
+                                "author": "Terence Parr",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Compilers: Principles, Techniques, and Tools (2nd Edition)",
+                                "link": "http://www.amazon.com/Compilers-Principles-Techniques-Tools-2nd/dp/0321486811/",
+                                "author": "Alfred V. Aho, Monica S. Lam, Ravi Sethi,  Jeffrey D. Ullman",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Compiler Construction",
+                                "link": "https://inf.ethz.ch/personal/wirth/CompilerConstruction/index.html",
+                                "author": "Niklaus Wirth",
+                                "type": "book"
+                            },
+                            {
+                                "title": "The Mythical Man-Month",
+                                "link": "https://www.amazon.com/Mythical-Man-Month-Software-Engineering-Anniversary/dp/0201835959/",
+                                "author": "Fred Brooks, Jr.",
+                                "type": "book"
+                            },
+                            {
+                                "title": "Physically Based Rendering: From Theory To Implementation",
+                                "link": "http://www.pbr-book.org/",
+                                "author": "Matt Pharr, Wenzel Jakob, and Greg Humphreys",
+                                "type": "book"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tools",
+                "subcategories": [
+                    {
+                        "title": "Items",
+                        "courses": [
+                            {
+                                "title": "The Linux Command Line",
+                                "link": "https://linuxcommand.org/tlcl.php",
+                                "author": "by William Shotts",
+                                "type": "book"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

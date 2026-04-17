@@ -1,0 +1,46 @@
+{
+  "id": "sum-of-all-submatrices",
+  "title": "Sum of all Submatrices",
+  "difficulty": "Medium",
+  "category": "two-dimensional-array",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [[1, 1], [1, 1]]",
+      "output": "16"
+    },
+    {
+      "input": "A = [[1, 2], [3, 4]]",
+      "output": "40"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int[][] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of list of integers\n    # @return an integer\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(vector<vector<int> >& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[[1,1],[1,1]]"
+    },
+    {
+      "A": "[[1,2],[3,4]]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int_array_2d"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Instead of generating all submatrices, think about the contribution of each element.",
+    "For an element at position (i, j), count how many submatrices include this element.",
+    "An element at (i, j) will be included in all submatrices that start at any (x, y) where x <= i and y <= j, and end at any (p, q) where p >= i and q >= j.",
+    "The number of submatrices containing A[i][j] is (i+1) * (j+1) * (N-i) * (N-j).",
+    "Sum up the contribution of each element: A[i][j] * (i+1) * (j+1) * (N-i) * (N-j)."
+  ]
+}
+

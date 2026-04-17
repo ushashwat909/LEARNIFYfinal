@@ -1,0 +1,12 @@
+{
+    "title": "Two Sum",
+    "difficulty": "Easy",
+    "category": "Arrays",
+    "functionName": "twoSum",
+    "testCases": [
+        {
+            "nums": "[2,7,11,15]",
+            "target": "9"
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+{
+  "id": "string-operations",
+  "title": "String operations",
+  "difficulty": "Easy",
+  "category": "strings",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = \"aeiOUz\"",
+      "output": "\"###z###z\""
+    },
+    {
+      "input": "A = \"AbcaZeoB\"",
+      "output": "\"bc###bc###\""
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public String solve(String A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : string\n    # @return a string\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    string solve(string A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "\"aeiOUz\""
+    },
+    {
+      "A": "\"AbcaZeoB\""
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "string"
+    }
+  ],
+  "outputType": "string",
+  "hints": [
+    "First, concatenate the string with itself.",
+    "Then, iterate through the concatenated string and skip uppercase letters (ASCII 65-90).",
+    "For remaining characters, check if they are vowels (a, e, i, o, u) and replace with '#'.",
+    "Keep all other lowercase consonants as they are."
+  ]
+}
+

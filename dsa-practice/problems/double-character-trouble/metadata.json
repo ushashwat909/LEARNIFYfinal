@@ -1,0 +1,52 @@
+{
+  "id": "double-character-trouble",
+  "title": "Double Character Trouble",
+  "difficulty": "Easy",
+  "category": "stacks1",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = \"abccbc\"",
+      "output": "\"ac\""
+    },
+    {
+      "input": "A = \"ab\"",
+      "output": "\"ab\""
+    }
+  ],
+  "starterCode": {
+    "java": "import java.util.*;\nclass Solution {\n    public String solve(String A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : string\n    # @return a strings\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    string solve(string A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "abccbc"
+    },
+    {
+      "A": "ab"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "string"
+    }
+  ],
+  "outputType": "string",
+  "hints": [
+    "Use a stack to efficiently remove consecutive identical pairs.",
+    "For each character in the string:",
+    "  - If the stack is empty, push the character.",
+    "  - If the stack is not empty, check if the top equals the current character.",
+    "  - If they match, pop from the stack (removing the pair).",
+    "  - If they don't match, push the current character.",
+    "After processing all characters, build the result string from the remaining stack elements."
+  ]
+}
+
+
+
+
+

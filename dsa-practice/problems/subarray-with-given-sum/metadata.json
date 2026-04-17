@@ -1,0 +1,52 @@
+{
+  "id": "subarray-with-given-sum",
+  "title": "Subarray with given sum",
+  "difficulty": "Medium",
+  "category": "two-pointers",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [1, 2, 3, 4, 5]\nB = 5",
+      "output": "[2, 3]"
+    },
+    {
+      "input": "A = [5, 10, 20, 100, 105]\nB = 110",
+      "output": "[-1]"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int[] solve(int[] A, int B) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @param B : integer\n    # @return a list of integers\n    def solve(self, A, B):\n        ",
+    "cpp": "class Solution {\npublic:\n    vector<int> solve(vector<int>& A, int B) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1,2,3,4,5]",
+      "B": "5"
+    },
+    {
+      "A": "[5,10,20,100,105]",
+      "B": "110"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    },
+    {
+      "name": "B",
+      "type": "int"
+    }
+  ],
+  "outputType": "int_array",
+  "hints": [
+    "Use two pointers (sliding window) technique to find the subarray.",
+    "Maintain a window with sum less than or equal to B.",
+    "If sum exceeds B, shrink the window from the left.",
+    "If sum equals B, return the current window.",
+    "If no subarray is found after processing all elements, return [-1]."
+  ]
+}
+

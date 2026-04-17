@@ -1,0 +1,47 @@
+{
+  "id": "distribute-candy",
+  "title": "Distribute Candy",
+  "difficulty": "Hard",
+  "category": "greedy",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [1, 2]",
+      "output": "3"
+    },
+    {
+      "input": "A = [1, 5, 2, 1]",
+      "output": "7"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int candy(int[] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @return an integer\n    def candy(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int candy(vector<int>& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1,2]"
+    },
+    {
+      "A": "[1,5,2,1]"
+    }
+  ],
+  "functionName": "candy",
+  "params": [
+    {
+      "name": "A",
+      "type": "int_array"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use a two-pass greedy approach.",
+    "First pass (left to right): ensure each child has more candies than the left neighbor if their rating is higher.",
+    "Second pass (right to left): ensure each child has more candies than the right neighbor if their rating is higher.",
+    "Initialize all children with 1 candy (minimum requirement).",
+    "In the second pass, use max() to ensure we don't reduce candies that were already set correctly in the first pass.",
+    "The sum of all candies gives the minimum total required."
+  ]
+}
+

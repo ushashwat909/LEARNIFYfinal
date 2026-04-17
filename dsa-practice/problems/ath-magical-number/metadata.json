@@ -1,0 +1,64 @@
+{
+  "id": "ath-magical-number",
+  "title": "Ath Magical Number",
+  "difficulty": "Hard",
+  "category": "binary-search-on-problems",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 1\nB = 2\nC = 3",
+      "output": "2"
+    },
+    {
+      "input": "A = 4\nB = 2\nC = 3",
+      "output": "6"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int A, int B, int C) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : integer\n    # @param B : integer\n    # @param C : integer\n    # @return an integer\n    def solve(self, A, B, C):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(int A, int B, int C) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "1",
+      "B": "2",
+      "C": "3"
+    },
+    {
+      "A": "4",
+      "B": "2",
+      "C": "3"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int"
+    },
+    {
+      "name": "B",
+      "type": "int"
+    },
+    {
+      "name": "C",
+      "type": "int"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use binary search to find the Ath magical number.",
+    "For a given number mid, count how many magical numbers are <= mid using inclusion-exclusion principle.",
+    "Count of magical numbers <= mid = mid/B + mid/C - mid/LCM(B,C).",
+    "Use binary search where lo = 0 and hi = min(B, C) * A as an upper bound.",
+    "When count == A, store the answer and continue searching left to find the minimum such number.",
+    "Calculate LCM using GCD: LCM(a, b) = (a * b) / GCD(a, b).",
+    "Remember to apply modulo 10^9 + 7 to the final answer."
+  ]
+}
+
+
+
+
+

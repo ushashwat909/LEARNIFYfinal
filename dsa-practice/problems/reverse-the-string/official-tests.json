@@ -1,0 +1,13 @@
+[
+  { "A": "\"the sky is blue\"" },
+  { "A": "\"this is ib\"" },
+  { "A": "\"hello\"" },
+  { "A": "\"a b c\"" },
+  { "A": "\"  hello world  \"" },
+  { "A": "\"the   quick   brown   fox\"" },
+  { "A": "\"a\"" },
+  { "A": "\"  a  b  c  \"" },
+  { "A": "\"test string\"" },
+  { "A": "\"multiple    spaces    between    words\"" }
+]
+

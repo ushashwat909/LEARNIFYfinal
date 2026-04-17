@@ -1,0 +1,46 @@
+{
+  "id": "number-of-islands",
+  "title": "Number of islands",
+  "difficulty": "Medium",
+  "category": "graphs2-bfs-matrix",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [ \n      [0, 1, 0]\n      [0, 0, 1]\n      [1, 0, 0]\n    ]",
+      "output": "2"
+    },
+    {
+      "input": "A = [   \n      [1, 1, 0, 0, 0]\n      [0, 1, 0, 0, 0]\n      [1, 0, 0, 1, 1]\n      [0, 0, 0, 0, 0]\n      [1, 0, 1, 0, 1]    \n    ]",
+      "output": "5"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int[][] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of list of integers\n    # @return an integer\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(vector<vector<int>>& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[[0,1,0],[0,0,1],[1,0,0]]"
+    },
+    {
+      "A": "[[1,1,0,0,0],[0,1,0,0,0],[1,0,0,1,1],[0,0,0,0,0],[1,0,1,0,1]]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[][]"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use BFS or DFS to traverse all connected 1's starting from each unvisited 1.",
+    "Mark visited cells to avoid counting the same island multiple times.",
+    "Check all 8 directions (including diagonals) from each cell.",
+    "Each time you find an unvisited 1, start a new BFS/DFS to mark all connected 1's.",
+    "Count the number of times you start a new traversal - that's the number of islands."
+  ]
+}
+

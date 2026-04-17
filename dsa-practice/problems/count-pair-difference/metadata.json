@@ -1,0 +1,57 @@
+{
+  "id": "count-pair-difference",
+  "title": "Count Pair Difference",
+  "difficulty": "Medium",
+  "category": "hashing-2",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [3, 5, 1, 2]\nB = 4",
+      "output": "1"
+    },
+    {
+      "input": "A = [1, 2, 1, 2]\nB = 1",
+      "output": "4"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int[] A, int B) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @param B : integer\n    # @return an integer\n    def solve(self, A, B):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(vector<int>& A, int B) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[3, 5, 1, 2]",
+      "B": "4"
+    },
+    {
+      "A": "[1, 2, 1, 2]",
+      "B": "1"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    },
+    {
+      "name": "B",
+      "type": "int"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use a hashmap to count frequency of elements.",
+    "For A[i] - A[j] = B, we need A[j] = A[i] - B.",
+    "For each element A[i], check if A[i] - B exists in the hashmap (count pairs where A[i] is the larger element).",
+    "Also check if B + A[i] exists in the hashmap (count pairs where A[i] is the smaller element).",
+    "Add the current element to hashmap after checking to avoid counting same element twice.",
+    "Return count modulo 10^9+7."
+  ]
+}
+
+
+
+
+

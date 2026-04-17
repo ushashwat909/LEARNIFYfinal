@@ -1,0 +1,1 @@
+Suppose an array of length `n` sorted in ascending order is rotated between `1` and `n` times. Return the minimum element of this array.

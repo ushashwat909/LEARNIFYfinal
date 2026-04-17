@@ -1,0 +1,47 @@
+{
+  "id": "count-of-divisors",
+  "title": "Count of divisors",
+  "difficulty": "Medium",
+  "category": "maths-prime-numbers",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [2, 3, 4, 5]",
+      "output": "[2, 2, 3, 2]"
+    },
+    {
+      "input": "A = [8, 9, 10]",
+      "output": "[4, 3, 4]"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int[] solve(int[] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @return a list of integers\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    vector<int> solve(vector<int>& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[2,3,4,5]"
+    },
+    {
+      "A": "[8,9,10]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int_array"
+    }
+  ],
+  "outputType": "int_array",
+  "hints": [
+    "Use the Smallest Prime Factor (SPF) array technique for efficient factorization.",
+    "Build SPF array using Sieve of Eratosthenes up to max(A).",
+    "For each number, use SPF to factorize it and count the exponents of each prime factor.",
+    "The number of divisors = (e1+1) * (e2+1) * ... * (ek+1) where e1, e2, ..., ek are exponents of prime factors.",
+    "For example, 12 = 2^2 * 3^1, so number of divisors = (2+1) * (1+1) = 6.",
+    "Use SPF to quickly find the smallest prime factor of any number during factorization."
+  ]
+}
+

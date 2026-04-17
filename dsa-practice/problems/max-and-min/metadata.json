@@ -1,0 +1,48 @@
+{
+  "id": "max-and-min",
+  "title": "MAX and MIN",
+  "difficulty": "Hard",
+  "category": "stacks2",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [1]",
+      "output": "0"
+    },
+    {
+      "input": "A = [4, 7, 3, 8]",
+      "output": "26"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int[] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @return an integer\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(vector<int>& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1]"
+    },
+    {
+      "A": "[4,7,3,8]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use contribution technique: sum of (max - min) for all subarrays = sum of max for all subarrays - sum of min for all subarrays.",
+    "For each element, find how many subarrays it contributes as maximum and minimum.",
+    "Use stacks to find nearest smaller element (nsl, nsr) and nearest greater element (ngl, ngr).",
+    "For element A[i], number of subarrays where it's maximum = (ngr[i] - i) * (i - ngl[i]).",
+    "For element A[i], number of subarrays where it's minimum = (nsr[i] - i) * (i - nsl[i]).",
+    "Contribution of A[i] = A[i] * (max_contribution - min_contribution).",
+    "Sum all contributions and return modulo 10^9+7."
+  ]
+}
+

@@ -1,0 +1,12 @@
+{
+    "title": "Coin Change",
+    "difficulty": "Medium",
+    "category": "Dynamic Programming",
+    "functionName": "coinChange",
+    "testCases": [
+        {
+            "coins": "[1,2,5]",
+            "amount": "11"
+        }
+    ]
+}

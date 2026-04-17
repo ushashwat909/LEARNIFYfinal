@@ -1,0 +1,47 @@
+{
+  "id": "generate-all-parentheses-ii",
+  "title": "Generate all Parentheses II",
+  "difficulty": "Medium",
+  "category": "backtracking1",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 3",
+      "output": "[ \"((()))\", \"(()())\", \"(())()\", \"()(())\", \"()()()\" ]"
+    },
+    {
+      "input": "A = 1",
+      "output": "[ \"()\" ]"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public ArrayList<String> generateParenthesis(int A) {\n        \n    }\n}",
+    "python": "class Solution:\n\t# @param A : integer\n\t# @return a list of strings\n    def generateParenthesis(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    vector<string> generateParenthesis(int A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "3"
+    },
+    {
+      "A": "1"
+    }
+  ],
+  "functionName": "generateParenthesis",
+  "params": [
+    {
+      "name": "A",
+      "type": "int"
+    }
+  ],
+  "outputType": "string_list",
+  "hints": [
+    "Use backtracking to generate all valid parentheses combinations.",
+    "Keep track of the number of open and close parentheses used.",
+    "You can add '(' if the count of open parentheses is less than A.",
+    "You can add ')' if the count of close parentheses is less than open parentheses.",
+    "When both counts reach A, you have a valid combination - add it to the result.",
+    "After each recursive call, backtrack by removing the last added character."
+  ]
+}
+

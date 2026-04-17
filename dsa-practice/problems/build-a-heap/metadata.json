@@ -1,0 +1,41 @@
+{
+  "id": "build-a-heap",
+  "title": "Build a Heap",
+  "difficulty": "Medium",
+  "category": "heaps1",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [5, 13, -2, 11, 27, 31, 0, 19]",
+      "output": "[-2, 5, 0, 13, 11, 19, 27, 31]"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int[] build_heap(int[] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A: list of integers\n    # @return: a list representing the binary min heap\n    def build_heap(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    vector<int> build_heap(vector<int>& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[5,13,-2,11,27,31,0,19]"
+    }
+  ],
+  "functionName": "build_heap",
+  "params": [
+    {
+      "name": "A",
+      "type": "int_array"
+    }
+  ],
+  "outputType": "int_array",
+  "hints": [
+    "Use the bottom-up heap construction approach.",
+    "Start from the last parent node (at index n/2 - 1) and work backwards to the root.",
+    "For each node, perform down-heapify to ensure the min-heap property is maintained.",
+    "In down-heapify, compare the node with its children and swap with the smallest child if needed.",
+    "Continue down-heapify recursively until the node is in the correct position or reaches a leaf.",
+    "The array representation of a heap has parent at index i, left child at 2*i+1, and right child at 2*i+2."
+  ]
+}
+
+

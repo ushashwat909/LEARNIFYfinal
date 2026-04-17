@@ -1,0 +1,46 @@
+{
+  "id": "preorder-traversal",
+  "title": "Preorder Traversal",
+  "difficulty": "Easy",
+  "category": "trees1",
+  "link": "",
+  "examples": [
+    {
+      "input": "Tree: 1 -> null, 2 -> 3",
+      "output": "[1, 2, 3]"
+    },
+    {
+      "input": "Tree: 1 -> (6, 2), 2 -> (3, null)",
+      "output": "[1, 6, 2, 3]"
+    }
+  ],
+  "starterCode": {
+    "java": "// Definition for a binary tree node.\n// class TreeNode {\n//     int val;\n//     TreeNode left;\n//     TreeNode right;\n//     TreeNode(int x) { val = x; }\n// }\n\nimport java.util.*;\n\nclass Solution {\n    public int[] preorderTraversal(TreeNode A) {\n        \n    }\n}",
+    "python": "# Definition for a  binary tree node\n# class TreeNode:\n#\tdef __init__(self, x):\n#\t\tself.val = x\n#\t\tself.left = None\n#\t\tself.right = None\n\nclass Solution:\n\t# @param A : root node of tree\n\t# @return a list of integers\n\tdef preorderTraversal(self, A):\n        ",
+    "cpp": "// Definition for binary tree\n// struct TreeNode {\n//     int val;\n//     TreeNode *left;\n//     TreeNode *right;\n//     TreeNode(int x) : val(x), left(NULL), right(NULL) {}\n// };\n\n#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> preorderTraversal(TreeNode* A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "Tree: 1 -> null, 2 -> 3"
+    },
+    {
+      "A": "Tree: 1 -> (6, 2), 2 -> (3, null)"
+    }
+  ],
+  "functionName": "preorderTraversal",
+  "params": [
+    {
+      "name": "A",
+      "type": "TreeNode"
+    }
+  ],
+  "outputType": "int_array",
+  "hints": [
+    "Preorder traversal visits nodes in the order: root, left, right.",
+    "Use recursion to traverse the tree.",
+    "For each node, first add its value to the result, then recursively traverse left subtree, then right subtree.",
+    "Handle the base case when the node is null.",
+    "You can also use an iterative approach with a stack."
+  ]
+}
+

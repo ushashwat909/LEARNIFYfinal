@@ -1,0 +1,46 @@
+{
+  "id": "rain-water-trapped",
+  "title": "Rain Water Trapped",
+  "difficulty": "Hard",
+  "category": "arrays-one-dimensional",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [0, 1, 0, 2]",
+      "output": "1"
+    },
+    {
+      "input": "A = [1, 2]",
+      "output": "0"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int[] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @return an integer\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(vector<int>& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[0,1,0,2]"
+    },
+    {
+      "A": "[1,2]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use prefix and suffix maximum arrays.",
+    "For each position i, the water trapped depends on the minimum of maximum height on left and maximum height on right.",
+    "Create left maximum array: l[i] = max height from index 0 to i.",
+    "Create right maximum array: r[i] = max height from index i to n-1.",
+    "For each position i (from 1 to n-2), trapped water = min(l[i-1], r[i+1]) - A[i] if positive."
+  ]
+}
+

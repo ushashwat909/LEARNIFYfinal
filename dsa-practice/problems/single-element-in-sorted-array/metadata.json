@@ -1,0 +1,51 @@
+{
+  "id": "single-element-in-sorted-array",
+  "title": "Single Element in Sorted Array",
+  "difficulty": "Medium",
+  "category": "binary-search-on-array",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [1, 1, 7]",
+      "output": "7"
+    },
+    {
+      "input": "A = [2, 3, 3]",
+      "output": "2"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int[] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @return an integer\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(vector<int>& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1,1,7]"
+    },
+    {
+      "A": "[2,3,3]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use binary search to find the single element in O(log N) time.",
+    "Check edge cases first: single element array, first element is unique, last element is unique.",
+    "For each mid position, check if it's the single element by comparing with neighbors.",
+    "If A[mid] != A[mid-1] and A[mid] != A[mid+1], it's the single element.",
+    "Use the pattern of pairs: before the single element, pairs are at even-odd indices. After the single element, pairs are at odd-even indices.",
+    "If mid is even and A[mid] == A[mid+1], the single element is on the right. Otherwise, it's on the left."
+  ]
+}
+
+
+
+
+

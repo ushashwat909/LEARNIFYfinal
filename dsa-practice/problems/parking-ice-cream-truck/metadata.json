@@ -1,0 +1,53 @@
+{
+  "id": "parking-ice-cream-truck",
+  "title": "Parking Ice Cream Truck",
+  "difficulty": "Hard",
+  "category": "queues",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [1, 3, -1, -3, 5, 3, 6, 7]\nB = 3",
+      "output": "[3, 3, 5, 5, 6, 7]"
+    },
+    {
+      "input": "A = [1, 2, 3, 4, 2, 7, 1, 3, 6]\nB = 6",
+      "output": "[7, 7, 7, 7]"
+    }
+  ],
+  "starterCode": {
+    "java": "import java.util.*;\n\nclass Solution {\n    public int[] slidingMaximum(int[] A, int B) {\n        \n    }\n}",
+    "python": "from collections import deque\n\nclass Solution:\n\t# @param A : tuple of integers\n\t# @param B : integer\n\t# @return a list of integers\n\tdef slidingMaximum(self, A, B):\n        ",
+    "cpp": "#include <deque>\n#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> slidingMaximum(vector<int>& A, int B) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1, 3, -1, -3, 5, 3, 6, 7]",
+      "B": "3"
+    },
+    {
+      "A": "[1, 2, 3, 4, 2, 7, 1, 3, 6]",
+      "B": "6"
+    }
+  ],
+  "functionName": "slidingMaximum",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    },
+    {
+      "name": "B",
+      "type": "int"
+    }
+  ],
+  "outputType": "int_array",
+  "hints": [
+    "Use a deque (double-ended queue) to efficiently track the maximum in each sliding window.",
+    "Store indices in the deque instead of values to easily check if elements are outside the window.",
+    "Maintain the deque in decreasing order - remove elements from the back that are smaller than the current element.",
+    "The front of the deque always contains the index of the maximum element in the current window.",
+    "When the window slides, remove the front element if it's outside the current window range.",
+    "If B > length of array, return an array with a single element containing the maximum of the entire array."
+  ]
+}
+

@@ -1,0 +1,49 @@
+{
+  "id": "next-pointer-binary-tree",
+  "title": "Next Pointer Binary Tree",
+  "difficulty": "Medium",
+  "category": "trees5",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [1, 2, 3]",
+      "output": "1 -> NULL, 2 -> 3 -> NULL"
+    },
+    {
+      "input": "A = [1, 2, 5, 3, 4, 6, 7]",
+      "output": "1 -> NULL, 2 -> 5 -> NULL, 3 -> 4 -> 6 -> 7 -> NULL"
+    }
+  ],
+  "starterCode": {
+    "java": "// Definition for a binary tree node with next pointer\n// class TreeLinkNode {\n//     int val;\n//     TreeLinkNode left;\n//     TreeLinkNode right;\n//     TreeLinkNode next;\n//     TreeLinkNode(int x) { val = x; }\n// }\n\nclass Solution {\n    public TreeLinkNode connect(TreeLinkNode A) {\n        \n    }\n}",
+    "python": "# Definition for a binary tree node\n# class TreeLinkNode:\n#     def __init__(self, x):\n#         self.val = x\n#         self.left = None\n#         self.right = None\n#         self.next = None\n\nclass Solution:\n    # @param A, a tree node\n    # @return nothing\n    def connect(self, A):\n        ",
+    "cpp": "// Definition for a binary tree node with next pointer\n// struct TreeLinkNode {\n//     int val;\n//     TreeLinkNode *left;\n//     TreeLinkNode *right;\n//     TreeLinkNode *next;\n//     TreeLinkNode(int x) : val(x), left(NULL), right(NULL), next(NULL) {}\n// };\n\nclass Solution {\npublic:\n    TreeLinkNode* connect(TreeLinkNode* A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1,2,3]"
+    },
+    {
+      "A": "[1,2,5,3,4,6,7]"
+    }
+  ],
+  "functionName": "connect",
+  "params": [
+    {
+      "name": "A",
+      "type": "TreeLinkNode"
+    }
+  ],
+  "outputType": "TreeLinkNode",
+  "hints": [
+    "Use level-order traversal to connect nodes at the same level.",
+    "You can use a dummy node to help connect nodes at each level.",
+    "Traverse level by level, connecting left and right children of each node.",
+    "For each level, use a temporary pointer to build the chain of next pointers.",
+    "After processing a level, move to the next level using the dummy node's next pointer.",
+    "The dummy node helps you keep track of the start of the next level.",
+    "Since it's a perfect binary tree, every node has either 0 or 2 children."
+  ]
+}
+
+

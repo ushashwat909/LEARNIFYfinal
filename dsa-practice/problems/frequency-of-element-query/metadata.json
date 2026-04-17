@@ -1,0 +1,56 @@
+{
+  "id": "frequency-of-element-query",
+  "title": "Frequency of element query",
+  "difficulty": "Easy",
+  "category": "hashing-1",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [1, 2, 1, 1]\nB = [1, 2]",
+      "output": "[3, 1]"
+    },
+    {
+      "input": "A = [2, 5, 9, 2, 8]\nB = [3, 2]",
+      "output": "[0, 2]"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int[] solve(int[] A, int[] B) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @param B : list of integers\n    # @return a list of integers\n    def solve(self, A, B):\n        ",
+    "cpp": "class Solution {\npublic:\n    vector<int> solve(vector<int>& A, vector<int>& B) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1, 2, 1, 1]",
+      "B": "[1, 2]"
+    },
+    {
+      "A": "[2, 5, 9, 2, 8]",
+      "B": "[3, 2]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    },
+    {
+      "name": "B",
+      "type": "int[]"
+    }
+  ],
+  "outputType": "int_array",
+  "hints": [
+    "Use a hashmap to count the frequency of each element in array A.",
+    "Iterate through array A and increment the count for each element in the hashmap.",
+    "For each query in array B, look up its frequency in the hashmap.",
+    "If an element from B is not found in the hashmap, its frequency is 0.",
+    "Return an array containing the frequencies for all queries in the same order as array B."
+  ]
+}
+
+
+
+
+

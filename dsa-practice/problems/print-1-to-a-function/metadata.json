@@ -1,0 +1,49 @@
+{
+  "id": "print-1-to-a-function",
+  "title": "Print 1 to A function",
+  "difficulty": "Easy",
+  "category": "recursion-1",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 10",
+      "output": "1 2 3 4 5 6 7 8 9 10 "
+    },
+    {
+      "input": "A = 5",
+      "output": "1 2 3 4 5 "
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public String solve(int A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : integer\n    # @return a string\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    string solve(int A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "10"
+    },
+    {
+      "A": "5"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int"
+    }
+  ],
+  "outputType": "string",
+  "hints": [
+    "Think about printing numbers in order using recursion.",
+    "Print the numbers from 1 to A-1 first, then print A.",
+    "The base case is when A becomes 0 or 1.",
+    "Make sure to add a space after each number and a newline at the end."
+  ]
+}
+
+
+
+
+

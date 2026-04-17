@@ -1,0 +1,45 @@
+{
+  "id": "toggle-case",
+  "title": "Toggle Case",
+  "difficulty": "Easy",
+  "category": "strings",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = \"Hello\"",
+      "output": "\"hELLO\""
+    },
+    {
+      "input": "A = \"tHiSiSaStRiNg\"",
+      "output": "\"ThIsIsAsTrInG\""
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public String solve(String A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : string\n    # @return a string\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    string solve(string A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "\"Hello\""
+    },
+    {
+      "A": "\"tHiSiSaStRiNg\""
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "string"
+    }
+  ],
+  "outputType": "string",
+  "hints": [
+    "Iterate through each character in the string.",
+    "If a character is uppercase (A-Z), convert it to lowercase by adding 32 to its ASCII value.",
+    "If a character is lowercase (a-z), convert it to uppercase by subtracting 32 from its ASCII value.",
+    "You can also use Character.isUpperCase() and Character.toUpperCase()/toLowerCase() methods in Java."
+  ]
+}
+

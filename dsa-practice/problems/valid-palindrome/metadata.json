@@ -1,0 +1,11 @@
+{
+    "title": "Valid Palindrome",
+    "difficulty": "Easy",
+    "category": "Strings",
+    "functionName": "isPalindrome",
+    "testCases": [
+        {
+            "s": "'race a car'"
+        }
+    ]
+}

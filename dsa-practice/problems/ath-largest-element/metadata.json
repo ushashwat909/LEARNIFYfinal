@@ -1,0 +1,54 @@
+{
+  "id": "ath-largest-element",
+  "title": "Ath Largest Element",
+  "difficulty": "Medium",
+  "category": "heaps2",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 4, B = [1, 2, 3, 4, 5, 6]",
+      "output": "[-1, -1, -1, 1, 2, 3]"
+    },
+    {
+      "input": "A = 2, B = [15, 20, 99, 1]",
+      "output": "[-1, 15, 20, 20]"
+    }
+  ],
+  "starterCode": {
+    "java": "import java.util.*;\nclass Solution {\n    public int[] solve(int A, int[] B) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : integer\n    # @param B : list of integers\n    # @return a list of integers\n    def solve(self, A, B):\n        ",
+    "cpp": "class Solution {\npublic:\n    vector<int> solve(int A, vector<int>& B) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "4",
+      "B": "[1,2,3,4,5,6]"
+    },
+    {
+      "A": "2",
+      "B": "[15,20,99,1]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int"
+    },
+    {
+      "name": "B",
+      "type": "int_array"
+    }
+  ],
+  "outputType": "int_array",
+  "hints": [
+    "Use a min heap to maintain the A largest elements seen so far.",
+    "For each element in the array, add it to the heap.",
+    "If the heap size exceeds A, remove the smallest element (root of min heap).",
+    "The root of the min heap (smallest among the A largest) is the Ath largest element.",
+    "If the heap size is less than A, output -1 for that index.",
+    "The min heap will always contain the A largest elements, with the smallest of them at the root."
+  ]
+}
+
+

@@ -1,0 +1,48 @@
+{
+  "id": "print-paths-in-staircase",
+  "title": "Print paths in Staircase",
+  "difficulty": "Medium",
+  "category": "backtracking2",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 2",
+      "output": "[ [1, 1], [2] ]"
+    },
+    {
+      "input": "A = 3",
+      "output": "[ [1, 1, 1], [1, 2], [2, 1] ]"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public ArrayList<ArrayList<Integer>> WaysToClimb(int A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : integer\n    # @return a list of list of integers\n    def WaysToClimb(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> WaysToClimb(int A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "2"
+    },
+    {
+      "A": "3"
+    }
+  ],
+  "functionName": "WaysToClimb",
+  "params": [
+    {
+      "name": "A",
+      "type": "int"
+    }
+  ],
+  "outputType": "int_list_2d",
+  "hints": [
+    "Use backtracking to generate all possible paths.",
+    "At each step, you can either climb 1 step or 2 steps.",
+    "Keep track of the current number of steps climbed and the path taken.",
+    "When steps == A, add the current path to the result.",
+    "When steps > A, return (invalid path).",
+    "After each recursive call, backtrack by removing the last step from the path.",
+    "Try 1 step first, then 2 steps to maintain lexicographical order."
+  ]
+}
+

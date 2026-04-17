@@ -1,0 +1,56 @@
+{
+  "id": "all-indices-of-array",
+  "title": "All Indices Of Array",
+  "difficulty": "Easy",
+  "category": "recursion-2",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [1, 2, 3, 4, 5]\nB = 1",
+      "output": "[0]"
+    },
+    {
+      "input": "A = [8, 9, 5, 6, 5, 5]\nB = 5",
+      "output": "[2, 4, 5]"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int[] allIndices(int[] A, int B) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @param B : integer\n    # @return a list of integers\n    def allIndices(self, A, B):\n        ",
+    "cpp": "class Solution {\npublic:\n    vector<int> allIndices(vector<int>& A, int B) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1, 2, 3, 4, 5]",
+      "B": "1"
+    },
+    {
+      "A": "[8, 9, 5, 6, 5, 5]",
+      "B": "5"
+    }
+  ],
+  "functionName": "allIndices",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    },
+    {
+      "name": "B",
+      "type": "int"
+    }
+  ],
+  "outputType": "int_array",
+  "hints": [
+    "Use recursion to traverse through the array.",
+    "Create a helper function that takes an index parameter.",
+    "Check if the element at current index equals B, and if so, add the index to the result.",
+    "Recursively process the next index.",
+    "Base case: when index equals array length, return."
+  ]
+}
+
+
+
+
+

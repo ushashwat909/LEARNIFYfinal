@@ -1,0 +1,52 @@
+{
+  "id": "queue-using-stacks",
+  "title": "Queue Using Stacks",
+  "difficulty": "Medium",
+  "category": "queues",
+  "link": "",
+  "examples": [
+    {
+      "input": "Operations: [push(20), empty(), peek(), pop(), empty(), push(30), peek(), push(40), peek()]",
+      "output": "[false, 20, 20, true, 30, 30]"
+    },
+    {
+      "input": "Operations: [push(10), push(20), push(30), pop(), pop()]",
+      "output": "[10, 20]"
+    }
+  ],
+  "starterCode": {
+    "java": "import java.util.*;\n\nclass UserQueue {\n    // Initialize your data structure here\n    public UserQueue() {\n        \n    }\n    \n    public void push(int x) {\n        // Push element x to the back of queue\n    }\n    \n    public int pop() {\n        // Removes the element from in front of queue and returns that element\n    }\n    \n    public int peek() {\n        // Get the front element\n    }\n    \n    public boolean empty() {\n        // Returns whether the queue is empty\n    }\n}",
+    "python": "class UserQueue:\n    def __init__(self):\n        \"\"\"\n        Initialize your data structure here.\n        \"\"\"\n        \n    def push(self, x: int) -> None:\n        \"\"\"\n        Push element x to the back of queue.\n        \"\"\"\n        \n    def pop(self) -> int:\n        \"\"\"\n        Removes the element from in front of queue and returns that element.\n        \"\"\"\n        \n    def peek(self) -> int:\n        \"\"\"\n        Get the front element.\n        \"\"\"\n        \n    def empty(self) -> bool:\n        \"\"\"\n        Returns whether the queue is empty.\n        \"\"\"",
+    "cpp": "class UserQueue {\npublic:\n    // Initialize your data structure here\n    UserQueue() {\n        \n    }\n    \n    void push(int x) {\n        // Push element x to the back of queue\n    }\n    \n    int pop() {\n        // Removes the element from in front of queue and returns that element\n    }\n    \n    int peek() {\n        // Get the front element\n    }\n    \n    bool empty() {\n        // Returns whether the queue is empty\n    }\n};"
+  },
+  "testCases": [
+    {
+      "operations": "[\"push\", \"empty\", \"peek\", \"pop\", \"empty\", \"push\", \"peek\", \"push\", \"peek\"]",
+      "values": "[20, 0, 0, 0, 0, 30, 0, 40, 0]"
+    },
+    {
+      "operations": "[\"push\", \"push\", \"push\", \"pop\", \"pop\"]",
+      "values": "[10, 20, 30, 0, 0]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "operations",
+      "type": "string[]"
+    },
+    {
+      "name": "values",
+      "type": "int[]"
+    }
+  ],
+  "outputType": "int_array",
+  "hints": [
+    "Use two stacks to implement a queue. One stack for pushing elements, another for popping.",
+    "When you need to pop or peek, if the second stack is empty, transfer all elements from the first stack to the second stack.",
+    "This way, the top of the second stack will be the front of the queue (FIFO order).",
+    "The push operation always goes to the first stack.",
+    "The empty check should verify both stacks are empty."
+  ]
+}
+

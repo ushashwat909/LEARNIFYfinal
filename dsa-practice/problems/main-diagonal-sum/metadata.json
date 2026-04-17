@@ -1,0 +1,44 @@
+{
+  "id": "main-diagonal-sum",
+  "title": "Main Diagonal Sum",
+  "difficulty": "Easy",
+  "category": "2d-matrices",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [[1, -2, -3], [-4, 5, -6], [-7, -8, 9]]",
+      "output": "15"
+    },
+    {
+      "input": "A = [[3, 2], [2, 3]]",
+      "output": "6"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int[][] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of list of integers\n    # @return an integer\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(vector<vector<int> >& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[[1,-2,-3],[-4,5,-6],[-7,-8,9]]"
+    },
+    {
+      "A": "[[3,2],[2,3]]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int_array_2d"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Main diagonal elements are those where row index equals column index (i == j).",
+    "Iterate through the matrix and sum elements where i == j.",
+    "For an N x N matrix, you can simply iterate i from 0 to N-1 and add A[i][i]."
+  ]
+}
+

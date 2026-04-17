@@ -1,0 +1,45 @@
+{
+  "id": "is-prime",
+  "title": "IsPrime",
+  "difficulty": "Easy",
+  "category": "introduction-to-problem-solving",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 5",
+      "output": "1"
+    },
+    {
+      "input": "A = 10",
+      "output": "0"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : integer\n    # @return an integer\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(int A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "5"
+    },
+    {
+      "A": "10"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "A prime number has exactly 2 factors: 1 and itself.",
+    "Try iterating from 1 to sqrt(A) and count factors efficiently.",
+    "If the count of factors is exactly 2, the number is prime."
+  ]
+}
+
+

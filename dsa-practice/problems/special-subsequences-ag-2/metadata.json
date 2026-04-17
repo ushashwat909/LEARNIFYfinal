@@ -1,0 +1,44 @@
+{
+  "id": "special-subsequences-ag-2",
+  "title": "Special Subsequences \"AG\" - 2",
+  "difficulty": "Easy",
+  "category": "carry-forward-and-subarrays",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = \"ABCGAG\"",
+      "output": "3"
+    },
+    {
+      "input": "A = \"GAB\"",
+      "output": "0"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public long solve(String A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : string\n    # @return an long\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    long long solve(string A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "\"ABCGAG\""
+    },
+    {
+      "A": "\"GAB\""
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "string"
+    }
+  ],
+  "outputType": "long",
+  "hints": [
+    "Use carry-forward technique to count pairs efficiently.",
+    "Count the number of 'A' characters seen so far as you iterate through the string.",
+    "When you encounter a 'G', add the count of 'A' to your answer (each 'A' before this 'G' forms a valid pair)."
+  ]
+}
+

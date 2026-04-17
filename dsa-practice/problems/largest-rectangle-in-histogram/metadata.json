@@ -1,0 +1,47 @@
+{
+  "id": "largest-rectangle-in-histogram",
+  "title": "Largest Rectangle in Histogram",
+  "difficulty": "Hard",
+  "category": "stacks2",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [2, 1, 5, 6, 2, 3]",
+      "output": "10"
+    },
+    {
+      "input": "A = [2]",
+      "output": "2"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int largestRectangleArea(int[] A) {\n        \n    }\n}",
+    "python": "class Solution:\n\t# @param A : list of integers\n\t# @return an integer\n\tdef largestRectangleArea(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int largestRectangleArea(vector<int>& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[2,1,5,6,2,3]"
+    },
+    {
+      "A": "[2]"
+    }
+  ],
+  "functionName": "largestRectangleArea",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use stack to find nearest smaller element on left (nsl) and right (nsr) for each bar.",
+    "For each bar, the width of rectangle it can form is (nsr[i] - nsl[i] - 1).",
+    "Area for each bar = A[i] * width.",
+    "Find the maximum area among all bars.",
+    "Use monotonic stack to efficiently find nearest smaller elements.",
+    "Initialize nsl with -1 and nsr with n (array length) for boundary cases."
+  ]
+}
+

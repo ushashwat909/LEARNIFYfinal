@@ -1,0 +1,47 @@
+{
+  "id": "cutting-a-rod",
+  "title": "Cutting a Rod",
+  "difficulty": "Medium",
+  "category": "dp4-knapsack-application",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [3, 4, 1, 6, 2]",
+      "output": "15"
+    },
+    {
+      "input": "A = [1, 5, 2, 5, 6]",
+      "output": "11"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int[] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @return an integer\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(vector<int>& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[3,4,1,6,2]"
+    },
+    {
+      "A": "[1,5,2,5,6]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int_array"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "This is essentially an unbounded knapsack problem where the rod length is the capacity.",
+    "Use dynamic programming: dp[L] represents the maximum value for a rod of length L.",
+    "For each length L, try all possible first cuts from length 1 to L.",
+    "For a cut of length cut_len, the value is A[cut_len-1] + dp[L - cut_len].",
+    "Take the maximum over all possible first cuts: dp[L] = max(A[i-1] + dp[L-i]) for i from 1 to L.",
+    "Base case: dp[0] = 0 (no value for zero length rod)."
+  ]
+}
+

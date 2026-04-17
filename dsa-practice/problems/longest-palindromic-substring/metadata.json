@@ -1,0 +1,45 @@
+{
+  "id": "longest-palindromic-substring",
+  "title": "Longest Palindromic Substring",
+  "difficulty": "Medium",
+  "category": "strings",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = \"aaaabaaa\"",
+      "output": "\"aaabaaa\""
+    },
+    {
+      "input": "A = \"abba\"",
+      "output": "\"abba\""
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public String solve(String A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : string\n    # @return a string\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    string solve(string A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "\"aaaabaaa\""
+    },
+    {
+      "A": "\"abba\""
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "string"
+    }
+  ],
+  "outputType": "string",
+  "hints": [
+    "Use the expand around centers approach.",
+    "For each position i, check for palindromes centered at i (odd length) and between i and i+1 (even length).",
+    "Expand outward from each center while characters match.",
+    "Track the longest palindrome found and return the one with the least starting index in case of ties."
+  ]
+}
+

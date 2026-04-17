@@ -1,0 +1,49 @@
+{
+  "id": "check-palindrome-list",
+  "title": "Palindrome List",
+  "difficulty": "Medium",
+  "category": "doubly-linked-list",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [1, 2, 2, 1]",
+      "output": "1"
+    },
+    {
+      "input": "A = [1, 3, 2]",
+      "output": "0"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int lPalin(ListNode A) {\n        \n    }\n}",
+    "python": "# Definition for singly-linked list.\n# class ListNode:\n#\tdef __init__(self, x):\n#\t\tself.val = x\n#\t\tself.next = None\n\nclass Solution:\n\t# @param A : head node of linked list\n\t# @return an integer\n\tdef lPalin(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int lPalin(ListNode* A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1,2,2,1]"
+    },
+    {
+      "A": "[1,3,2]"
+    }
+  ],
+  "functionName": "lPalin",
+  "params": [
+    {
+      "name": "A",
+      "type": "ListNode"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use two pointers (slow and fast) to find the middle of the linked list.",
+    "When fast pointer reaches the end, slow pointer will be at the middle.",
+    "Reverse the second half of the linked list starting from slow.",
+    "Compare the first half with the reversed second half.",
+    "If all values match, return 1 (palindrome), otherwise return 0.",
+    "You can use the reverse linked list technique to reverse the second half.",
+    "Handle edge cases like empty list or single node list."
+  ]
+}
+
+

@@ -1,0 +1,46 @@
+{
+  "id": "best-time-to-buy-and-sell-stocks-ii",
+  "title": "Best Time to Buy and Sell Stocks II",
+  "difficulty": "Easy",
+  "category": "graphs4-topological-sort",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [1, 2, 3]",
+      "output": "2"
+    },
+    {
+      "input": "A = [5, 2, 10]",
+      "output": "8"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int maxProfit(int[] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @return an integer\n    def maxProfit(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int maxProfit(vector<int>& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1,2,3]"
+    },
+    {
+      "A": "[5,2,10]"
+    }
+  ],
+  "functionName": "maxProfit",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "You can buy and sell multiple times, so capture every price increase.",
+    "If the price increases from day i-1 to day i, add that profit.",
+    "The greedy approach: buy before every price increase and sell after.",
+    "Simply sum all positive differences between consecutive days.",
+    "No need for complex DP - just iterate and add profits when price increases."
+  ]
+}
+

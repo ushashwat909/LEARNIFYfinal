@@ -1,0 +1,49 @@
+{
+  "id": "first-repeating-element",
+  "title": "First Repeating element",
+  "difficulty": "Easy",
+  "category": "hashing-1",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [10, 5, 3, 4, 3, 5, 6]",
+      "output": "5"
+    },
+    {
+      "input": "A = [6, 10, 5, 4, 9, 120]",
+      "output": "-1"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int[] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @return an integer\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(vector<int>& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[10, 5, 3, 4, 3, 5, 6]"
+    },
+    {
+      "A": "[6, 10, 5, 4, 9, 120]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use a hashmap to count the frequency of each element.",
+    "First pass: count the frequency of each element in the array.",
+    "Second pass: iterate through the array and return the first element with frequency > 1.",
+    "If no element has frequency > 1, return -1."
+  ]
+}
+
+
+
+
+

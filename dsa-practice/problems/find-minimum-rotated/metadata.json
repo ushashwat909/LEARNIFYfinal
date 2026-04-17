@@ -1,0 +1,11 @@
+{
+    "title": "Find Minimum in Rotated Array",
+    "difficulty": "Medium",
+    "category": "Search",
+    "functionName": "findMin",
+    "testCases": [
+        {
+            "nums": "[3,4,5,1,2]"
+        }
+    ]
+}

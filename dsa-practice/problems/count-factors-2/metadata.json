@@ -1,0 +1,49 @@
+{
+  "id": "count-factors-2",
+  "title": "Count Factors - 2",
+  "difficulty": "Easy",
+  "category": "introduction-to-problem-solving",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 5",
+      "output": "2"
+    },
+    {
+      "input": "A = 10",
+      "output": "4"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : integer\n    # @return an integer\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(int A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "5"
+    },
+    {
+      "A": "10"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Try iterating from 1 to sqrt(A) and count factors efficiently."
+  ]
+}
+
+
+
+
+
+
+
+

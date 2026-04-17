@@ -1,0 +1,45 @@
+{
+  "id": "decimal-to-binary",
+  "title": "Decimal to Binary",
+  "difficulty": "Easy",
+  "category": "bit-manipulation-basics",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 10",
+      "output": "\"1010\""
+    },
+    {
+      "input": "A = 11",
+      "output": "\"1011\""
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public String solve(int A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : integer\n    # @return a string\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    string solve(int A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "10"
+    },
+    {
+      "A": "11"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int"
+    }
+  ],
+  "outputType": "string",
+  "hints": [
+    "Convert decimal to binary by repeatedly dividing by 2 and collecting remainders.",
+    "The remainders (0 or 1) form the binary representation, but in reverse order.",
+    "Build the binary string by prepending each remainder to the result.",
+    "Handle the case when A is 0 separately (should return \"0\")."
+  ]
+}
+

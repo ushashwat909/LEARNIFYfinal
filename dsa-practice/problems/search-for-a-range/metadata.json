@@ -1,0 +1,56 @@
+{
+  "id": "search-for-a-range",
+  "title": "Search for a Range",
+  "difficulty": "Medium",
+  "category": "binary-search-on-array",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [5, 7, 7, 8, 8, 10]\nB = 8",
+      "output": "[3, 4]"
+    },
+    {
+      "input": "A = [5, 17, 100, 111]\nB = 3",
+      "output": "[-1, -1]"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int[] searchRange(int[] A, int B) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : tuple of integers\n    # @param B : integer\n    # @return a list of integers\n    def searchRange(self, A, B):\n        ",
+    "cpp": "class Solution {\npublic:\n    vector<int> searchRange(vector<int>& A, int B) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[5,7,7,8,8,10]",
+      "B": "8"
+    },
+    {
+      "A": "[5,17,100,111]",
+      "B": "3"
+    }
+  ],
+  "functionName": "searchRange",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    },
+    {
+      "name": "B",
+      "type": "int"
+    }
+  ],
+  "outputType": "int_array",
+  "hints": [
+    "Use binary search twice - once to find the leftmost occurrence, once to find the rightmost occurrence.",
+    "For leftmost index: when A[mid] == B, update the result and continue searching left (hi = mid - 1).",
+    "For rightmost index: when A[mid] == B, update the result and continue searching right (lo = mid + 1).",
+    "If the target is not found in the first search, return [-1, -1] immediately.",
+    "The time complexity should be O(log n) for both searches."
+  ]
+}
+
+
+
+
+

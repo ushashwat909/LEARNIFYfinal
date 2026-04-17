@@ -1,0 +1,49 @@
+{
+  "id": "find-fibonacci-ii",
+  "title": "Find Fibonacci - II",
+  "difficulty": "Easy",
+  "category": "recursion-1",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 2",
+      "output": "1"
+    },
+    {
+      "input": "A = 9",
+      "output": "34"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int findAthFibonacci(int A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : integer\n    # @return an integer\n    def findAthFibonacci(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int findAthFibonacci(int A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "2"
+    },
+    {
+      "A": "9"
+    }
+  ],
+  "functionName": "findAthFibonacci",
+  "params": [
+    {
+      "name": "A",
+      "type": "int"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Think about the base cases: F(0) = 0 and F(1) = 1.",
+    "For any other value A, F(A) = F(A-1) + F(A-2).",
+    "Use recursion to break down the problem into smaller subproblems.",
+    "Make sure to handle the base cases correctly to avoid infinite recursion."
+  ]
+}
+
+
+
+
+

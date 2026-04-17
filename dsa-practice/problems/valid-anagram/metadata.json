@@ -1,0 +1,12 @@
+{
+    "title": "Valid Anagram",
+    "difficulty": "Easy",
+    "category": "Strings",
+    "functionName": "isAnagram",
+    "testCases": [
+        {
+            "s": "'anagram'",
+            "t": "'nagaram'"
+        }
+    ]
+}

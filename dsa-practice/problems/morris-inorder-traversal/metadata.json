@@ -1,0 +1,50 @@
+{
+  "id": "morris-inorder-traversal",
+  "title": "Morris Inorder Traversal",
+  "difficulty": "Hard",
+  "category": "trees4",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [1, -1, 2, 3]",
+      "output": "[1, 3, 2]"
+    },
+    {
+      "input": "A = [1, 6, 2, -1, -1, 3]",
+      "output": "[6, 1, 3, 2]"
+    }
+  ],
+  "starterCode": {
+    "java": "// Definition for a binary tree node\n// class TreeNode {\n//     int val;\n//     TreeNode left;\n//     TreeNode right;\n//     TreeNode(int x) { val = x; }\n// }\n\nclass Solution {\n    public int[] solve(TreeNode A) {\n        \n    }\n}",
+    "python": "# Definition for a  binary tree node\n# class TreeNode:\n#\tdef __init__(self, x):\n#\t\tself.val = x\n#\t\tself.left = None\n#\t\tself.right = None\n\nclass Solution:\n\t# @param A : root node of tree\n\t# @return a list of integers\n\tdef solve(self, A):\n        ",
+    "cpp": "// Definition for a binary tree node.\n// struct TreeNode {\n//     int val;\n//     TreeNode *left;\n//     TreeNode *right;\n//     TreeNode(int x) : val(x), left(NULL), right(NULL) {}\n// };\n\nclass Solution {\npublic:\n    vector<int> solve(TreeNode* A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1,-1,2,3]"
+    },
+    {
+      "A": "[1,6,2,-1,-1,3]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "TreeNode"
+    }
+  ],
+  "outputType": "int_array",
+  "hints": [
+    "Morris traversal uses the concept of threaded binary trees.",
+    "The key idea is to temporarily modify the tree structure to create links (threads) that help traverse without stack.",
+    "For each node, if it has a left child, find the rightmost node in its left subtree (inorder predecessor).",
+    "If the predecessor's right pointer is null, make it point to current node (create thread) and move left.",
+    "If the predecessor's right pointer already points to current node (thread exists), remove the thread, visit current node, and move right.",
+    "If a node has no left child, visit it and move right.",
+    "This algorithm restores the tree structure after traversal by removing all created threads.",
+    "Time complexity is O(n) and space complexity is O(1) - no extra space for stack or recursion."
+  ]
+}
+
+

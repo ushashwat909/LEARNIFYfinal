@@ -1,0 +1,59 @@
+{
+  "id": "unbounded-knapsack",
+  "title": "Unbounded Knapsack",
+  "difficulty": "Medium",
+  "category": "dp3-knapsack",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 10\nB = [5]\nC = [10]",
+      "output": "5"
+    },
+    {
+      "input": "A = 10\nB = [6, 7]\nC = [5, 5]",
+      "output": "14"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int A, int[] B, int[] C) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : integer\n    # @param B : list of integers\n    # @param C : list of integers\n    # @return an integer\n    def solve(self, A, B, C):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(int A, vector<int>& B, vector<int>& C) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "10",
+      "B": "[5]",
+      "C": "[10]"
+    },
+    {
+      "A": "10",
+      "B": "[6,7]",
+      "C": "[5,5]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int"
+    },
+    {
+      "name": "B",
+      "type": "int_array"
+    },
+    {
+      "name": "C",
+      "type": "int_array"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "This is an unbounded knapsack problem where each item can be used multiple times.",
+    "Use dynamic programming: dp[w] represents the maximum value achievable with capacity w.",
+    "For each item, iterate forward through capacities from C[i] to A (unlike 0-1 knapsack).",
+    "Iterating forward allows us to use the same item multiple times in the same iteration.",
+    "For each capacity w, decide whether to include the current item: dp[w] = max(dp[w], dp[w - C[i]] + B[i]).",
+    "The answer will be dp[A], the maximum value achievable with full capacity."
+  ]
+}
+

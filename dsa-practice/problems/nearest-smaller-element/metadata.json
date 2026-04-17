@@ -1,0 +1,49 @@
+{
+  "id": "nearest-smaller-element",
+  "title": "Nearest Smaller Element",
+  "difficulty": "Medium",
+  "category": "stacks2",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [4, 5, 2, 10, 8]",
+      "output": "[-1, 4, -1, 2, 2]"
+    },
+    {
+      "input": "A = [3, 2, 1]",
+      "output": "[-1, -1, -1]"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int[] prevSmaller(int[] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @return a list of integers\n    def prevSmaller(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    vector<int> prevSmaller(vector<int>& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[4,5,2,10,8]"
+    },
+    {
+      "A": "[3,2,1]"
+    }
+  ],
+  "functionName": "prevSmaller",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    }
+  ],
+  "outputType": "int_array",
+  "hints": [
+    "Use a stack to maintain indices of elements in increasing order.",
+    "For each element, pop from stack while the top element is greater than or equal to current element.",
+    "The top of stack (if exists) will be the index of the nearest smaller element.",
+    "If stack is empty after popping, there's no smaller element to the left."
+  ]
+}
+
+
+
+
+

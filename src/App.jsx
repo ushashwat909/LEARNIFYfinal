@@ -17,6 +17,7 @@ import LoginPage from './components/LoginPage';
 import GapAnalyzer from './components/GapAnalyzer';
 import SyllabusContextualizer from './components/SyllabusContextualizer';
 import KnowledgeGraph from './components/KnowledgeGraph';
+import CurriculumView from './components/CurriculumView';
 
 // Import WaveIcon from Navbar for use in Footer, or define inline
 const WaveIcon = () => (
@@ -187,6 +188,9 @@ function App() {
 
       {view === 'syllabus-ai' && (
         <SyllabusContextualizer theme={theme} />
+      )}
+      {view === 'curriculum' && (
+        <CurriculumView theme={theme} />
       )}
 
       {view === 'knowledge-graph' && (

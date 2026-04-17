@@ -1,0 +1,45 @@
+{
+  "id": "elements-removal",
+  "title": "Elements Removal",
+  "difficulty": "Easy",
+  "category": "sorting-basics",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [2, 1]",
+      "output": "4"
+    },
+    {
+      "input": "A = [5]",
+      "output": "5"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int[] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @return an integer\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(vector<int>& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[2,1]"
+    },
+    {
+      "A": "[5]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "To minimize cost, remove larger elements first.",
+    "Sort the array in descending order.",
+    "For each element at position i (0-indexed) in the sorted array, it contributes A[i] * (i+1) to the total cost.",
+    "This is because when removing the i-th largest element, there are (i+1) elements remaining in the array."
+  ]
+}
+

@@ -1,0 +1,57 @@
+{
+  "id": "subarray-with-given-sum-and-length",
+  "title": "Subarray with given sum and length",
+  "difficulty": "Easy",
+  "category": "sliding-window-and-contribution-technique",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [4, 3, 2, 6, 1]\nB = 3\nC = 11",
+      "output": "1"
+    },
+    {
+      "input": "A = [4, 2, 2, 5, 1]\nB = 4\nC = 6",
+      "output": "0"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int[] A, int B, int C) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @param B : integer\n    # @param C : integer\n    # @return an integer\n    def solve(self, A, B, C):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(vector<int>& A, int B, int C) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[4,3,2,6,1]",
+      "B": "3",
+      "C": "11"
+    },
+    {
+      "A": "[4,2,2,5,1]",
+      "B": "4",
+      "C": "6"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    },
+    {
+      "name": "B",
+      "type": "int"
+    },
+    {
+      "name": "C",
+      "type": "int"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use fixed-size sliding window technique.",
+    "Calculate the sum of the first window of size B.",
+    "Slide the window by removing the leftmost element and adding the rightmost element.",
+    "Check if any window has sum equal to C."
+  ]
+}
+

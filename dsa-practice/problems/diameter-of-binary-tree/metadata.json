@@ -1,0 +1,49 @@
+{
+  "id": "diameter-of-binary-tree",
+  "title": "Diameter of Binary Tree",
+  "difficulty": "Medium",
+  "category": "trees5",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [1, 2, 3, 4, 5]",
+      "output": "3"
+    },
+    {
+      "input": "A = [1, 2, 3, 4, 5, -1, 6]",
+      "output": "4"
+    }
+  ],
+  "starterCode": {
+    "java": "// Definition for a binary tree node\n// class TreeNode {\n//     int val;\n//     TreeNode left;\n//     TreeNode right;\n//     TreeNode(int x) { val = x; }\n// }\n\nclass Solution {\n    public int solve(TreeNode A) {\n        \n    }\n}",
+    "python": "# Definition for a  binary tree node\n# class TreeNode:\n#\tdef __init__(self, x):\n#\t\tself.val = x\n#\t\tself.left = None\n#\t\tself.right = None\n\nclass Solution:\n\t# @param A : root node of tree\n\t# @return an integer\n\tdef solve(self, A):\n        ",
+    "cpp": "// Definition for a binary tree node.\n// struct TreeNode {\n//     int val;\n//     TreeNode *left;\n//     TreeNode *right;\n//     TreeNode(int x) : val(x), left(NULL), right(NULL) {}\n// };\n\nclass Solution {\npublic:\n    int solve(TreeNode* A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1,2,3,4,5]"
+    },
+    {
+      "A": "[1,2,3,4,5,-1,6]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "TreeNode"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "The diameter of a tree is the longest path between any two nodes.",
+    "For each node, the diameter passing through it is: height of left subtree + height of right subtree + 2.",
+    "Use a recursive approach to calculate heights of subtrees.",
+    "While calculating height, also track the maximum diameter found so far.",
+    "Return -1 for null nodes (so height of leaf nodes becomes 0).",
+    "The diameter might pass through the root, or it might be entirely in a subtree.",
+    "Keep updating the maximum diameter as you traverse the tree."
+  ]
+}
+
+

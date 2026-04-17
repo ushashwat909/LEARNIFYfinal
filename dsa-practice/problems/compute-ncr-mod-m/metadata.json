@@ -1,0 +1,60 @@
+{
+  "id": "compute-ncr-mod-m",
+  "title": "Compute nCr % m",
+  "difficulty": "Medium",
+  "category": "maths-combinatoric-basics",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 5, B = 2, C = 13",
+      "output": "10"
+    },
+    {
+      "input": "A = 6, B = 2, C = 13",
+      "output": "2"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int A, int B, int C) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : integer\n    # @param B : integer\n    # @param C : integer\n    # @return an integer\n    def solve(self, A, B, C):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(int A, int B, int C) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "5",
+      "B": "2",
+      "C": "13"
+    },
+    {
+      "A": "6",
+      "B": "2",
+      "C": "13"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int"
+    },
+    {
+      "name": "B",
+      "type": "int"
+    },
+    {
+      "name": "C",
+      "type": "int"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "nCr = n! / ((n-r)! * r!). We need to compute this modulo m.",
+    "Directly computing factorials can cause overflow. Use factorization approach.",
+    "Factorize each number in numerator (n, n-1, ..., n-r+1) and denominator (1, 2, ..., r).",
+    "Subtract the exponents of denominator factors from numerator factors.",
+    "Multiply the remaining factors using modular exponentiation to avoid overflow.",
+    "Use the property: (a * b) % m = ((a % m) * (b % m)) % m.",
+    "For prime factorization, iterate from 2 to sqrt(n) and count occurrences."
+  ]
+}
+

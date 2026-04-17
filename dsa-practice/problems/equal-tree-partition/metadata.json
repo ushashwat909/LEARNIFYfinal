@@ -1,0 +1,50 @@
+{
+  "id": "equal-tree-partition",
+  "title": "Equal Tree Partition",
+  "difficulty": "Medium",
+  "category": "trees5",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [5, 3, 7, 4, 6, 5, 6]",
+      "output": "1"
+    },
+    {
+      "input": "A = [1, 2, 10, -1, -1, 20, 2]",
+      "output": "0"
+    }
+  ],
+  "starterCode": {
+    "java": "// Definition for a binary tree node\n// class TreeNode {\n//     int val;\n//     TreeNode left;\n//     TreeNode right;\n//     TreeNode(int x) { val = x; }\n// }\n\nclass Solution {\n    public int solve(TreeNode A) {\n        \n    }\n}",
+    "python": "# Definition for a  binary tree node\n# class TreeNode:\n#\tdef __init__(self, x):\n#\t\tself.val = x\n#\t\tself.left = None\n#\t\tself.right = None\n\nclass Solution:\n\t# @param A : root node of tree\n\t# @return an integer\n\tdef solve(self, A):\n        ",
+    "cpp": "// Definition for a binary tree node.\n// struct TreeNode {\n//     int val;\n//     TreeNode *left;\n//     TreeNode *right;\n//     TreeNode(int x) : val(x), left(NULL), right(NULL) {}\n// };\n\nclass Solution {\npublic:\n    int solve(TreeNode* A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[5,3,7,4,6,5,6]"
+    },
+    {
+      "A": "[1,2,10,-1,-1,20,2]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "TreeNode"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Use post-order traversal to calculate subtree sums.",
+    "Store all subtree sums in a set while traversing.",
+    "Calculate the total sum of the entire tree.",
+    "If the total sum is odd, it's impossible to partition equally - return 0.",
+    "If the total sum is even, check if half of the total sum exists in the subtree sums set.",
+    "If half the sum exists in subtree sums, we can remove an edge to create two equal partitions.",
+    "Note: We don't include the root's subtree sum in the check (since removing root would leave nothing).",
+    "The key insight: if a subtree has sum = total_sum/2, removing the edge above it creates two equal partitions."
+  ]
+}
+
+

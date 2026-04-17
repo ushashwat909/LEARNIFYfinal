@@ -1,0 +1,47 @@
+{
+  "id": "level-order",
+  "title": "Level Order",
+  "difficulty": "Easy",
+  "category": "trees2",
+  "link": "",
+  "examples": [
+    {
+      "input": "Tree: 3 -> (9, 20), 20 -> (15, 7)",
+      "output": "[[3], [9, 20], [15, 7]]"
+    },
+    {
+      "input": "Tree: 1 -> (6, 2), 2 -> (3, null)",
+      "output": "[[1], [6, 2], [3]]"
+    }
+  ],
+  "starterCode": {
+    "java": "// Definition for a binary tree node.\n// class TreeNode {\n//     int val;\n//     TreeNode left;\n//     TreeNode right;\n//     TreeNode(int x) { val = x; }\n// }\n\nimport java.util.*;\n\nclass Solution {\n    public List<List<Integer>> solve(TreeNode A) {\n        \n    }\n}",
+    "python": "# Definition for a  binary tree node\n# class TreeNode:\n#    def __init__(self, x):\n#        self.val = x\n#        self.left = None\n#        self.right = None\n\nfrom collections import deque\n\nclass Solution:\n    # @param A : root node of tree\n    # @return a list of list of integers\n    def solve(self, A):\n        ",
+    "cpp": "// Definition for binary tree\n// struct TreeNode {\n//     int val;\n//     TreeNode *left;\n//     TreeNode *right;\n//     TreeNode(int x) : val(x), left(NULL), right(NULL) {}\n// };\n\n#include <vector>\n#include <queue>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<vector<int>> solve(TreeNode* A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "Tree: 3 -> (9, 20), 20 -> (15, 7)"
+    },
+    {
+      "A": "Tree: 1 -> (6, 2), 2 -> (3, null)"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "TreeNode"
+    }
+  ],
+  "outputType": "int_list_2d",
+  "hints": [
+    "Use BFS (Breadth-First Search) to traverse the tree level by level.",
+    "Use a queue to store nodes at each level.",
+    "Use a delimiter (like null) to separate different levels in the queue.",
+    "For each level, collect all node values in a list, then add that list to the result.",
+    "When you encounter the delimiter, it means you've finished processing one level.",
+    "Add the delimiter back to the queue after processing each level (except the last one)."
+  ]
+}
+

@@ -1,0 +1,1 @@
+Given an array of integers `nums` which is sorted in ascending order, search target in nums.

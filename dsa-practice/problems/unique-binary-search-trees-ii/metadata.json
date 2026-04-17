@@ -1,0 +1,47 @@
+{
+  "id": "unique-binary-search-trees-ii",
+  "title": "Unique Binary Search Trees II",
+  "difficulty": "Medium",
+  "category": "dp-2dimensional",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 1",
+      "output": "1"
+    },
+    {
+      "input": "A = 2",
+      "output": "2"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int numTrees(int A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : integer\n    # @return an integer\n    def numTrees(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int numTrees(int A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "1"
+    },
+    {
+      "A": "2"
+    }
+  ],
+  "functionName": "numTrees",
+  "params": [
+    {
+      "name": "A",
+      "type": "int"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "This problem is related to Catalan numbers.",
+    "For a BST with n nodes, if we choose node i as the root, the left subtree will have i-1 nodes and the right subtree will have n-i nodes.",
+    "Use dynamic programming: dp[i] represents the number of unique BSTs with i nodes.",
+    "Base cases: dp[0] = 1 (empty tree), dp[1] = 1 (single node).",
+    "For dp[i], try each node j (from 0 to i-1) as the root. The number of BSTs with j as root is dp[j] * dp[i-j-1].",
+    "Sum up all possibilities: dp[i] = sum(dp[j] * dp[i-j-1]) for j from 0 to i-1."
+  ]
+}
+

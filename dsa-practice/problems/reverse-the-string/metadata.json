@@ -1,0 +1,46 @@
+{
+  "id": "reverse-the-string",
+  "title": "Reverse the String",
+  "difficulty": "Easy",
+  "category": "strings",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = \"the sky is blue\"",
+      "output": "\"blue is sky the\""
+    },
+    {
+      "input": "A = \"this is ib\"",
+      "output": "\"ib is this\""
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public String solve(String A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : string\n    # @return a string\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    string solve(string A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "\"the sky is blue\""
+    },
+    {
+      "A": "\"this is ib\""
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "string"
+    }
+  ],
+  "outputType": "string",
+  "hints": [
+    "Split the string by spaces to get individual words.",
+    "Reverse the order of words.",
+    "Join the words back with single spaces.",
+    "Remove leading and trailing spaces from the result.",
+    "Handle multiple spaces between words by splitting and filtering empty strings."
+  ]
+}
+

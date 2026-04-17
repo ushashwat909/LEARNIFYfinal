@@ -1,0 +1,50 @@
+{
+  "id": "number-of-1-bits",
+  "title": "Number of 1 Bits",
+  "difficulty": "Easy",
+  "category": "bit-manipulation-1",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 11",
+      "output": "3"
+    },
+    {
+      "input": "A = 6",
+      "output": "2"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int numSetBits(int A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : integer\n    # @return an integer\n    def numSetBits(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int numSetBits(int A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "11"
+    },
+    {
+      "A": "6"
+    }
+  ],
+  "functionName": "numSetBits",
+  "params": [
+    {
+      "name": "A",
+      "type": "int"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Count the number of set bits (1s) in the binary representation of A.",
+    "You can check each bit position from 0 to 31 using bitwise AND: A & (1 << i).",
+    "If the result is non-zero, increment the count.",
+    "Alternatively, you can use Brian Kernighan's algorithm: repeatedly clear the rightmost set bit using A = A & (A - 1) until A becomes 0.",
+    "Another approach: use built-in functions like Integer.bitCount() in Java, but try implementing it manually first."
+  ]
+}
+
+
+
+
+

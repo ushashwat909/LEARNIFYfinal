@@ -1,0 +1,45 @@
+{
+  "id": "sum-of-all-subarrays",
+  "title": "Sum of All Subarrays",
+  "difficulty": "Easy",
+  "category": "sliding-window-and-contribution-technique",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [1, 2, 3]",
+      "output": "20"
+    },
+    {
+      "input": "A = [2, 1, 3]",
+      "output": "19"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public long solve(int[] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @return an long\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    long long solve(vector<int>& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1,2,3]"
+    },
+    {
+      "A": "[2,1,3]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    }
+  ],
+  "outputType": "long",
+  "hints": [
+    "Use the contribution technique - count how many times each element appears in all subarrays.",
+    "For element at index i, it appears in (i+1) * (n-i) subarrays.",
+    "Multiply each element by the number of times it appears and sum them up.",
+    "Use long data type to prevent integer overflow."
+  ]
+}
+

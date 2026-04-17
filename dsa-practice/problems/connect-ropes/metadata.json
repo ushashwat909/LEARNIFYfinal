@@ -1,0 +1,47 @@
+{
+  "id": "connect-ropes",
+  "title": "Connect Ropes",
+  "difficulty": "Easy",
+  "category": "heaps1",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [1, 2, 3, 4, 5]",
+      "output": "33"
+    },
+    {
+      "input": "A = [5, 17, 100, 11]",
+      "output": "182"
+    }
+  ],
+  "starterCode": {
+    "java": "import java.util.*;\nclass Solution {\n    public int solve(int[] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @return an integer\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(vector<int>& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1,2,3,4,5]"
+    },
+    {
+      "A": "[5,17,100,11]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int_array"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "This is a classic greedy problem. Always connect the two shortest ropes first.",
+    "Use a min heap to efficiently get the two smallest ropes at each step.",
+    "At each step, pop the two smallest ropes, add their sum to the total cost, and push the sum back into the heap.",
+    "Continue until only one rope remains in the heap.",
+    "The greedy approach of always connecting the smallest ropes minimizes the total cost."
+  ]
+}
+
+

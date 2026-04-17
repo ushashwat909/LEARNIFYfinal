@@ -1,0 +1,56 @@
+{
+  "id": "set-bit",
+  "title": "Set Bit",
+  "difficulty": "Easy",
+  "category": "bit-manipulation-1",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 3\nB = 5",
+      "output": "40"
+    },
+    {
+      "input": "A = 4\nB = 4",
+      "output": "16"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int A, int B) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : integer\n    # @param B : integer\n    # @return an integer\n    def solve(self, A, B):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(int A, int B) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "3",
+      "B": "5"
+    },
+    {
+      "A": "4",
+      "B": "4"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int"
+    },
+    {
+      "name": "B",
+      "type": "int"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Start with 0 and set the A-th and B-th bits.",
+    "Use bitwise OR to set bits: 0 | (1 << A) | (1 << B).",
+    "If A and B are the same, you only need to set one bit: 0 | (1 << A).",
+    "The expression (1 << A) creates a mask with only the A-th bit set.",
+    "Combine both masks using OR to set both bits at once."
+  ]
+}
+
+
+
+
+

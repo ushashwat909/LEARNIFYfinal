@@ -1,0 +1,46 @@
+{
+  "id": "remove-loop-from-linked-list",
+  "title": "Remove Loop from Linked List",
+  "difficulty": "Medium",
+  "category": "linked-list-sorting-detecting-loops",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 1 -> 2 (with cycle at node 2)",
+      "output": "1 -> 2 -> NULL"
+    },
+    {
+      "input": "A = 3 -> 2 -> 4 -> 5 -> 6 (with cycle starting at node 4)",
+      "output": "3 -> 2 -> 4 -> 5 -> 6 -> NULL"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public ListNode solve(ListNode A) {\n        \n    }\n}",
+    "python": "class Solution:\n\t# @param A : head node of linked list\n\t# @return the head node in the linked list\n\tdef solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    ListNode* solve(ListNode* A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1,2]"
+    },
+    {
+      "A": "[3,2,4,5,6]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "ListNode"
+    }
+  ],
+  "outputType": "ListNode",
+  "hints": [
+    "Use Floyd's cycle detection algorithm (slow and fast pointers) to detect if there's a cycle.",
+    "If a cycle is detected, find the start of the cycle by moving one pointer from head and one from meeting point.",
+    "Once you find the start of the cycle, traverse to find the node just before the start of the cycle.",
+    "Set the next pointer of the node before the cycle start to null to break the loop.",
+    "If no cycle is detected, return the list as is."
+  ]
+}
+

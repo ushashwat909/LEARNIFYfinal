@@ -1,0 +1,59 @@
+{
+  "id": "good-pair",
+  "title": "Good Pair",
+  "difficulty": "Easy",
+  "category": "introduction-to-arrays",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [1,2,3,4]\nB = 7",
+      "output": "1"
+    },
+    {
+      "input": "A = [1,2,4]\nB = 4",
+      "output": "0"
+    },
+    {
+      "input": "A = [1,2,2]\nB = 4",
+      "output": "1"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int[] A, int B) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @param B : integer\n    # @return an integer\n    def solve(self, A, B):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(vector<int>& A, int B) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1,2,3,4]",
+      "B": "7"
+    },
+    {
+      "A": "[1,2,4]",
+      "B": "4"
+    },
+    {
+      "A": "[1,2,2]",
+      "B": "4"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    },
+    {
+      "name": "B",
+      "type": "int"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Try sorting the array first.",
+    "Use two pointers approach - one at the start and one at the end.",
+    "If the sum is less than B, move the left pointer forward. If greater, move the right pointer backward."
+  ]
+}
+
+

@@ -1,0 +1,47 @@
+{
+  "id": "heap-queries",
+  "title": "Heap Queries",
+  "difficulty": "Easy",
+  "category": "heaps1",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [[1, -1], [2, 2], [2, 1], [1, -1]]",
+      "output": "[-1, 1]"
+    },
+    {
+      "input": "A = [[2, 5], [2, 3], [2, 1], [1, -1], [1, -1]]",
+      "output": "[1, 3]"
+    }
+  ],
+  "starterCode": {
+    "java": "import java.util.*;\nclass Solution {\n    public int[] solve(int[][] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of list of integers\n    # @return a list of integers\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    vector<int> solve(vector<vector<int> >& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[[1,-1],[2,2],[2,1],[1,-1]]"
+    },
+    {
+      "A": "[[2,5],[2,3],[2,1],[1,-1],[1,-1]]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int_array_2d"
+    }
+  ],
+  "outputType": "int_array",
+  "hints": [
+    "Use a min heap (PriorityQueue in Java) to maintain the elements.",
+    "For each query, check if P = 1 (extract min) or P = 2 (insert).",
+    "When P = 1 and Q = -1, pop the minimum element if heap is not empty, otherwise return -1.",
+    "When P = 2, insert Q into the heap.",
+    "Collect all results from extract min operations in an array and return it."
+  ]
+}
+
+

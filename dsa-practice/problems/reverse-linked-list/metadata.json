@@ -1,0 +1,51 @@
+{
+  "id": "reverse-linked-list",
+  "title": "Reverse Linked List",
+  "difficulty": "Easy",
+  "category": "linked-list-introduction",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = 1 -> 2 -> 3 -> 4 -> 5 -> NULL",
+      "output": "5 -> 4 -> 3 -> 2 -> 1 -> NULL"
+    },
+    {
+      "input": "A = 3 -> NULL",
+      "output": "3 -> NULL"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public ListNode reverseList(ListNode A) {\n        \n    }\n}",
+    "python": "# Definition for singly-linked list.\n# class ListNode:\n#\tdef __init__(self, x):\n#\t\tself.val = x\n#\t\tself.next = None\n\nclass Solution:\n\t# @param A : head node of linked list\n\t# @return the head node in the linked list\n\tdef reverseList(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    ListNode* reverseList(ListNode* A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1,2,3,4,5]"
+    },
+    {
+      "A": "[3]"
+    }
+  ],
+  "functionName": "reverseList",
+  "params": [
+    {
+      "name": "A",
+      "type": "ListNode"
+    }
+  ],
+  "outputType": "ListNode",
+  "hints": [
+    "Use three pointers: prev, cur, and next_node.",
+    "Initialize prev to null and cur to head.",
+    "For each node, save the next node, reverse the link, then move forward.",
+    "Update: next_node = cur.next, cur.next = prev, prev = cur, cur = next_node.",
+    "Continue until cur becomes null.",
+    "Return prev as it will be the new head of the reversed list."
+  ]
+}
+
+
+
+
+

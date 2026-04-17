@@ -1,0 +1,44 @@
+{
+  "id": "closest-minmax",
+  "title": "Closest MinMax",
+  "difficulty": "Easy",
+  "category": "carry-forward-and-subarrays",
+  "link": "",
+  "examples": [
+    {
+      "input": "A = [1, 3, 2]",
+      "output": "2"
+    },
+    {
+      "input": "A = [2, 6, 1, 6, 9]",
+      "output": "3"
+    }
+  ],
+  "starterCode": {
+    "java": "class Solution {\n    public int solve(int[] A) {\n        \n    }\n}",
+    "python": "class Solution:\n    # @param A : list of integers\n    # @return an integer\n    def solve(self, A):\n        ",
+    "cpp": "class Solution {\npublic:\n    int solve(vector<int>& A) {\n        \n    }\n};"
+  },
+  "testCases": [
+    {
+      "A": "[1,3,2]"
+    },
+    {
+      "A": "[2,6,1,6,9]"
+    }
+  ],
+  "functionName": "solve",
+  "params": [
+    {
+      "name": "A",
+      "type": "int[]"
+    }
+  ],
+  "outputType": "int",
+  "hints": [
+    "Find the minimum and maximum elements of the array first.",
+    "Track the last seen indices of both min and max elements as you iterate.",
+    "Whenever you see either min or max, update the corresponding index and calculate the subarray length if both indices are valid."
+  ]
+}
+
