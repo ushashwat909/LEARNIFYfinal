@@ -1,4 +1,5 @@
 httpx
+pandas
 fastapi
 uvicorn
 python-dotenv
