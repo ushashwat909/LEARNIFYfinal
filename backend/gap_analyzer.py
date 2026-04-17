@@ -4,7 +4,7 @@ Uses Gemini AI to identify semantic misunderstandings in student explanations.
 """
 import os
 import json
-from google import genai
+import re
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 
@@ -97,43 +97,47 @@ def _fallback_analysis(topic: str, explanation: str):
         "summary": "Using fallback analyzer due to high traffic. Your explanation shows some basics but might miss specific technical keywords."
     }
 
-def analyze_semantic_gap(topic: str, explanation: str):
+async def analyze_semantic_gap(topic: str, explanation: str):
     """
-    Analyzes the user's concept explanation for semantic misunderstandings.
+    Analyzes the user's concept explanation for semantic misunderstandings via asynchronous REST API.
     """
-    if not GEMINI_API_KEY:
+    from chatbot_engine import GEMINI_ENDPOINT  # Share the verified endpoint
+    import httpx
+
+    if not GEMINI_API_KEY or "YOUR_FREE" in GEMINI_API_KEY:
         return {"status": "success", "analysis": _fallback_analysis(topic, explanation)}
 
-    # List of models to try in order
-    models_to_try = ["gemini-2.0-flash", "gemini-2.0-flash-lite", "gemini-1.5-flash"]
-    
-    last_error = ""
-    for model_name in models_to_try:
-        try:
-            client = genai.Client(api_key=GEMINI_API_KEY)
-            prompt = GAP_ANALYSIS_PROMPT.format(topic=topic, explanation=explanation)
-            
-            response = client.models.generate_content(
-                model=model_name,
-                contents=prompt,
-                config={'response_mime_type': 'application/json'}
+    try:
+        prompt = GAP_ANALYSIS_PROMPT.format(topic=topic, explanation=explanation)
+        
+        # Use httpx for non-blocking REST call
+        async with httpx.AsyncClient() as client:
+            response = await client.post(
+                f"{GEMINI_ENDPOINT}?key={GEMINI_API_KEY}",
+                json={
+                    "contents": [{"role": "user", "parts": [{"text": prompt}]}],
+                    "generationConfig": {"response_mime_type": "application/json"}
+                },
+                timeout=30.0
             )
             
-            result = json.loads(response.text)
+        if response.status_code == 200:
+            data = response.json()
+            raw_text = data['candidates'][0]['content']['parts'][0]['text']
+            # Sometimes Gemini wraps JSON in code blocks
+            clean_json = re.sub(r'^```json\n|```$', '', raw_text, flags=re.MULTILINE).strip()
+            result = json.loads(clean_json)
             return {"status": "success", "analysis": result}
+        else:
+            print(f"[GapAnalyzer] API error {response.status_code}: {response.text}")
 
-        except Exception as e:
-            error_msg = str(e)
-            last_error = error_msg
-            print(f"[GapAnalyzer] Model {model_name} failed: {error_msg}")
-            # If not a rate limit error, don't keep trying models
-            if "429" not in error_msg and "RESOURCE_EXHAUSTED" not in error_msg:
-                break
+    except Exception as e:
+        print(f"[GapAnalyzer] Error: {e}")
     
     # Final Fallback
-    print(f"[GapAnalyzer] All models exhausted or rate limited. Using rule-based fallback.")
+    print(f"[GapAnalyzer] Using rule-based fallback.")
     return {
         "status": "success", 
         "analysis": _fallback_analysis(topic, explanation),
-        "warning": "Gemini API quota exceeded. Showing rule-based results."
+        "warning": "Gemini API unavailable or key issues. Showing curated results."
     }

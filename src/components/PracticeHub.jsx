@@ -11,7 +11,7 @@ const PracticeHub = ({ onSelectProblem, initialSearch = '' }) => {
     useEffect(() => {
         const fetchProblems = async () => {
             try {
-                const response = await fetch('http://localhost:8000/api/problems');
+                const response = await fetch('/api/problems');
                 const data = await response.json();
                 setProblems(data.problems);
             } catch (error) {

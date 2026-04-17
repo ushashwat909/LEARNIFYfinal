@@ -30,8 +30,8 @@ const GamificationDashboard = ({ userId = 101 }) => {
         const fetchStats = async () => {
             try {
                 const [statsRes, progressRes] = await Promise.all([
-                    fetch(`http://localhost:8000/api/stats/${userId}`),
-                    fetch(`http://localhost:8000/api/progress/${userId}`)
+                    fetch(`/api/stats/${userId}`),
+                    fetch(`/api/progress/${userId}`)
                 ]);
                 const statsData = await statsRes.json();
                 const progressData = await progressRes.json();

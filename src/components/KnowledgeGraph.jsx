@@ -88,7 +88,7 @@ const KnowledgeGraph = ({ theme, userId = 101 }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/api/knowledge-graph/${userId}`);
+        const response = await fetch(`/api/knowledge-graph/${userId}`);
         const data = await response.json();
         setNodes(data.nodes);
         setEdges(data.edges);

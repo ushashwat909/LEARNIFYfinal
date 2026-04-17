@@ -31,7 +31,7 @@ const GapAnalyzer = ({ theme }) => {
     setError(null);
 
     try {
-      const response = await fetch('http://localhost:8000/api/analyze-gap', {
+      const response = await fetch('/api/analyze-gap', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

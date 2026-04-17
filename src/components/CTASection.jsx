@@ -1,42 +1,102 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
 
-const CTASection = ({ onStart }) => (
-  <section style={{ background: 'radial-gradient(ellipse at center, #1e293b 0%, #0B1120 100%)', padding: '120px 24px', position: 'relative', overflow: 'hidden' }}>
-    {/* Decorative background rings */}
-    <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '600px', height: '600px', borderRadius: '50%', border: '1px solid rgba(0,240,255,0.07)', pointerEvents: 'none' }} />
-    <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '900px', height: '900px', borderRadius: '50%', border: '1px solid rgba(0,240,255,0.04)', pointerEvents: 'none' }} />
+const CTASection = ({ onStart }) => {
+  const [email, setEmail] = useState('');
 
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.7 }}
-      style={{ maxWidth: '700px', margin: '0 auto', textAlign: 'center', position: 'relative' }}
-    >
-      <span style={{ fontSize: '4rem', display: 'block', marginBottom: '30px' }}>🚀</span>
-      <h2 style={{ color: 'var(--color-text)', fontSize: '3.5rem', lineHeight: 1.1, marginBottom: '24px', fontWeight: 900 }}>
-        Ready to <span style={{ color: 'var(--color-primary)' }}>defy gravity?</span>
-      </h2>
-      <p style={{ color: 'var(--color-text-muted)', fontSize: '1.2rem', marginBottom: '50px', lineHeight: 1.7 }}>
-        Join thousands of students whose knowledge graphs are expanding daily. Your mission starts now.
-      </p>
-      <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
-        <motion.button
-          whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(0, 240, 255, 0.5)' }}
-          whileTap={{ scale: 0.97 }}
-          onClick={onStart}
-          style={{ padding: '20px 50px', borderRadius: '14px', background: '#00F0FF', color: '#0B1120', border: 'none', fontWeight: 900, fontSize: '1.2rem', cursor: 'pointer', boxShadow: '0 0 25px rgba(0,240,255,0.35)' }}
-        >
-          Initialize My Path — It's Free
-        </motion.button>
-        <button style={{ padding: '20px 40px', borderRadius: '14px', background: 'transparent', color: '#FFF', border: '1px solid #334155', fontWeight: 600, fontSize: '1.1rem', cursor: 'pointer' }}>
-          View Demo
-        </button>
+  return (
+    <section style={{
+      background: 'var(--color-bg-dark)',
+      padding: '80px 0',
+      position: 'relative',
+      overflow: 'hidden',
+    }}>
+      {/* Decorative blobs */}
+      <div style={{
+        position: 'absolute', top: '-60px', left: '-40px',
+        width: '160px', height: '160px', borderRadius: '50%',
+        background: 'rgba(45, 158, 115, 0.15)', filter: 'blur(40px)',
+        pointerEvents: 'none',
+      }} />
+      <div style={{
+        position: 'absolute', bottom: '-60px', right: '-40px',
+        width: '180px', height: '180px', borderRadius: '50%',
+        background: 'rgba(45, 158, 115, 0.12)', filter: 'blur(50px)',
+        pointerEvents: 'none',
+      }} />
+
+      <div className="container" style={{ position: 'relative', zIndex: 2, textAlign: 'center' }}>
+        <div className="section-tag" style={{
+          background: 'rgba(45, 158, 115, 0.2)',
+          color: '#4ADE80',
+          border: '1px solid rgba(74, 222, 128, 0.25)',
+        }}>
+          NEWSLETTER
+        </div>
+
+        <h2 style={{
+          marginTop: '20px', marginBottom: '12px',
+          color: '#fff',
+          fontSize: 'clamp(1.8rem, 3.5vw, 2.5rem)',
+        }}>
+          Learn and Grow with Learnify!
+        </h2>
+        <p style={{
+          color: 'rgba(255,255,255,0.65)',
+          maxWidth: '480px', margin: '0 auto 40px',
+          fontSize: '1rem', lineHeight: 1.7,
+        }}>
+          Get the latest updates, expert advice, and special offers by joining our Learnify Newsletter today!
+        </p>
+
+        {/* Email Form */}
+        <div style={{
+          display: 'flex',
+          maxWidth: '480px',
+          margin: '0 auto',
+          gap: '0',
+          borderRadius: 'var(--radius-full)',
+          overflow: 'hidden',
+          border: '1.5px solid rgba(255,255,255,0.15)',
+          background: 'rgba(255,255,255,0.06)',
+        }}>
+          <input
+            type="email"
+            placeholder="e.g. hello@example.com"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+            style={{
+              flex: 1,
+              padding: '15px 24px',
+              background: 'transparent',
+              border: 'none',
+              color: '#fff',
+              fontSize: '0.95rem',
+              outline: 'none',
+            }}
+          />
+          <button
+            onClick={onStart}
+            style={{
+              padding: '15px 32px',
+              background: 'var(--color-primary)',
+              color: '#fff',
+              border: 'none',
+              fontWeight: 700,
+              fontSize: '0.95rem',
+              cursor: 'pointer',
+              transition: 'background 0.2s',
+              whiteSpace: 'nowrap',
+              fontFamily: 'inherit',
+            }}
+            onMouseEnter={e => e.target.style.background = '#24875F'}
+            onMouseLeave={e => e.target.style.background = 'var(--color-primary)'}
+          >
+            Subscribe
+          </button>
+        </div>
       </div>
-      <p style={{ color: '#475569', fontSize: '0.85rem', marginTop: '30px' }}>No account required. Your progress is saved locally.</p>
-    </motion.div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default CTASection;

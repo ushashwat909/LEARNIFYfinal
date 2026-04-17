@@ -1,0 +1,2068 @@
+{
+    "manifest_version": "1.0.23",
+    "title": "Aicademy AI School & Academy Elementor Template Kit",
+    "page_builder": "elementor",
+    "kit_version": "1.0.0",
+    "templates": [
+        {
+            "name": "Global Kit Styles",
+            "screenshot": "screenshots\/global-kit-styles.jpg",
+            "source": "templates\/global.json",
+            "preview_url": "https:\/\/demo.deverust.com",
+            "type": "section",
+            "category": "page",
+            "metadata": {
+                "template_type": "global-styles",
+                "include_in_zip": "1",
+                "elementor_pro_required": null,
+                "additional_template_information": [
+                    "These are the global theme styles configured through the Elementor Theme Styles area."
+                ]
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Our Blog",
+            "screenshot": "screenshots\/our-blog.jpg",
+            "source": "templates\/our-blog.json",
+            "preview_url": "https:\/\/demo.deverust.com\/aicademy\/template-kit\/our-blog\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Design Guideline",
+            "screenshot": "screenshots\/design-guideline.jpg",
+            "source": "templates\/design-guideline.json",
+            "preview_url": "https:\/\/demo.deverust.com\/aicademy\/template-kit\/design-guideline\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Memberships",
+            "screenshot": "screenshots\/memberships.jpg",
+            "source": "templates\/memberships.json",
+            "preview_url": "https:\/\/demo.deverust.com\/aicademy\/template-kit\/memberships\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Events",
+            "screenshot": "screenshots\/events.jpg",
+            "source": "templates\/events.json",
+            "preview_url": "https:\/\/demo.deverust.com\/aicademy\/template-kit\/events\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Trainers",
+            "screenshot": "screenshots\/trainers.jpg",
+            "source": "templates\/trainers.json",
+            "preview_url": "https:\/\/demo.deverust.com\/aicademy\/template-kit\/trainers\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Program Detail",
+            "screenshot": "screenshots\/program-detail.jpg",
+            "source": "templates\/program-detail.json",
+            "preview_url": "https:\/\/demo.deverust.com\/aicademy\/template-kit\/program-detail\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Programs",
+            "screenshot": "screenshots\/programs.jpg",
+            "source": "templates\/programs.json",
+            "preview_url": "https:\/\/demo.deverust.com\/aicademy\/template-kit\/programs-list\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "About Us",
+            "screenshot": "screenshots\/about-us.jpg",
+            "source": "templates\/about-us.json",
+            "preview_url": "https:\/\/demo.deverust.com\/aicademy\/template-kit\/about-us\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Career",
+            "screenshot": "screenshots\/career.jpg",
+            "source": "templates\/career.json",
+            "preview_url": "https:\/\/demo.deverust.com\/aicademy\/template-kit\/career\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Certification",
+            "screenshot": "screenshots\/certification.jpg",
+            "source": "templates\/certification.json",
+            "preview_url": "https:\/\/demo.deverust.com\/aicademy\/template-kit\/certification\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "FAQ",
+            "screenshot": "screenshots\/faq.jpg",
+            "source": "templates\/faq.json",
+            "preview_url": "https:\/\/demo.deverust.com\/aicademy\/template-kit\/faq\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Single Post",
+            "screenshot": "screenshots\/single-post.jpg",
+            "source": "templates\/single-post.json",
+            "preview_url": "https:\/\/demo.deverust.com\/aicademy\/template-kit\/single-post\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-post",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Error 404",
+            "screenshot": "screenshots\/error-404.jpg",
+            "source": "templates\/error-404.json",
+            "preview_url": "https:\/\/demo.deverust.com\/aicademy\/template-kit\/error-404\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-404",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Subscribe Form",
+            "screenshot": "screenshots\/subscribe-form.jpg",
+            "source": "templates\/subscribe-form.json",
+            "preview_url": "https:\/\/demo.deverust.com\/aicademy\/template-kit\/subscribe-form\/",
+            "type": "section",
+            "category": "section",
+            "metadata": {
+                "template_type": "section-other",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Coming Soon",
+            "screenshot": "screenshots\/coming-soon.jpg",
+            "source": "templates\/coming-soon.json",
+            "preview_url": "https:\/\/demo.deverust.com\/aicademy\/template-kit\/coming-soon\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Get In Touch Form",
+            "screenshot": "screenshots\/get-in-touch-form.jpg",
+            "source": "templates\/get-in-touch-form.json",
+            "preview_url": "https:\/\/demo.deverust.com\/aicademy\/template-kit\/get-in-touch-form\/",
+            "type": "section",
+            "category": "section",
+            "metadata": {
+                "template_type": "section-other",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Contact Us",
+            "screenshot": "screenshots\/contact-us.jpg",
+            "source": "templates\/contact-us.json",
+            "preview_url": "https:\/\/demo.deverust.com\/aicademy\/template-kit\/contact-us\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Search Form",
+            "screenshot": "screenshots\/search-form.jpg",
+            "source": "templates\/search-form.json",
+            "preview_url": "https:\/\/demo.deverust.com\/aicademy\/template-kit\/search-form\/",
+            "type": "section",
+            "category": "section",
+            "metadata": {
+                "template_type": "section-other",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Newsletter Form",
+            "screenshot": "screenshots\/newsletter-form.jpg",
+            "source": "templates\/newsletter-form.json",
+            "preview_url": "https:\/\/demo.deverust.com\/aicademy\/template-kit\/newsletter-form\/",
+            "type": "section",
+            "category": "section",
+            "metadata": {
+                "template_type": "section-other",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Contact Form",
+            "screenshot": "screenshots\/contact-form.jpg",
+            "source": "templates\/contact-form.json",
+            "preview_url": "https:\/\/demo.deverust.com\/aicademy\/template-kit\/contact-form\/",
+            "type": "section",
+            "category": "section",
+            "metadata": {
+                "template_type": "section-other",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Footer",
+            "screenshot": "screenshots\/footer.jpg",
+            "source": "templates\/footer.json",
+            "preview_url": "https:\/\/demo.deverust.com\/aicademy\/template-kit\/footer\/",
+            "type": "section",
+            "category": "section",
+            "metadata": {
+                "template_type": "section-footer",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Header",
+            "screenshot": "screenshots\/header.jpg",
+            "source": "templates\/header.json",
+            "preview_url": "https:\/\/demo.deverust.com\/aicademy\/template-kit\/header\/",
+            "type": "section",
+            "category": "section",
+            "metadata": {
+                "template_type": "section-header",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Home",
+            "screenshot": "screenshots\/home.jpg",
+            "source": "templates\/home.json",
+            "preview_url": "https:\/\/demo.deverust.com\/aicademy\/template-kit\/home\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Webinars",
+            "screenshot": "screenshots\/webinars.jpg",
+            "source": "templates\/webinars.json",
+            "preview_url": "https:\/\/demo.deverust.com\/aicademy\/template-kit\/webinars\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        }
+    ],
+    "required_plugins": [
+        {
+            "name": "ElementsKit Lite",
+            "version": "3.4.3",
+            "file": "elementskit-lite\/elementskit-lite.php",
+            "author": "Wpmet"
+        },
+        {
+            "name": "Gum Elementor Addon",
+            "version": "1.3.10",
+            "file": "gum-elementor-addon\/gum-elementor-addon.php",
+            "author": "TemeGUM"
+        },
+        {
+            "name": "MetForm",
+            "version": "3.9.3",
+            "file": "metform\/metform.php",
+            "author": "Wpmet"
+        },
+        {
+            "name": "The Plus Addons for Elementor",
+            "version": "6.2.1",
+            "file": "the-plus-addons-for-elementor-page-builder\/theplus_elementor_addon.php",
+            "author": "POSIMYTH"
+        },
+        {
+            "name": "Elementor",
+            "version": "3.27.4",
+            "file": "elementor\/elementor.php",
+            "author": "Elementor.com"
+        }
+    ],
+    "images": [
+        {
+            "filename": "Ornament-Aicademy-v1.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/Ornament-Aicademy-v1.png",
+            "templates": [
+                {
+                    "source": "templates\/our-blog.json",
+                    "name": "Our Blog"
+                },
+                {
+                    "source": "templates\/memberships.json",
+                    "name": "Memberships"
+                },
+                {
+                    "source": "templates\/events.json",
+                    "name": "Events"
+                },
+                {
+                    "source": "templates\/trainers.json",
+                    "name": "Trainers"
+                },
+                {
+                    "source": "templates\/program-detail.json",
+                    "name": "Program Detail"
+                },
+                {
+                    "source": "templates\/programs.json",
+                    "name": "Programs"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/career.json",
+                    "name": "Career"
+                },
+                {
+                    "source": "templates\/certification.json",
+                    "name": "Certification"
+                },
+                {
+                    "source": "templates\/faq.json",
+                    "name": "FAQ"
+                },
+                {
+                    "source": "templates\/error-404.json",
+                    "name": "Error 404"
+                },
+                {
+                    "source": "templates\/contact-us.json",
+                    "name": "Contact Us"
+                },
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/webinars.json",
+                    "name": "Webinars"
+                }
+            ],
+            "filesize": 8316,
+            "dimensions": [
+                412,
+                180
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "bucket-1.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/bucket-1.png",
+            "templates": [
+                {
+                    "source": "templates\/design-guideline.json",
+                    "name": "Design Guideline"
+                }
+            ],
+            "filesize": 8338,
+            "dimensions": [
+                512,
+                512
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "edit-1.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/edit-1.png",
+            "templates": [
+                {
+                    "source": "templates\/design-guideline.json",
+                    "name": "Design Guideline"
+                }
+            ],
+            "filesize": 10075,
+            "dimensions": [
+                512,
+                512
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "colorfilter-1.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/colorfilter-1.png",
+            "templates": [
+                {
+                    "source": "templates\/design-guideline.json",
+                    "name": "Design Guideline"
+                }
+            ],
+            "filesize": 12094,
+            "dimensions": [
+                512,
+                512
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "element-equal.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/element-equal.png",
+            "templates": [
+                {
+                    "source": "templates\/design-guideline.json",
+                    "name": "Design Guideline"
+                }
+            ],
+            "filesize": 8875,
+            "dimensions": [
+                512,
+                512
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "businessman-holding-presentation-to-diverse-group-C8KPVYU.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/businessman-holding-presentation-to-diverse-group-C8KPVYU-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/memberships.json",
+                    "name": "Memberships"
+                }
+            ],
+            "filesize": 210782,
+            "dimensions": [
+                1650,
+                1100
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-C8KPVYU"
+        },
+        {
+            "filename": "businessman-in-his-office-WRRKEG3.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/businessman-in-his-office-WRRKEG3-800x800.jpg",
+            "templates": [
+                {
+                    "source": "templates\/memberships.json",
+                    "name": "Memberships"
+                }
+            ],
+            "filesize": 114541,
+            "dimensions": [
+                1200,
+                1200
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-WRRKEG3"
+        },
+        {
+            "filename": "university-student-portrait-men-smiling-happiness-H7LZAW4.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/university-student-portrait-men-smiling-happiness-H7LZAW4-800x800.jpg",
+            "templates": [
+                {
+                    "source": "templates\/memberships.json",
+                    "name": "Memberships"
+                },
+                {
+                    "source": "templates\/program-detail.json",
+                    "name": "Program Detail"
+                }
+            ],
+            "filesize": 104693,
+            "dimensions": [
+                1200,
+                1200
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-H7LZAW4"
+        },
+        {
+            "filename": "img-UE882RN.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/img-UE882RN-800x800.jpg",
+            "templates": [
+                {
+                    "source": "templates\/memberships.json",
+                    "name": "Memberships"
+                }
+            ],
+            "filesize": 88278,
+            "dimensions": [
+                1200,
+                1200
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-UE882RN"
+        },
+        {
+            "filename": "speaker-talking-with-audience-during-remote-call-o-QTYMFAV.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/speaker-talking-with-audience-during-remote-call-o-QTYMFAV-800x450.jpg",
+            "templates": [
+                {
+                    "source": "templates\/events.json",
+                    "name": "Events"
+                },
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 76214,
+            "dimensions": [
+                1200,
+                675
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-QTYMFAV"
+        },
+        {
+            "filename": "young-confident-teacher-explaining-his-students-in-GNDAGGA.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/young-confident-teacher-explaining-his-students-in-GNDAGGA-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/events.json",
+                    "name": "Events"
+                },
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 109463,
+            "dimensions": [
+                1200,
+                800
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-GNDAGGA"
+        },
+        {
+            "filename": "selective-focus-of-young-multicultural-businesspeo-X9RV2ZB.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/selective-focus-of-young-multicultural-businesspeo-X9RV2ZB-800x534.jpg",
+            "templates": [
+                {
+                    "source": "templates\/events.json",
+                    "name": "Events"
+                },
+                {
+                    "source": "templates\/coming-soon.json",
+                    "name": "Coming Soon"
+                },
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 99215,
+            "dimensions": [
+                1200,
+                801
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-X9RV2ZB"
+        },
+        {
+            "filename": "creative-ai-robot-learning-how-to-paint-on-canvas-PRF6YNW.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/creative-ai-robot-learning-how-to-paint-on-canvas-PRF6YNW-800x535.jpg",
+            "templates": [
+                {
+                    "source": "templates\/events.json",
+                    "name": "Events"
+                },
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 126745,
+            "dimensions": [
+                1200,
+                802
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-PRF6YNW"
+        },
+        {
+            "filename": "colleagues-from-diverse-backgrounds-discuss-vr-tec-Y4F4LZD.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/colleagues-from-diverse-backgrounds-discuss-vr-tec-Y4F4LZD-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/events.json",
+                    "name": "Events"
+                },
+                {
+                    "source": "templates\/certification.json",
+                    "name": "Certification"
+                }
+            ],
+            "filesize": 164468,
+            "dimensions": [
+                1650,
+                1100
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-Y4F4LZD"
+        },
+        {
+            "filename": "joyous-it-engineer-presenting-artificial-intellige-RPXUT5N.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/joyous-it-engineer-presenting-artificial-intellige-RPXUT5N-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/events.json",
+                    "name": "Events"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 200423,
+            "dimensions": [
+                1650,
+                1100
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-RPXUT5N"
+        },
+        {
+            "filename": "business-speaker-and-woman-at-seminar-with-mic-tab-BJMCQ7H.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/business-speaker-and-woman-at-seminar-with-mic-tab-BJMCQ7H-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/events.json",
+                    "name": "Events"
+                }
+            ],
+            "filesize": 132380,
+            "dimensions": [
+                1650,
+                1100
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-BJMCQ7H"
+        },
+        {
+            "filename": "happy-young-confident-teacher-or-lecturer-pointing-63887UV.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/happy-young-confident-teacher-or-lecturer-pointing-63887UV-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/events.json",
+                    "name": "Events"
+                },
+                {
+                    "source": "templates\/programs.json",
+                    "name": "Programs"
+                },
+                {
+                    "source": "templates\/webinars.json",
+                    "name": "Webinars"
+                }
+            ],
+            "filesize": 149164,
+            "dimensions": [
+                1650,
+                1100
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-63887UV"
+        },
+        {
+            "filename": "engineers-connecting-robot-with-computer-9FMX57G.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/engineers-connecting-robot-with-computer-9FMX57G-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/events.json",
+                    "name": "Events"
+                },
+                {
+                    "source": "templates\/certification.json",
+                    "name": "Certification"
+                }
+            ],
+            "filesize": 154620,
+            "dimensions": [
+                1650,
+                1100
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-9FMX57G"
+        },
+        {
+            "filename": "the-impact-of-ai-on-jobs-fired-business-people-lea-4H59DSQ.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/the-impact-of-ai-on-jobs-fired-business-people-lea-4H59DSQ-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/events.json",
+                    "name": "Events"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 110893,
+            "dimensions": [
+                1650,
+                1100
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-4H59DSQ"
+        },
+        {
+            "filename": "smiling-girl-as-female-computer-programmer-at-work-JD53B77.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/smiling-girl-as-female-computer-programmer-at-work-JD53B77-800x800.jpg",
+            "templates": [
+                {
+                    "source": "templates\/trainers.json",
+                    "name": "Trainers"
+                },
+                {
+                    "source": "templates\/program-detail.json",
+                    "name": "Program Detail"
+                },
+                {
+                    "source": "templates\/programs.json",
+                    "name": "Programs"
+                },
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 100018,
+            "dimensions": [
+                1200,
+                1200
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-JD53B77"
+        },
+        {
+            "filename": "young-smiling-it-manager-with-tablet-looking-at-ca-KT7UVTP.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/young-smiling-it-manager-with-tablet-looking-at-ca-KT7UVTP-800x800.jpg",
+            "templates": [
+                {
+                    "source": "templates\/trainers.json",
+                    "name": "Trainers"
+                },
+                {
+                    "source": "templates\/programs.json",
+                    "name": "Programs"
+                },
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 241131,
+            "dimensions": [
+                1200,
+                1200
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-KT7UVTP"
+        },
+        {
+            "filename": "young-successful-female-programmer-looking-at-came-J2M92GV.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/young-successful-female-programmer-looking-at-came-J2M92GV-800x800.jpg",
+            "templates": [
+                {
+                    "source": "templates\/trainers.json",
+                    "name": "Trainers"
+                },
+                {
+                    "source": "templates\/programs.json",
+                    "name": "Programs"
+                },
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 136533,
+            "dimensions": [
+                1200,
+                1200
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-J2M92GV"
+        },
+        {
+            "filename": "contemporary-young-programmer-standing-by-workplac-BPCK7CT.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/contemporary-young-programmer-standing-by-workplac-BPCK7CT-800x800.jpg",
+            "templates": [
+                {
+                    "source": "templates\/trainers.json",
+                    "name": "Trainers"
+                },
+                {
+                    "source": "templates\/programs.json",
+                    "name": "Programs"
+                },
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 124340,
+            "dimensions": [
+                1200,
+                1200
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-BPCK7CT"
+        },
+        {
+            "filename": "robot-bom-457K93Q.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/robot-bom-457K93Q-800x800.jpg",
+            "templates": [
+                {
+                    "source": "templates\/trainers.json",
+                    "name": "Trainers"
+                }
+            ],
+            "filesize": 113666,
+            "dimensions": [
+                1200,
+                1200
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-457K93Q"
+        },
+        {
+            "filename": "img-SHJDNC5.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/img-SHJDNC5-800x800.jpg",
+            "templates": [
+                {
+                    "source": "templates\/trainers.json",
+                    "name": "Trainers"
+                }
+            ],
+            "filesize": 104294,
+            "dimensions": [
+                1200,
+                1200
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-SHJDNC5"
+        },
+        {
+            "filename": "spl02613-2H8PFED.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/spl02613-2H8PFED-800x800.jpg",
+            "templates": [
+                {
+                    "source": "templates\/trainers.json",
+                    "name": "Trainers"
+                }
+            ],
+            "filesize": 87539,
+            "dimensions": [
+                1200,
+                1200
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-2H8PFED"
+        },
+        {
+            "filename": "portrait-of-asian-male-engineer-using-digital-tabl-F8SYEQ2.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/portrait-of-asian-male-engineer-using-digital-tabl-F8SYEQ2-800x800.jpg",
+            "templates": [
+                {
+                    "source": "templates\/trainers.json",
+                    "name": "Trainers"
+                }
+            ],
+            "filesize": 150721,
+            "dimensions": [
+                1200,
+                1200
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-F8SYEQ2"
+        },
+        {
+            "filename": "27-AI@1x-EUVA9D6.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/27-AI@1x-EUVA9D6.png",
+            "templates": [
+                {
+                    "source": "templates\/trainers.json",
+                    "name": "Trainers"
+                }
+            ],
+            "filesize": 12753,
+            "dimensions": [
+                256,
+                256
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-EUVA9D6"
+        },
+        {
+            "filename": "44-Brain-Stimulation@1x-EUVA9D6.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/44-Brain-Stimulation@1x-EUVA9D6.png",
+            "templates": [
+                {
+                    "source": "templates\/trainers.json",
+                    "name": "Trainers"
+                }
+            ],
+            "filesize": 14103,
+            "dimensions": [
+                256,
+                256
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-EUVA9D6"
+        },
+        {
+            "filename": "28-Multi-Agent-System@1x-EUVA9D6.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/28-Multi-Agent-System@1x-EUVA9D6.png",
+            "templates": [
+                {
+                    "source": "templates\/trainers.json",
+                    "name": "Trainers"
+                }
+            ],
+            "filesize": 16484,
+            "dimensions": [
+                256,
+                256
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-EUVA9D6"
+        },
+        {
+            "filename": "21-Task-Automation@1x-EUVA9D6.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/21-Task-Automation@1x-EUVA9D6.png",
+            "templates": [
+                {
+                    "source": "templates\/trainers.json",
+                    "name": "Trainers"
+                },
+                {
+                    "source": "templates\/contact-us.json",
+                    "name": "Contact Us"
+                }
+            ],
+            "filesize": 11067,
+            "dimensions": [
+                256,
+                256
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-EUVA9D6"
+        },
+        {
+            "filename": "31-Big-Data@1x-EUVA9D6.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/31-Big-Data@1x-EUVA9D6.png",
+            "templates": [
+                {
+                    "source": "templates\/trainers.json",
+                    "name": "Trainers"
+                },
+                {
+                    "source": "templates\/contact-us.json",
+                    "name": "Contact Us"
+                }
+            ],
+            "filesize": 9692,
+            "dimensions": [
+                256,
+                256
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-EUVA9D6"
+        },
+        {
+            "filename": "30-Virtual-Reality@1x-EUVA9D6.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/30-Virtual-Reality@1x-EUVA9D6.png",
+            "templates": [
+                {
+                    "source": "templates\/trainers.json",
+                    "name": "Trainers"
+                }
+            ],
+            "filesize": 11315,
+            "dimensions": [
+                256,
+                256
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-EUVA9D6"
+        },
+        {
+            "filename": "young-confident-male-technician-UE882RN.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/young-confident-male-technician-UE882RN-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/trainers.json",
+                    "name": "Trainers"
+                },
+                {
+                    "source": "templates\/career.json",
+                    "name": "Career"
+                }
+            ],
+            "filesize": 113895,
+            "dimensions": [
+                1650,
+                1100
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-UE882RN"
+        },
+        {
+            "filename": "mature-businessman-or-a-scientist-with-robot-PYNT5LJ.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/mature-businessman-or-a-scientist-with-robot-PYNT5LJ-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/program-detail.json",
+                    "name": "Program Detail"
+                },
+                {
+                    "source": "templates\/programs.json",
+                    "name": "Programs"
+                },
+                {
+                    "source": "templates\/error-404.json",
+                    "name": "Error 404"
+                },
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 171196,
+            "dimensions": [
+                1200,
+                800
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-PYNT5LJ"
+        },
+        {
+            "filename": "40-AI-Gear@1x-EUVA9D6.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/40-AI-Gear@1x-EUVA9D6.png",
+            "templates": [
+                {
+                    "source": "templates\/program-detail.json",
+                    "name": "Program Detail"
+                }
+            ],
+            "filesize": 12202,
+            "dimensions": [
+                256,
+                256
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-EUVA9D6"
+        },
+        {
+            "filename": "42-Artificial-Noosphere@1x-EUVA9D6.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/42-Artificial-Noosphere@1x-EUVA9D6.png",
+            "templates": [
+                {
+                    "source": "templates\/program-detail.json",
+                    "name": "Program Detail"
+                }
+            ],
+            "filesize": 13776,
+            "dimensions": [
+                256,
+                256
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-EUVA9D6"
+        },
+        {
+            "filename": "img-9V3NNXB.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/img-9V3NNXB-800x800.jpg",
+            "templates": [
+                {
+                    "source": "templates\/program-detail.json",
+                    "name": "Program Detail"
+                }
+            ],
+            "filesize": 108927,
+            "dimensions": [
+                1200,
+                1200
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-9V3NNXB"
+        },
+        {
+            "filename": "smiling-young-businessman-sit-at-desk-talk-on-webc-GQFUTAX.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/smiling-young-businessman-sit-at-desk-talk-on-webc-GQFUTAX-800x800.jpg",
+            "templates": [
+                {
+                    "source": "templates\/program-detail.json",
+                    "name": "Program Detail"
+                }
+            ],
+            "filesize": 173676,
+            "dimensions": [
+                1200,
+                1200
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-GQFUTAX"
+        },
+        {
+            "filename": "at-a-technical-college-a-teen-boy-tests-a-robot-ha-B6ZN5DY.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/at-a-technical-college-a-teen-boy-tests-a-robot-ha-B6ZN5DY-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/programs.json",
+                    "name": "Programs"
+                },
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 135188,
+            "dimensions": [
+                1200,
+                800
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-B6ZN5DY"
+        },
+        {
+            "filename": "it-professional-in-home-office-worried-by-consciou-4PK5N6M.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/it-professional-in-home-office-worried-by-consciou-4PK5N6M-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/programs.json",
+                    "name": "Programs"
+                },
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 228598,
+            "dimensions": [
+                1200,
+                800
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-4PK5N6M"
+        },
+        {
+            "filename": "in-the-future-every-child-will-have-a-robot-friend-Q92H6HG.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/in-the-future-every-child-will-have-a-robot-friend-Q92H6HG-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/programs.json",
+                    "name": "Programs"
+                },
+                {
+                    "source": "templates\/webinars.json",
+                    "name": "Webinars"
+                }
+            ],
+            "filesize": 129318,
+            "dimensions": [
+                1650,
+                1100
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-Q92H6HG"
+        },
+        {
+            "filename": "two-photographers-working-on-the-computers-in-the-DJ7A4QL.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/two-photographers-working-on-the-computers-in-the-DJ7A4QL-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/programs.json",
+                    "name": "Programs"
+                }
+            ],
+            "filesize": 172288,
+            "dimensions": [
+                1650,
+                1100
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-DJ7A4QL"
+        },
+        {
+            "filename": "robot-with-businessmen-on-the-street-near-the-buil-HTYHZ96.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/robot-with-businessmen-on-the-street-near-the-buil-HTYHZ96-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/programs.json",
+                    "name": "Programs"
+                },
+                {
+                    "source": "templates\/career.json",
+                    "name": "Career"
+                }
+            ],
+            "filesize": 153665,
+            "dimensions": [
+                1650,
+                1100
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-HTYHZ96"
+        },
+        {
+            "filename": "group-of-teenage-students-describing-technical-cha-9U8W43N.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/group-of-teenage-students-describing-technical-cha-9U8W43N-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/programs.json",
+                    "name": "Programs"
+                }
+            ],
+            "filesize": 198781,
+            "dimensions": [
+                1650,
+                1100
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-9U8W43N"
+        },
+        {
+            "filename": "two-happy-young-it-managers-sitting-by-workplace-i-7LGHRR9.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/two-happy-young-it-managers-sitting-by-workplace-i-7LGHRR9-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 157079,
+            "dimensions": [
+                1200,
+                800
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-7LGHRR9"
+        },
+        {
+            "filename": "06-Machine-Learning@1x-EUVA9D6.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/06-Machine-Learning@1x-EUVA9D6.png",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 10762,
+            "dimensions": [
+                256,
+                256
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-EUVA9D6"
+        },
+        {
+            "filename": "02-Turing-Test@1x-EUVA9D6.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/02-Turing-Test@1x-EUVA9D6.png",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 9943,
+            "dimensions": [
+                256,
+                256
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-EUVA9D6"
+        },
+        {
+            "filename": "14-Drone@1x-EUVA9D6.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/14-Drone@1x-EUVA9D6.png",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 14133,
+            "dimensions": [
+                256,
+                256
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-EUVA9D6"
+        },
+        {
+            "filename": "29-Smart-Home@1x-EUVA9D6.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/29-Smart-Home@1x-EUVA9D6.png",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 7614,
+            "dimensions": [
+                256,
+                256
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-EUVA9D6"
+        },
+        {
+            "filename": "47-Ambient-User-Experience@1x-EUVA9D6.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/47-Ambient-User-Experience@1x-EUVA9D6.png",
+            "templates": [
+                {
+                    "source": "templates\/career.json",
+                    "name": "Career"
+                }
+            ],
+            "filesize": 14445,
+            "dimensions": [
+                256,
+                256
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-EUVA9D6"
+        },
+        {
+            "filename": "34-AI-Productivity@1x-EUVA9D6.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/34-AI-Productivity@1x-EUVA9D6.png",
+            "templates": [
+                {
+                    "source": "templates\/career.json",
+                    "name": "Career"
+                }
+            ],
+            "filesize": 10359,
+            "dimensions": [
+                256,
+                256
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-EUVA9D6"
+        },
+        {
+            "filename": "43-Touch-Screen@1x-EUVA9D6.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/43-Touch-Screen@1x-EUVA9D6.png",
+            "templates": [
+                {
+                    "source": "templates\/career.json",
+                    "name": "Career"
+                }
+            ],
+            "filesize": 11643,
+            "dimensions": [
+                256,
+                256
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-EUVA9D6"
+        },
+        {
+            "filename": "seminar-event-and-keynote-speaker-with-business-pe-NS2WE6L.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/seminar-event-and-keynote-speaker-with-business-pe-NS2WE6L-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/certification.json",
+                    "name": "Certification"
+                }
+            ],
+            "filesize": 155213,
+            "dimensions": [
+                1650,
+                1100
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-NS2WE6L"
+        },
+        {
+            "filename": "handsome-african-american-businessman-pointing-wit-W4ASPEC.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/handsome-african-american-businessman-pointing-wit-W4ASPEC-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/certification.json",
+                    "name": "Certification"
+                },
+                {
+                    "source": "templates\/webinars.json",
+                    "name": "Webinars"
+                }
+            ],
+            "filesize": 123466,
+            "dimensions": [
+                1650,
+                1100
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-W4ASPEC"
+        },
+        {
+            "filename": "asian-businessman-planning-project-on-glass-board-SHJDNC5.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/asian-businessman-planning-project-on-glass-board-SHJDNC5-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/certification.json",
+                    "name": "Certification"
+                }
+            ],
+            "filesize": 128448,
+            "dimensions": [
+                1650,
+                1100
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-SHJDNC5"
+        },
+        {
+            "filename": "portrait-of-cheerful-handsome-man-in-denim-shirt-s-ZXG9M4P.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/portrait-of-cheerful-handsome-man-in-denim-shirt-s-ZXG9M4P-800x800.jpg",
+            "templates": [
+                {
+                    "source": "templates\/footer.json",
+                    "name": "Footer"
+                },
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 137674,
+            "dimensions": [
+                1219,
+                1219
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-ZXG9M4P"
+        },
+        {
+            "filename": "woman-portrait-indoors-GJ96G46.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/woman-portrait-indoors-GJ96G46.jpg",
+            "templates": [
+                {
+                    "source": "templates\/footer.json",
+                    "name": "Footer"
+                },
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 101831,
+            "dimensions": [
+                528,
+                528
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-GJ96G46"
+        },
+        {
+            "filename": "woman-D779WWN.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/woman-D779WWN.jpg",
+            "templates": [
+                {
+                    "source": "templates\/footer.json",
+                    "name": "Footer"
+                },
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 123269,
+            "dimensions": [
+                662,
+                662
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-D779WWN"
+        },
+        {
+            "filename": "young-handsome-man-standing-with-crossed-arms-TD2S3E7.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/young-handsome-man-standing-with-crossed-arms-TD2S3E7.jpg",
+            "templates": [
+                {
+                    "source": "templates\/footer.json",
+                    "name": "Footer"
+                },
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 51521,
+            "dimensions": [
+                642,
+                642
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-TD2S3E7"
+        },
+        {
+            "filename": "Aicademy-color-inlight.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/Aicademy-color-inlight.png",
+            "templates": [
+                {
+                    "source": "templates\/footer.json",
+                    "name": "Footer"
+                },
+                {
+                    "source": "templates\/header.json",
+                    "name": "Header"
+                }
+            ],
+            "filesize": 18703,
+            "dimensions": [
+                527,
+                106
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "Aicademy-color-indark.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/Aicademy-color-indark.png",
+            "templates": [
+                {
+                    "source": "templates\/header.json",
+                    "name": "Header"
+                }
+            ],
+            "filesize": 17207,
+            "dimensions": [
+                526,
+                106
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "cute-teen-girl-taking-notes-and-using-laptop-XU2JZR4.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/cute-teen-girl-taking-notes-and-using-laptop-XU2JZR4-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 98335,
+            "dimensions": [
+                1200,
+                800
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-XU2JZR4"
+        },
+        {
+            "filename": "07-Artificial-Intelligenge@1x-EUVA9D6.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/07-Artificial-Intelligenge@1x-EUVA9D6.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 8616,
+            "dimensions": [
+                256,
+                256
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-EUVA9D6"
+        },
+        {
+            "filename": "12-Aicademy.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/12-Aicademy.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 9564,
+            "dimensions": [
+                560,
+                284
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "11-Aicademy.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/11-Aicademy.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 5247,
+            "dimensions": [
+                560,
+                284
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "01-Aicademy.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/01-Aicademy.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 3859,
+            "dimensions": [
+                560,
+                284
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "02-Aicademy.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/02-Aicademy.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 8360,
+            "dimensions": [
+                560,
+                284
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "03-Aicademy.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/03-Aicademy.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 5230,
+            "dimensions": [
+                560,
+                284
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "04-Aicademy.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/04-Aicademy.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 9212,
+            "dimensions": [
+                560,
+                284
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "05-Aicademy.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/05-Aicademy.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 6733,
+            "dimensions": [
+                560,
+                284
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "06-Aicademy.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/06-Aicademy.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 4316,
+            "dimensions": [
+                560,
+                284
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "07-Aicademy.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/07-Aicademy.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 7656,
+            "dimensions": [
+                560,
+                284
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "08-Aicademy.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/08-Aicademy.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 4457,
+            "dimensions": [
+                560,
+                284
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "09-Aicademy.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/09-Aicademy.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 9894,
+            "dimensions": [
+                560,
+                284
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "10-Aicademy.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/10-Aicademy.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 3184,
+            "dimensions": [
+                560,
+                284
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "32-Neural-Network@1x-EUVA9D6.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/32-Neural-Network@1x-EUVA9D6.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/webinars.json",
+                    "name": "Webinars"
+                }
+            ],
+            "filesize": 12685,
+            "dimensions": [
+                256,
+                256
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-EUVA9D6"
+        },
+        {
+            "filename": "38-Deep-Learning@1x-EUVA9D6.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/38-Deep-Learning@1x-EUVA9D6.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/webinars.json",
+                    "name": "Webinars"
+                }
+            ],
+            "filesize": 6510,
+            "dimensions": [
+                256,
+                256
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-EUVA9D6"
+        },
+        {
+            "filename": "09-Learning-Transfer@1x-EUVA9D6.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/09-Learning-Transfer@1x-EUVA9D6.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/webinars.json",
+                    "name": "Webinars"
+                }
+            ],
+            "filesize": 12227,
+            "dimensions": [
+                256,
+                256
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-EUVA9D6"
+        },
+        {
+            "filename": "11-Facial-Recognition@1x-EUVA9D6.png",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/01\/11-Facial-Recognition@1x-EUVA9D6.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/webinars.json",
+                    "name": "Webinars"
+                }
+            ],
+            "filesize": 8773,
+            "dimensions": [
+                256,
+                256
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-EUVA9D6"
+        },
+        {
+            "filename": "ai-image-generator-app-person-creating-photo-art-w-79PPLQV.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/ai-image-generator-app-person-creating-photo-art-w-79PPLQV-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/webinars.json",
+                    "name": "Webinars"
+                }
+            ],
+            "filesize": 91862,
+            "dimensions": [
+                1650,
+                1100
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-79PPLQV"
+        },
+        {
+            "filename": "computer-scientist-running-ai-cognitive-computing-DQHNFQN.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/computer-scientist-running-ai-cognitive-computing-DQHNFQN-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/webinars.json",
+                    "name": "Webinars"
+                }
+            ],
+            "filesize": 166260,
+            "dimensions": [
+                1650,
+                1100
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-DQHNFQN"
+        },
+        {
+            "filename": "computer-monitors-with-codes-in-classroom-DX3892C.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/computer-monitors-with-codes-in-classroom-DX3892C-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/webinars.json",
+                    "name": "Webinars"
+                }
+            ],
+            "filesize": 161215,
+            "dimensions": [
+                1650,
+                1100
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-DX3892C"
+        },
+        {
+            "filename": "robot-with-businessmen-on-the-street-near-the-buil-JVAS388.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/robot-with-businessmen-on-the-street-near-the-buil-JVAS388-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/webinars.json",
+                    "name": "Webinars"
+                }
+            ],
+            "filesize": 155231,
+            "dimensions": [
+                1650,
+                1100
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-JVAS388"
+        },
+        {
+            "filename": "selective-focus-of-multicultural-businessmen-havin-LVRZSUT.jpg",
+            "thumbnail_url": "https:\/\/demo.deverust.com\/aicademy\/wp-content\/uploads\/sites\/26\/2025\/02\/selective-focus-of-multicultural-businessmen-havin-LVRZSUT-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/webinars.json",
+                    "name": "Webinars"
+                }
+            ],
+            "filesize": 140967,
+            "dimensions": [
+                1650,
+                1100
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/image-LVRZSUT"
+        }
+    ]
+}

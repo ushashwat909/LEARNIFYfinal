@@ -8,7 +8,9 @@ const Chatbot = ({ theme = 'dark', userId = 0 }) => {
   ]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
+  const [hasNewMessage, setHasNewMessage] = useState(false);
   const messagesEndRef = useRef(null);
+  const proactiveTriggered = useRef(false);
 
   const isDark = theme === 'dark';
   const bg = isDark ? '#0d1117' : '#ffffff';
@@ -23,8 +25,33 @@ const Chatbot = ({ theme = 'dark', userId = 0 }) => {
   };
 
   useEffect(() => {
-    if (isOpen) scrollToBottom();
+    if (isOpen) {
+      scrollToBottom();
+      setHasNewMessage(false);
+    }
   }, [messages, isOpen]);
+
+  // Proactive Engagement Timer
+  useEffect(() => {
+    if (proactiveTriggered.current) return;
+    
+    const timer = setTimeout(async () => {
+      try {
+        const response = await fetch(`/api/chat/proactive/${userId}`);
+        const data = await response.json();
+        
+        if (data.message) {
+          setMessages(prev => [...prev, { role: 'ai', content: data.message }]);
+          if (!isOpen) setHasNewMessage(true);
+          proactiveTriggered.current = true;
+        }
+      } catch (err) {
+        console.error("Failed to fetch proactive message", err);
+      }
+    }, 45000); // 45 seconds of inactivity/session time
+
+    return () => clearTimeout(timer);
+  }, [userId, isOpen]);
 
   const sendMessage = async (e) => {
     e.preventDefault();
@@ -37,7 +64,7 @@ const Chatbot = ({ theme = 'dark', userId = 0 }) => {
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:8000/api/chat', {
+      const response = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: userMsg, user_id: userId })
@@ -97,6 +124,14 @@ const Chatbot = ({ theme = 'dark', userId = 0 }) => {
         }}
       >
         <MessageCircle size={24} color="#fff" />
+        {hasNewMessage && (
+          <div style={{
+            position: 'absolute', top: '0', right: '0', width: '20px', height: '20px',
+            background: '#ff4444', borderRadius: '50%', border: '2px solid #fff',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            fontSize: '10px', color: '#fff', fontWeight: 'bold'
+          }}>1</div>
+        )}
       </div>
 
       {/* Chat Window */}

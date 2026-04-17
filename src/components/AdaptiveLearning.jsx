@@ -131,7 +131,7 @@ const AdaptiveLearning = ({ userData, onChallenge }) => {
     setLoading(true);
     setError(false);
     try {
-      const response = await fetch(`http://localhost:8000/api/adaptive/recommend/${userId}`);
+      const response = await fetch(`/api/adaptive/recommend/${userId}`);
       if (!response.ok) throw new Error("Failed to load");
       const data = await response.json();
       setRecommendation(data);
@@ -167,14 +167,14 @@ const AdaptiveLearning = ({ userData, onChallenge }) => {
     setNodeToast(node.data.label);
     setTimeout(() => setNodeToast(null), 2500);
     try {
-      const response = await fetch(`http://localhost:8000/api/adaptive/recommend/${userId}?topic_override=${node.id}`);
+      const response = await fetch(`/api/adaptive/recommend/${userId}?topic_override=${node.id}`);
       if (!response.ok) throw new Error('override failed');
       const data = await response.json();
       // Force the topic to the clicked node if backend doesn't support override
       const overridden = { ...data, topic_id: node.id, resource: data.resource };
       // Try to get the clicked node's resource from backend (it returns current recommendation)
       // Instead, fetch the resource directly
-      const resResp = await fetch(`http://localhost:8000/api/adaptive/resource/${node.id}`);
+      const resResp = await fetch(`/api/adaptive/resource/${node.id}`);
       if (resResp.ok) {
         const resData = await resResp.json();
         overridden.resource = resData;
@@ -199,7 +199,7 @@ const AdaptiveLearning = ({ userData, onChallenge }) => {
     setShowQuiz(false);
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:8000/api/adaptive/submit', {
+      const response = await fetch('/api/adaptive/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

@@ -1,141 +1,264 @@
 import React, { useState, useEffect } from 'react';
-import { Sun, Moon, LogIn, LogOut, User } from 'lucide-react';
-import logo from '../assets/learnify_logo.png';
+import { Sun, Moon, LogIn, LogOut, User, Menu, X, ChevronDown } from 'lucide-react';
+
+const WaveIcon = () => (
+  <svg width="22" height="18" viewBox="0 0 22 18" fill="none">
+    <path d="M1 9 C3.5 3, 6.5 15, 11 9 S18 3, 21 9" stroke="currentColor" strokeWidth="2.2" fill="none" strokeLinecap="round"/>
+  </svg>
+);
 
 const Navbar = ({ onGoHome, onNavigate, currentView, theme, onToggleTheme, user, onLogout }) => {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const isDark = theme === 'dark';
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const navItemStyle = (view) => ({
-    textDecoration: 'none', 
-    color: currentView === view ? 'var(--color-primary)' : 'var(--color-text)', 
-    fontWeight: 600,
-    fontSize: '0.9rem',
-    cursor: 'pointer',
-    transition: 'all 0.2s',
-    borderBottom: currentView === view ? '2px solid var(--color-primary)' : '2px solid transparent',
-    paddingBottom: '4px'
-  });
+  const navLink = (label, view) => (
+    <span
+      key={view}
+      onClick={() => { onNavigate(view); setMenuOpen(false); }}
+      style={{
+        cursor: 'pointer',
+        color: currentView === view ? 'var(--color-primary)' : 'var(--color-text)',
+        fontWeight: currentView === view ? 700 : 500,
+        fontSize: '0.9rem',
+        padding: '4px 0',
+        borderBottom: currentView === view ? '2px solid var(--color-primary)' : '2px solid transparent',
+        transition: 'all 0.2s',
+        whiteSpace: 'nowrap',
+      }}
+    >
+      {label}
+    </span>
+  );
+
+  const isInApp = !['landing', 'login', 'discovery'].includes(currentView);
 
   return (
-    <nav style={{ 
-      position: 'fixed', top: 0, width: '100%', zIndex: 100, 
-      transition: 'all 0.3s ease',
-      background: scrolled ? 'var(--color-navbar)' : 'transparent',
-      backdropFilter: scrolled ? 'blur(10px)' : 'none',
-      borderBottom: scrolled ? '1px solid var(--color-border)' : '1px solid transparent'
-    }}>
-      <div className="container flex items-center justify-between" style={{ padding: '16px 24px' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px', cursor: 'pointer' }} onClick={() => { onGoHome(); onNavigate('landing'); }}>
-          <img src={logo} alt="Learnify Logo" style={{ height: '40px', width: 'auto', borderRadius: '8px' }} />
-          <span style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--color-text)' }}>Learnify</span>
-        </div>
-        
-        <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-          {(currentView !== 'landing' && currentView !== 'discovery' && currentView !== 'login') && (
-            <>
-              <span onClick={() => onNavigate('dashboard')} style={navItemStyle('dashboard')}>Dashboard</span>
-              <span onClick={() => onNavigate('practice')} style={navItemStyle('practice')}>Practice Hub</span>
-              <span onClick={() => onNavigate('gap-analyzer')} style={navItemStyle('gap-analyzer')}>Gap Analyzer</span>
-              <span onClick={() => onNavigate('syllabus-ai')} style={navItemStyle('syllabus-ai')}>Syllabus AI</span>
-              <span onClick={() => onNavigate('knowledge-graph')} style={navItemStyle('knowledge-graph')}>Brain GPS</span>
-              <span onClick={() => onNavigate('stats')} style={navItemStyle('stats')}>Stats</span>
-            </>
-          )}
-          {currentView === 'landing' && (
-            <>
-              <a onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })} style={{ textDecoration: 'none', color: 'var(--color-text)', fontWeight: 500, cursor: 'pointer' }}>How it Works</a>
-              <a href="#features" style={{ textDecoration: 'none', color: 'var(--color-text)', fontWeight: 500 }}>Features</a>
-              <a href="http://localhost:8501" target="_blank" rel="noreferrer" style={{ textDecoration: 'none', color: 'var(--color-text)', fontWeight: 500 }}>Teachers</a>
-            </>
-          )}
+    <>
+      {/* Announcement Bar */}
+      <div style={{
+        background: 'var(--color-announcement)',
+        color: '#fff',
+        textAlign: 'center',
+        padding: '10px 24px',
+        fontSize: '0.82rem',
+        fontWeight: 500,
+        letterSpacing: '0.02em',
+      }}>
+        🚀 Learn AI the Right Way &mdash;{' '}
+        <span
+          style={{ textDecoration: 'underline', cursor: 'pointer', fontWeight: 700 }}
+          onClick={() => onNavigate('login')}
+        >
+          Join Us Today!
+        </span>
+      </div>
 
+      {/* Main Navbar */}
+      <nav style={{
+        position: 'sticky',
+        top: 0,
+        zIndex: 999,
+        background: 'var(--color-navbar)',
+        backdropFilter: 'blur(12px)',
+        WebkitBackdropFilter: 'blur(12px)',
+        borderBottom: `1px solid ${scrolled ? 'var(--color-border)' : 'transparent'}`,
+        transition: 'all 0.3s ease',
+        boxShadow: scrolled ? '0 2px 12px rgba(0,0,0,0.07)' : 'none',
+      }}>
+        <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '14px 24px' }}>
+          
+          {/* Logo */}
+          <div
+            onClick={() => { onGoHome(); onNavigate('landing'); }}
+            style={{ display: 'flex', alignItems: 'center', gap: '10px', cursor: 'pointer' }}
+          >
+            <div style={{
+              width: '36px', height: '36px', borderRadius: '10px',
+              background: 'var(--color-primary)',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              color: '#fff',
+            }}>
+              <WaveIcon />
+            </div>
+            <span style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--color-text)', letterSpacing: '-0.01em' }}>
+              Learnify
+            </span>
+          </div>
+
+          {/* Desktop Nav Links */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '28px' }} className="desktop-nav">
+            {isInApp ? (
+              <>
+                {navLink('Dashboard', 'dashboard')}
+                {navLink('Practice Hub', 'practice')}
+                {navLink('Gap Analyzer', 'gap-analyzer')}
+                {navLink('Syllabus AI', 'syllabus-ai')}
+                {navLink('Brain GPS', 'knowledge-graph')}
+                {navLink('Stats', 'stats')}
+              </>
+            ) : (
+              <>
+                <span
+                  onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
+                  style={{ cursor: 'pointer', color: 'var(--color-text)', fontWeight: 500, fontSize: '0.9rem', transition: 'color 0.2s' }}
+                  onMouseEnter={e => e.target.style.color = 'var(--color-primary)'}
+                  onMouseLeave={e => e.target.style.color = 'var(--color-text)'}
+                >
+                  How it Works
+                </span>
+                <span
+                  onClick={() => document.getElementById('programs')?.scrollIntoView({ behavior: 'smooth' })}
+                  style={{ cursor: 'pointer', color: 'var(--color-text)', fontWeight: 500, fontSize: '0.9rem', transition: 'color 0.2s' }}
+                  onMouseEnter={e => e.target.style.color = 'var(--color-primary)'}
+                  onMouseLeave={e => e.target.style.color = 'var(--color-text)'}
+                >
+                  Programs
+                </span>
+                <span
+                  onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
+                  style={{ cursor: 'pointer', color: 'var(--color-text)', fontWeight: 500, fontSize: '0.9rem', transition: 'color 0.2s' }}
+                  onMouseEnter={e => e.target.style.color = 'var(--color-primary)'}
+                  onMouseLeave={e => e.target.style.color = 'var(--color-text)'}
+                >
+                  Features
+                </span>
+                <span
+                  onClick={() => document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' })}
+                  style={{ cursor: 'pointer', color: 'var(--color-text)', fontWeight: 500, fontSize: '0.9rem', transition: 'color 0.2s' }}
+                  onMouseEnter={e => e.target.style.color = 'var(--color-primary)'}
+                  onMouseLeave={e => e.target.style.color = 'var(--color-text)'}
+                >
+                  FAQ
+                </span>
+              </>
+            )}
+          </div>
+
+          {/* Right Actions */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             {/* Theme Toggle */}
-            <button 
+            <button
               onClick={onToggleTheme}
-              style={{ 
-                background: isDark ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.04)', 
-                border: `1px solid var(--color-border)`, 
-                borderRadius: '8px', padding: '8px', 
-                color: 'var(--color-text)', cursor: 'pointer',
-                display: 'flex', alignItems: 'center', justifyContent: 'center'
+              style={{
+                background: 'transparent',
+                border: '1.5px solid var(--color-border)',
+                borderRadius: '8px',
+                padding: '7px',
+                cursor: 'pointer',
+                color: 'var(--color-text)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                transition: 'all 0.2s',
               }}
               title={`Switch to ${isDark ? 'Light' : 'Dark'} mode`}
             >
-              {isDark ? <Sun size={16} /> : <Moon size={16} />}
+              {isDark ? <Sun size={15} /> : <Moon size={15} />}
             </button>
 
-            {/* Auth Buttons */}
             {user ? (
               <>
-                <div style={{ 
-                  display: 'flex', alignItems: 'center', gap: '8px', padding: '6px 14px', 
-                  borderRadius: '8px', background: isDark ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.04)',
-                  border: `1px solid var(--color-border)`, fontSize: '0.85rem', fontWeight: 600, color: 'var(--color-text)'
+                <div style={{
+                  display: 'flex', alignItems: 'center', gap: '8px',
+                  padding: '7px 14px', borderRadius: '8px',
+                  background: 'var(--color-bg-alt)',
+                  border: '1.5px solid var(--color-border)',
+                  fontSize: '0.85rem', fontWeight: 600, color: 'var(--color-text)',
                 }}>
                   <User size={14} />
                   {user.username}
                 </div>
-                <button 
+                <button
                   onClick={onLogout}
-                  style={{ 
-                    background: 'transparent', border: `1px solid var(--color-border)`, 
-                    borderRadius: '8px', padding: '8px', color: 'var(--color-text)', 
-                    cursor: 'pointer', display: 'flex', alignItems: 'center'
+                  style={{
+                    background: 'transparent', border: '1.5px solid var(--color-border)',
+                    borderRadius: '8px', padding: '7px', cursor: 'pointer',
+                    color: 'var(--color-text-muted)', display: 'flex', alignItems: 'center',
+                    transition: 'all 0.2s',
                   }}
                   title="Sign out"
                 >
-                  <LogOut size={16} />
+                  <LogOut size={15} />
                 </button>
-                <button 
-                  onClick={() => onNavigate('dashboard')} 
-                  style={{ 
-                    padding: '8px 20px', borderRadius: '8px', border: 'none',
-                    background: '#238636', color: '#fff', fontSize: '0.85rem', 
-                    fontWeight: 600, cursor: 'pointer'
-                  }}
+                <button
+                  onClick={() => onNavigate('dashboard')}
+                  className="btn btn-primary btn-sm"
+                  style={{ borderRadius: '8px' }}
                 >
                   Dashboard
                 </button>
               </>
             ) : (
               <>
-                <button 
-                  onClick={() => onNavigate('login')} 
-                  style={{ 
-                    padding: '8px 16px', borderRadius: '8px', 
-                    border: `1px solid var(--color-border)`, 
-                    background: 'transparent', color: 'var(--color-text)', 
-                    fontSize: '0.85rem', fontWeight: 600, cursor: 'pointer',
-                    display: 'flex', alignItems: 'center', gap: '6px'
-                  }}
+                <button
+                  onClick={() => onNavigate('login')}
+                  className="btn btn-outline btn-sm"
+                  style={{ borderRadius: '8px' }}
                 >
-                  <LogIn size={14} /> Sign in
+                  Sign In
                 </button>
-                <button 
-                  onClick={() => onNavigate(currentView === 'landing' ? 'discovery' : 'dashboard')} 
-                  style={{ 
-                    padding: '8px 20px', borderRadius: '8px', border: 'none',
-                    background: '#238636', color: '#fff', fontSize: '0.85rem', 
-                    fontWeight: 600, cursor: 'pointer'
-                  }}
+                <button
+                  onClick={() => onNavigate('login')}
+                  className="btn btn-primary btn-sm"
+                  style={{ borderRadius: '8px' }}
                 >
                   Get Started
                 </button>
               </>
             )}
+
+            {/* Mobile menu */}
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              style={{
+                display: 'none',
+                background: 'transparent', border: '1.5px solid var(--color-border)',
+                borderRadius: '8px', padding: '7px', cursor: 'pointer', color: 'var(--color-text)',
+              }}
+              className="mobile-menu-btn"
+            >
+              {menuOpen ? <X size={18} /> : <Menu size={18} />}
+            </button>
           </div>
         </div>
-      </div>
-    </nav>
+
+        {/* Mobile Nav Drawer */}
+        {menuOpen && (
+          <div style={{
+            background: 'var(--color-card-bg)',
+            borderTop: '1px solid var(--color-border)',
+            padding: '20px 24px',
+            display: 'flex', flexDirection: 'column', gap: '16px',
+          }}>
+            {isInApp ? (
+              ['dashboard', 'practice', 'gap-analyzer', 'syllabus-ai', 'knowledge-graph', 'stats'].map(v => (
+                <span key={v} onClick={() => { onNavigate(v); setMenuOpen(false); }}
+                  style={{ cursor: 'pointer', color: currentView === v ? 'var(--color-primary)' : 'var(--color-text)', fontWeight: 600, fontSize: '0.95rem', textTransform: 'capitalize' }}>
+                  {v.replace('-', ' ')}
+                </span>
+              ))
+            ) : (
+              ['How it Works', 'Programs', 'Features', 'FAQ'].map(label => (
+                <span key={label} style={{ cursor: 'pointer', color: 'var(--color-text)', fontWeight: 600, fontSize: '0.95rem' }}>{label}</span>
+              ))
+            )}
+          </div>
+        )}
+      </nav>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .desktop-nav { display: none !important; }
+          .mobile-menu-btn { display: flex !important; }
+        }
+      `}</style>
+    </>
   );
 };
 

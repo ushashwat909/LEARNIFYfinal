@@ -1,4 +1,10 @@
 from fastapi import FastAPI, HTTPException, Depends, Header
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv()
+
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import sqlite3
@@ -44,6 +50,15 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.get("/")
+def read_root():
+    return {
+        "status": "online",
+        "platform": "Learnify Buddy",
+        "api_docs": "/docs",
+        "message": "Backend engine is active. Please use the frontend or /docs to interact."
+    }
 
 # Initialize Database on startup
 @app.on_event("startup")
@@ -235,33 +250,52 @@ async def process_submission(submission: StudentSubmission):
 
 @app.post("/api/analyze-gap")
 async def process_gap_analysis(data: GapAnalysisRequest):
-    return analyze_semantic_gap(data.topic, data.explanation)
+    return await analyze_semantic_gap(data.topic, data.explanation)
 
 @app.post("/api/contextualize")
 async def process_transcript(data: TranscriptSubmission):
-    return contextualize_transcript(data.transcript)
+    return await contextualize_transcript(data.transcript)
 
 @app.get("/api/knowledge-graph/{user_id}")
 async def get_brain_gps(user_id: int):
     return graph_engine.get_react_flow_data(user_id)
 
-@app.post("/api/chat")
-async def handle_chat(chat: ChatMessage):
-    # Load user profile for personalization if user_id provided
-    user_profile = None
-    if chat.user_id:
-        conn = get_db_connection()
-        try:
-            user = conn.execute("SELECT username, study_track, experience_level FROM Students WHERE student_id = ?", (chat.user_id,)).fetchone()
-            if user:
-                user_profile = dict(user)
-        except:
-            pass
-        finally:
-            conn.close()
-
-    reply = generate_chat_response(chat.message, user_id=chat.user_id, user_profile=user_profile)
+    # Get reply asynchronously
+    reply = await generate_chat_response(chat.message, user_id=chat.user_id, user_profile=user_profile)
     return {"reply": reply}
+
+@app.get("/api/chat/proactive/{user_id}")
+async def handle_proactive_chat(user_id: int):
+    """
+    Generate a proactive check-in message for the user.
+    """
+    from chatbot_engine import generate_proactive_checkin
+    
+    conn = get_db_connection()
+    try:
+        # Gather user context for the AI
+        user = conn.execute("SELECT username, study_track, experience_level FROM Students WHERE student_id = ?", (user_id,)).fetchone()
+        
+        # Problems solved
+        solved = conn.execute("SELECT COUNT(DISTINCT problem_id) as total FROM UserProgress WHERE user_id = ? AND status = 'passed'", (user_id,)).fetchone()
+        
+        # Mock streak for now (can be calculated deeper)
+        streak = 1 
+        
+        user_stats = {
+            "username": user['username'] if user else "Student",
+            "study_track": user['study_track'] if user else "General",
+            "problems_solved": solved['total'] if solved else 0,
+            "current_streak": streak
+        }
+        
+        message = await generate_proactive_checkin(user_id, user_stats)
+        return {"message": message}
+    except Exception as e:
+        print(f"[API] Proactive trigger fault: {e}")
+        return {"message": "How is your study session going today? 👋"}
+    finally:
+        conn.close()
 
 @app.get("/api/dashboard")
 async def get_dashboard_data():

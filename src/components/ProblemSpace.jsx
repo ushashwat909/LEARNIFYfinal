@@ -45,7 +45,7 @@ const ProblemSpace = ({ problemId, onBack, onNext, onPrev, userId = 101, theme =
     useEffect(() => {
         const fetchProblem = async () => {
             try {
-                const response = await fetch(`http://localhost:8000/api/problems/${problemId}`);
+                const response = await fetch(`/api/problems/${problemId}`);
                 const data = await response.json();
                 setProblem(data);
                 const starter = data.starterCode?.[language] || getDefaultBoilerplate(language);
@@ -99,7 +99,7 @@ const ProblemSpace = ({ problemId, onBack, onNext, onPrev, userId = 101, theme =
         setSubmitSuccess(false);
         setBottomTab('output');
         try {
-            const response = await fetch(`http://localhost:8000/api/problems/${problemId}/run`, {
+            const response = await fetch(`/api/problems/${problemId}/run`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -124,7 +124,7 @@ const ProblemSpace = ({ problemId, onBack, onNext, onPrev, userId = 101, theme =
         setSubmitSuccess(false);
         setBottomTab('output');
         try {
-            const response = await fetch(`http://localhost:8000/api/problems/${problemId}/run`, {
+            const response = await fetch(`/api/problems/${problemId}/run`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({

@@ -30,7 +30,7 @@ const SyllabusContextualizer = ({ theme }) => {
     setError(null);
 
     try {
-      const response = await fetch('http://localhost:8000/api/contextualize', {
+      const response = await fetch('/api/contextualize', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

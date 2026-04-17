@@ -1,57 +1,102 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { WaveDivider } from './HeroSection';
+import { Code2, Database, Globe, Shield, Cpu, LineChart } from 'lucide-react';
 
-const paths = [
-  { icon: '💻', title: 'Software Engineer', topics: ['Arrays', 'Trees', 'Dynamic Programming', 'System Design'], color: '#00F0FF', count: 24 },
-  { icon: '🔐', title: 'Cybersecurity', topics: ['Network Layers', 'Cryptography', 'Exploit Dev', 'CTF Patterns'], color: '#FF5722', count: 18 },
-  { icon: '🤖', title: 'AI Researcher', topics: ['Linear Algebra', 'Probability', 'Transformers', 'RLHF'], color: '#a855f7', count: 22 },
-  { icon: '📊', title: 'Data Scientist', topics: ['Statistics', 'Pandas', 'Feature Eng', 'ML Pipelines'], color: '#22d3ee', count: 20 },
-  { icon: '🌐', title: 'Cloud Architect', topics: ['Networking', 'Docker', 'Kubernetes', 'IAM & Security'], color: '#FB923C', count: 16 },
-  { icon: '🎮', title: 'Game Developer', topics: ['Math for Games', 'Physics Sim', 'Shaders', 'ECS Patterns'], color: '#4ade80', count: 14 },
-];
+const CareerPathsSection = () => {
+  const paths = [
+    { icon: <Code2 size={24} />, title: 'Data Structures & Algorithms', duration: '12 Weeks', desc: 'Master arrays, trees, graphs, DP, and competitive programming patterns with hands-on practice.', color: '#2D9E73' },
+    { icon: <Database size={24} />, title: 'System Design', duration: '10 Weeks', desc: 'Learn to design scalable systems — load balancers, caching, microservices, and database sharding.', color: '#3B82F6' },
+    { icon: <Globe size={24} />, title: 'Full-Stack Development', duration: '14 Weeks', desc: 'Build end-to-end applications with React, Node.js, databases, and deployment pipelines.', color: '#8B5CF6' },
+    { icon: <Shield size={24} />, title: 'Cybersecurity Fundamentals', duration: '8 Weeks', desc: 'Understand network security, ethical hacking, cryptography, and secure coding practices.', color: '#EF4444' },
+    { icon: <Cpu size={24} />, title: 'Machine Learning Basics', duration: '10 Weeks', desc: 'Dive into supervised/unsupervised learning, neural networks, and model optimization.', color: '#F59E0B' },
+    { icon: <LineChart size={24} />, title: 'Competitive Programming', duration: '8 Weeks', desc: 'Sharpen problem-solving with curated contest problems, editorial walkthroughs, and timing drills.', color: '#06B6D4' },
+  ];
 
-const CareerPathsSection = () => (
-  <section style={{ background: 'var(--color-section-bg)', padding: '100px 24px' }}>
-    <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-      <div style={{ textAlign: 'center', marginBottom: '70px' }}>
-        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 20px', background: 'rgba(168,85,247,0.1)', borderRadius: '50px', marginBottom: '20px', fontSize: '0.85rem', fontWeight: 700, color: '#a855f7', letterSpacing: '2px', textTransform: 'uppercase', border: '1px solid rgba(168,85,247,0.2)' }}>
-          Choose your orbit
+  return (
+    <section id="programs" className="section" style={{ background: 'var(--color-bg)' }}>
+      <div className="container">
+        <WaveDivider />
+        <div style={{ textAlign: 'center', marginTop: '16px', marginBottom: '56px' }}>
+          <div className="section-tag">OUR PROGRAMS</div>
+          <h2 style={{ marginTop: '12px', marginBottom: '12px' }}>
+            Choose the right path<br />for your career.
+          </h2>
+          <p style={{ maxWidth: '520px', margin: '0 auto', fontSize: '1rem' }}>
+            Whether you're a beginner or an advanced professional, our structured courses will help you achieve your goals.
+          </p>
         </div>
-        <h2 style={{ color: 'var(--color-text)', fontSize: '2.8rem', marginBottom: '20px' }}>Career-Indexed Learning Paths</h2>
-        <p style={{ color: 'var(--color-text-muted)', maxWidth: '600px', margin: '0 auto', fontSize: '1.1rem' }}>Every trajectory is a Directed Acyclic Graph mapped to real hiring requirements. Built from job listings, not textbooks.</p>
-      </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '25px' }}>
-        {paths.map((path, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: i * 0.08 }}
-            whileHover={{ y: -8, boxShadow: `0 20px 40px ${path.color}22` }}
-            className="organic-card"
-            style={{ padding: '30px', borderRadius: '20px', cursor: 'default', position: 'relative', overflow: 'hidden', background: 'var(--color-card-bg)', border: '1px solid var(--color-border)' }}
-          >
-            {/* Glow orb */}
-            <div style={{ position: 'absolute', top: '-30px', right: '-30px', width: '100px', height: '100px', borderRadius: '50%', background: path.color, opacity: 0.08, filter: 'blur(30px)' }} />
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(3, 1fr)',
+          gap: '24px',
+        }}>
+          {paths.map((path, i) => (
+            <div key={i} className="card" style={{
+              padding: '0',
+              display: 'flex',
+              flexDirection: 'column',
+              border: '1px solid var(--color-border)',
+              background: 'var(--color-card-bg)',
+            }}>
+              {/* Color header strip */}
+              <div style={{
+                height: '6px',
+                background: path.color,
+                borderRadius: 'var(--radius-lg) var(--radius-lg) 0 0',
+              }} />
 
-            <div style={{ fontSize: '2.5rem', marginBottom: '15px' }}>{path.icon}</div>
-            <h3 style={{ color: 'var(--color-text)', fontSize: '1.2rem', marginBottom: '5px' }}>{path.title}</h3>
-            <div style={{ fontSize: '0.8rem', color: path.color, marginBottom: '20px', fontWeight: 600 }}>{path.count} knowledge nodes</div>
+              <div style={{ padding: '28px 24px', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                {/* Duration & icon */}
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
+                  <div style={{
+                    width: '48px', height: '48px', borderRadius: '12px',
+                    background: `${path.color}15`,
+                    color: path.color,
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  }}>
+                    {path.icon}
+                  </div>
+                  <span style={{
+                    fontSize: '0.75rem', fontWeight: 700,
+                    color: 'var(--color-text-muted)',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.06em',
+                  }}>
+                    {path.duration}
+                  </span>
+                </div>
 
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-              {path.topics.map((t, j) => (
-                <span key={j} style={{ padding: '5px 12px', borderRadius: '50px', fontSize: '0.75rem', fontWeight: 600, background: `${path.color}18`, color: path.color, border: `1px solid ${path.color}33` }}>
-                  {t}
-                </span>
-              ))}
+                <h3 style={{ fontSize: '1.1rem', marginBottom: '10px', fontWeight: 700 }}>{path.title}</h3>
+                <p style={{ fontSize: '0.88rem', lineHeight: 1.65, flex: 1 }}>{path.desc}</p>
+
+                {/* Bottom action */}
+                <div style={{ marginTop: '20px' }}>
+                  <button className="btn btn-outline btn-sm" style={{
+                    width: '100%',
+                    borderRadius: 'var(--radius-full)',
+                    borderColor: path.color,
+                    color: path.color,
+                  }}>
+                    Explore Path →
+                  </button>
+                </div>
+              </div>
             </div>
-          </motion.div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
-);
+
+      <style>{`
+        @media (max-width: 1024px) {
+          #programs .container > div:last-child { grid-template-columns: repeat(2, 1fr) !important; }
+        }
+        @media (max-width: 640px) {
+          #programs .container > div:last-child { grid-template-columns: 1fr !important; }
+        }
+      `}</style>
+    </section>
+  );
+};
 
 export default CareerPathsSection;

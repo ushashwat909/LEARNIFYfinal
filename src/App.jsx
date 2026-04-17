@@ -5,7 +5,7 @@ import StatsSection from './components/StatsSection';
 import HowItWorks from './components/HowItWorks';
 import CareerPathsSection from './components/CareerPathsSection';
 import Features from './components/Features';
-import TestimonialsSection from './components/TestimonialsSection';
+import TestimonialsSection from './components/TestimonialsSection'; // Now acts as FAQ
 import CTASection from './components/CTASection';
 import Chatbot from './components/Chatbot';
 import AdaptiveLearning from './components/AdaptiveLearning';
@@ -17,6 +17,13 @@ import LoginPage from './components/LoginPage';
 import GapAnalyzer from './components/GapAnalyzer';
 import SyllabusContextualizer from './components/SyllabusContextualizer';
 import KnowledgeGraph from './components/KnowledgeGraph';
+
+// Import WaveIcon from Navbar for use in Footer, or define inline
+const WaveIcon = () => (
+  <svg width="22" height="18" viewBox="0 0 22 18" fill="none">
+    <path d="M1 9 C3.5 3, 6.5 15, 11 9 S18 3, 21 9" stroke="currentColor" strokeWidth="2.2" fill="none" strokeLinecap="round"/>
+  </svg>
+);
 
 function App() {
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'dark');
@@ -37,7 +44,7 @@ function App() {
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token) {
-      fetch('http://localhost:8000/api/auth/me', {
+      fetch('/api/auth/me', {
         headers: { 'Authorization': `Bearer ${token}` }
       })
         .then(res => res.ok ? res.json() : Promise.reject())
@@ -54,7 +61,7 @@ function App() {
 
   // Fetch all problems for navigation
   useEffect(() => {
-    fetch('http://localhost:8000/api/problems')
+    fetch('/api/problems')
       .then(res => res.json())
       .then(data => setAllProblems(data.problems || []))
       .catch(err => console.error("Failed to fetch problem list", err));
@@ -95,7 +102,7 @@ function App() {
     const token = localStorage.getItem('token');
     if (token) {
       try {
-        await fetch('http://localhost:8000/api/auth/onboard', {
+        await fetch('/api/auth/onboard', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
           body: JSON.stringify({ career: data.career, experience: data.experience })
@@ -157,7 +164,7 @@ function App() {
           <HowItWorks />
           <CareerPathsSection />
           <Features />
-          <TestimonialsSection />
+          <TestimonialsSection /> {/* Actually FAQ now based on Aicademy */}
           <CTASection onStart={handleStartOnboarding} />
         </>
       )}
@@ -189,7 +196,7 @@ function App() {
           onStartChallenge={async (category) => {
             // Pick a problem for this category and jump straight to coding
             try {
-              const res = await fetch('http://localhost:8000/api/problems');
+              const res = await fetch('/api/problems');
               const data = await res.json();
               const catProb = data.problems.find(p => p.category?.toLowerCase() === category.toLowerCase());
               if (catProb) {
@@ -227,26 +234,71 @@ function App() {
 
       <Chatbot theme={theme} userId={user?.id || 0} />
 
-      {/* Theme-aware Footer */}
+      {/* Aicademy-style Theme-aware Footer */}
       <footer style={{ 
-        background: isDark ? '#010409' : '#f6f8fa', 
-        color: isDark ? '#8b949e' : '#57606a', 
-        padding: '40px 24px', 
-        textAlign: 'center', 
-        borderTop: `1px solid ${isDark ? '#30363d' : '#d0d7de'}` 
+        background: 'var(--color-bg)', 
+        color: 'var(--color-text-muted)', 
+        padding: '60px 24px 40px', 
       }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '20px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <span style={{ fontSize: '1.5rem' }}>🚀</span>
-            <span style={{ fontWeight: 700, color: isDark ? '#c9d1d9' : '#24292f' }}>Learnify</span>
+        <div className="container" style={{ display: 'grid', gridTemplateColumns: 'minmax(250px, 1.5fr) 1fr 1fr 1fr', gap: '40px', marginBottom: '60px' }}>
+          
+          {/* Col 1: Brand & Desc */}
+          <div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
+              <div style={{
+                width: '32px', height: '32px', borderRadius: '8px',
+                background: 'var(--color-primary)', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                color: '#fff',
+              }}>
+                <WaveIcon />
+              </div>
+              <span style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--color-text)' }}>Learnify</span>
+            </div>
+            <p style={{ fontSize: '0.9rem', lineHeight: 1.7, marginBottom: '20px' }}>
+              Explore the World of Artificial Intelligence. Personalized education that adapts to you.
+            </p>
           </div>
-          <p style={{ margin: 0, fontSize: '0.85rem' }}>
-            © {new Date().getFullYear()} Learnify. Personalized learning, powered by AI.
-          </p>
-          <div style={{ display: 'flex', gap: '20px' }}>
-            {['How it Works', 'Career Paths', 'Teachers'].map((link) => (
-              <span key={link} style={{ fontSize: '0.85rem', cursor: 'default' }}>{link}</span>
-            ))}
+
+          {/* Col 2: Company */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <h4 style={{ color: 'var(--color-text)', fontSize: '1.05rem', marginBottom: '8px' }}>Company</h4>
+            <a href="#" style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', textDecoration: 'none' }}>About</a>
+            <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--color-text-muted)', fontSize: '0.9rem', textDecoration: 'none' }}>
+              Careers <span style={{ background: 'var(--color-primary)', color: '#fff', fontSize: '0.65rem', padding: '2px 6px', borderRadius: '10px', fontWeight: 700 }}>NEW</span>
+            </a>
+            <a href="#" style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', textDecoration: 'none' }}>Events</a>
+            <a href="#" style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', textDecoration: 'none' }}>Webinars</a>
+          </div>
+
+          {/* Col 3: Explore */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <h4 style={{ color: 'var(--color-text)', fontSize: '1.05rem', marginBottom: '8px' }}>Explore</h4>
+            <a href="#programs" style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', textDecoration: 'none' }}>Programs</a>
+            <a href="#" style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', textDecoration: 'none' }}>Trainers</a>
+            <a href="#" style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', textDecoration: 'none' }}>Membership</a>
+            <a href="#" style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', textDecoration: 'none' }}>Certification</a>
+          </div>
+
+          {/* Col 4: Support */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <h4 style={{ color: 'var(--color-text)', fontSize: '1.05rem', marginBottom: '8px' }}>Support</h4>
+            <a href="#" style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', textDecoration: 'none' }}>Get in Touch</a>
+            <a href="#faq" style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', textDecoration: 'none' }}>FAQ's</a>
+            <a href="#" style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', textDecoration: 'none' }}>Community</a>
+            <a href="#" style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', textDecoration: 'none' }}>Knowledgebase</a>
+          </div>
+        </div>
+
+        {/* Bottom border & copyright */}
+        <div className="container" style={{ 
+          display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '20px',
+          paddingTop: '24px', borderTop: '1px solid var(--color-border)', fontSize: '0.85rem'
+        }}>
+          <div>© {new Date().getFullYear()} Learnify. Designed with AI.</div>
+          <div style={{ display: 'flex', gap: '24px' }}>
+             <a href="#" style={{ color: 'var(--color-text-muted)', textDecoration: 'none' }}>Terms</a>
+             <a href="#" style={{ color: 'var(--color-text-muted)', textDecoration: 'none' }}>Privacy</a>
+             <a href="#" style={{ color: 'var(--color-text-muted)', textDecoration: 'none' }}>Cookies</a>
           </div>
         </div>
       </footer>
