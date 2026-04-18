@@ -24,7 +24,7 @@ class PracticeEngine:
                 statement_path = os.path.join(path, "statement.md")
                 
                 if os.path.exists(meta_path):
-                    with open(meta_path, 'r') as f:
+                    with open(meta_path, 'r', encoding='utf-8') as f:
                         try:
                             meta = json.load(f)
                             # Ensure ID matches folder if missing
@@ -32,7 +32,7 @@ class PracticeEngine:
                             
                             # Load statement if exists
                             if os.path.exists(statement_path):
-                                with open(statement_path, 'r') as sf:
+                                with open(statement_path, 'r', encoding='utf-8') as sf:
                                     meta['statement'] = sf.read()
                             
                             self.problems_index[meta['id']] = meta

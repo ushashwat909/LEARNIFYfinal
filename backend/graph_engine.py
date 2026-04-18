@@ -8,7 +8,7 @@ class GraphEngine:
             base_dir = os.path.dirname(os.path.abspath(__file__))
             graph_path = os.path.join(base_dir, 'dsa_graph.json')
         
-        with open(graph_path, 'r') as f:
+        with open(graph_path, 'r', encoding='utf-8') as f:
             self.raw_nodes = json.load(f)
         self.mastery_model = StudentMasteryModel()
 

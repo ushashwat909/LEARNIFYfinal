@@ -19,7 +19,7 @@ class LearnifyCore:
         problems_path = os.path.join(self.root_dir, 'dsa-practice', 'problems')
         self.practice = PracticeEngine(problems_path)
         
-        with open(self.resources_path, 'r') as f:
+        with open(self.resources_path, 'r', encoding='utf-8') as f:
             self.resources = json.load(f)
 
     def get_next_recommendation(self, user_id):

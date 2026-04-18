@@ -3,7 +3,7 @@ import os
 
 class AdaptiveEngine:
     def __init__(self, graph_path):
-        with open(graph_path, 'r') as f:
+        with open(graph_path, 'r', encoding='utf-8') as f:
             self.graph = json.load(f)
         self.student_mastery = {node['id']: 0.0 for node in self.graph}
         

@@ -99,10 +99,7 @@ class TranscriptSubmission(BaseModel):
     transcript: str
 
 def get_db_connection():
-    # Use absolute path to ensure DB is found in both local and serverless environments
-    base_dir = os.path.dirname(os.path.abspath(__file__))
-    db_path = os.path.join(os.path.dirname(base_dir), 'learnify.db')
-    conn = sqlite3.connect(db_path)
+    conn = sqlite3.connect('learnify.db')
     conn.row_factory = sqlite3.Row
     return conn
 
