@@ -1,0 +1,8 @@
+httpx
+pandas
+fastapi
+uvicorn
+python-dotenv
+pyjwt
+bcrypt
+youtube-search-python
